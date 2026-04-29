@@ -30,13 +30,13 @@ const cardVariants = {
     },
 };
 
-const headingVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: (i) => ({
-        opacity: 1, y: 0,
-        transition: { duration: 0.65, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] },
-    }),
-};
+// const headingVariants = {
+//     hidden: { opacity: 0, y: 30 },
+//     visible: (i) => ({
+//         opacity: 1, y: 0,
+//         transition: { duration: 0.65, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] },
+//     }),
+// };
 
 function ProductCard({ icon: Icon, title, desc, color, rgb }) {
     return (

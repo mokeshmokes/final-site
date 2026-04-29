@@ -1,0 +1,289 @@
+/* ═══════════════════════════════════════════
+   TEAM SECTION
+═══════════════════════════════════════════ */
+
+.team {
+    position: relative;
+    background: #080810;
+    padding: 110px 0 100px;
+    overflow: hidden;
+}
+
+.team__bg-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(110px);
+    pointer-events: none;
+    opacity: 0.09;
+}
+
+.team__bg-orb--1 {
+    width: 500px;
+    height: 500px;
+    background: var(--theme-color);
+    top: -120px;
+    right: -100px;
+}
+
+.team__bg-orb--2 {
+    width: 400px;
+    height: 400px;
+    background: #7c3aed;
+    bottom: -100px;
+    left: -80px;
+}
+
+.team__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header */
+.team__header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.team__tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.3rem 0.9rem;
+    background: rgba(var(--theme-rgb), 0.12);
+    border: 1px solid rgba(var(--theme-rgb), 0.3);
+    border-radius: 100px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin-bottom: 0.9rem;
+}
+
+.team__tag-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--theme-color);
+    box-shadow: 0 0 8px var(--theme-color);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(0.8);
+    }
+}
+
+.team__heading {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.team__heading-accent {
+    background: linear-gradient(135deg, var(--theme-color) 0%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.team__subheading {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.45);
+    max-width: 520px;
+    margin: 0 auto 1.5rem;
+    line-height: 1.75;
+}
+
+.team__divider {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--theme-color), #a78bfa);
+    border-radius: 2px;
+    margin: 0 auto;
+    transform-origin: left;
+}
+
+/* Grid */
+.team__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+}
+
+/* Card */
+.team-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 22px;
+    overflow: hidden;
+    cursor: default;
+    transition: border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.team-card:hover {
+    border-color: rgba(var(--tc-rgb), 0.3);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(var(--tc-rgb), 0.12);
+}
+
+/* Image */
+.team-card__img-wrap {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+}
+
+.team-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), filter 0.4s ease;
+    filter: brightness(0.9) saturate(1.05);
+}
+
+.team-card:hover .team-card__img {
+    transform: scale(1.07);
+    filter: brightness(0.75) saturate(1.1);
+}
+
+.team-card__img-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(8, 8, 16, 0.85) 0%, transparent 55%);
+    z-index: 1;
+}
+
+/* Social icons */
+.team-card__socials {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.team-card:hover .team-card__socials {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.team-card__social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.25s ease, transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.25s ease;
+}
+
+.team-card__social-btn:hover {
+    background: var(--tc-color);
+    border-color: var(--tc-color);
+    transform: scale(1.15) translateY(-2px);
+}
+
+/* Role badge */
+.team-card__role-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 3;
+    background: var(--tc-color);
+    color: #fff;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    padding: 0.25rem 0.7rem;
+    border-radius: 100px;
+    box-shadow: 0 4px 12px rgba(var(--tc-rgb), 0.4);
+}
+
+/* Body */
+.team-card__body {
+    padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.team-card__name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.3px;
+}
+
+.team-card__desc {
+    font-size: 0.83rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.45);
+    transition: color 0.3s ease;
+}
+
+.team-card:hover .team-card__desc {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Bottom accent */
+.team-card__accent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--tc-color), transparent);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.team-card:hover .team-card__accent {
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .team__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .team {
+        padding: 80px 0 70px;
+    }
+
+    .team__grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .team__container {
+        padding: 0 1rem;
+    }
+}

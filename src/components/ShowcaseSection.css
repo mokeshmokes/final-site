@@ -1,0 +1,311 @@
+/* ═══════════════════════════════════════════
+   SHOWCASE / SLIDER + TABS SECTION
+═══════════════════════════════════════════ */
+
+.showcase {
+    position: relative;
+    background: #080810;
+}
+
+/* ── Slider ── */
+.showcase__slider {
+    position: relative;
+    height: 88vh;
+    min-height: 560px;
+    overflow: hidden;
+}
+
+.showcase__swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.showcase__slide-bg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.05);
+    animation: kenBurns 6s ease-out forwards;
+}
+
+@keyframes kenBurns {
+    from {
+        transform: scale(1.05);
+    }
+
+    to {
+        transform: scale(1.0);
+    }
+}
+
+/* Overlay */
+.showcase__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient(135deg,
+            rgba(8, 8, 16, 0.78) 0%,
+            rgba(8, 8, 16, 0.55) 100%);
+}
+
+/* Center content */
+.showcase__center {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.showcase__center-inner {
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.1rem;
+}
+
+.showcase__center-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.3rem 0.9rem;
+    background: rgba(var(--theme-rgb), 0.18);
+    border: 1px solid rgba(var(--theme-rgb), 0.35);
+    border-radius: 100px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+.showcase__center-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+}
+
+.showcase__center-desc {
+    font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.75;
+    max-width: 560px;
+}
+
+.showcase__center-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.75rem;
+    background: var(--theme-color);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(var(--theme-rgb), 0.4);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    margin-top: 0.25rem;
+}
+
+.showcase__center-btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 14px 32px rgba(var(--theme-rgb), 0.55);
+}
+
+.showcase__center-btn svg {
+    transition: transform 0.25s ease;
+}
+
+.showcase__center-btn:hover svg {
+    transform: translateX(4px);
+}
+
+/* Arrows */
+.showcase__arrow {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.showcase__arrow:hover {
+    background: rgba(var(--theme-rgb), 0.65);
+    border-color: rgba(var(--theme-rgb), 0.8);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 8px 24px rgba(var(--theme-rgb), 0.4);
+}
+
+.showcase__arrow--prev {
+    left: 2rem;
+}
+
+.showcase__arrow--next {
+    right: 2rem;
+}
+
+/* ── Floating tab bar ── */
+.showcase__tabs-wrap {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    margin-top: -1px;
+    padding: 0 2rem;
+    background: #080810;
+}
+
+.showcase__tabs {
+    display: flex;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.showcase__tab {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 1.1rem 0.75rem;
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.45);
+    cursor: pointer;
+    transition: color 0.25s ease, background 0.25s ease;
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+    overflow: hidden;
+}
+
+.showcase__tab:last-child {
+    border-right: none;
+}
+
+.showcase__tab:hover {
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.showcase__tab--active {
+    color: #fff;
+    background: rgba(var(--theme-rgb), 0.12);
+}
+
+.showcase__tab-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 9px;
+    background: rgba(255, 255, 255, 0.06);
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.showcase__tab--active .showcase__tab-icon {
+    background: rgba(var(--theme-rgb), 0.2);
+    color: var(--theme-color);
+}
+
+.showcase__tab:hover .showcase__tab-icon {
+    transform: scale(1.1);
+}
+
+.showcase__tab-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+/* Active indicator (bottom line, animated via framer layoutId) */
+.showcase__tab-indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--theme-color);
+    border-radius: 2px 2px 0 0;
+    box-shadow: 0 0 12px rgba(var(--theme-rgb), 0.6);
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+    .showcase__slider {
+        height: 70vh;
+        min-height: 480px;
+    }
+
+    .showcase__arrow--prev {
+        left: 1rem;
+    }
+
+    .showcase__arrow--next {
+        right: 1rem;
+    }
+
+    .showcase__tabs-wrap {
+        padding: 0;
+    }
+
+    .showcase__tabs {
+        border-radius: 0;
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+    .showcase__tab {
+        min-width: 100px;
+        padding: 0.9rem 0.5rem;
+    }
+
+    .showcase__tab-label {
+        font-size: 0.65rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .showcase__slider {
+        height: 60vh;
+    }
+
+    .showcase__center {
+        padding: 0 1.25rem;
+    }
+
+    .showcase__tab-icon {
+        width: 26px;
+        height: 26px;
+    }
+}

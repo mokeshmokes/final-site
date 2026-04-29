@@ -131,9 +131,9 @@ export default function Footer() {
                         Made with <Heart size={13} className="footer__heart" fill="currentColor" /> by the JUSCO Team
                     </p>
                     <div className="footer__bottom-links">
-                        <a href="#" className="footer__bottom-link">Privacy Policy</a>
+                        <a href="" className="footer__bottom-link">Privacy Policy</a>
                         <span className="footer__bottom-sep">·</span>
-                        <a href="#" className="footer__bottom-link">Terms of Service</a>
+                        <a href="" className="footer__bottom-link">Terms of Service</a>
                     </div>
                 </div>
             </div>

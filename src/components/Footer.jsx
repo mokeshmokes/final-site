@@ -9,8 +9,8 @@ const FOOTER_LINKS = [
         links: [
             { label: "About Us", href: "#about-us" },
             { label: "Our Team", href: "#team" },
-            { label: "Careers", href: "#" },
-            { label: "Blog", href: "#" },
+            { label: "Careers", href: "" },
+            { label: "Blog", href: "" },
         ],
     },
     {
@@ -37,16 +37,16 @@ const FOOTER_LINKS = [
             { label: "Contact Us", href: "#visit-us" },
             { label: "AMC Plans", href: "#it-services" },
             { label: "Remote Support", href: "#it-services" },
-            { label: "FAQ", href: "#" },
+            { label: "FAQ", href: "" },
         ],
     },
 ];
 
 const SOCIALS = [
-    { icon: FaXTwitter, href: "#", label: "Twitter / X" },
-    { icon: FaLinkedinIn, href: "#", label: "LinkedIn" },
-    { icon: FaInstagram, href: "#", label: "Instagram" },
-    { icon: FaFacebookF, href: "#", label: "Facebook" },
+    { icon: FaXTwitter, href: "", label: "Twitter / X" },
+    { icon: FaLinkedinIn, href: "", label: "LinkedIn" },
+    { icon: FaInstagram, href: "", label: "Instagram" },
+    { icon: FaFacebookF, href: "", label: "Facebook" },
 ];
 
 export default function Footer() {

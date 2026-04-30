@@ -1,14 +1,14 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import CountUp from "react-countup";
-import { CheckSquare, Smile, Trophy, Coffee } from "lucide-react";
+import { CheckSquare, Map, Smile } from "lucide-react";
 import "./StatsSection.css";
 
 const STATS = [
-    { icon: CheckSquare, value: 891, suffix: "+", label: "Projects Done", color: "#2563eb", rgb: "37,99,235" },
-    { icon: Smile, value: 291, suffix: "+", label: "Happy Clients", color: "#7c3aed", rgb: "124,58,237" },
-    { icon: Trophy, value: 291, suffix: "+", label: "Awards Won", color: "#059669", rgb: "5,150,105" },
-    { icon: Coffee, value: 3890, suffix: "+", label: "Cups Of Coffee", color: "#d97706", rgb: "217,119,6" },
+    { icon: CheckSquare, value: 891, suffix: "+", label: "PROJECTS COMPLETED", color: "#2563eb", rgb: "37,99,235" },
+    { icon: Map, value: 291, suffix: "+", label: "STATES COVERED", color: "#7c3aed", rgb: "124,58,237" },
+    { icon: null, value: 291, suffix: "+", label: "DISTRICTS SERVED", color: "#059669", rgb: "5,150,105", imgSrc: "/images/tamilnadu-map.png" },
+    { icon: Smile, value: 3890, suffix: "+", label: "SATISFIED CLIENTS", color: "#d97706", rgb: "217,119,6" },
 ];
 
 const cardVariants = {
@@ -19,7 +19,7 @@ const cardVariants = {
     }),
 };
 
-function StatCard({ icon: Icon, value, suffix, label, color, rgb, index }) {
+function StatCard({ icon: Icon, imgSrc, value, suffix, label, color, rgb, index }) {
     const ref = useRef(null);
     const inView = useInView(ref, { once: true, margin: "-80px" });
 
@@ -37,9 +37,18 @@ function StatCard({ icon: Icon, value, suffix, label, color, rgb, index }) {
             {/* Top glow line */}
             <div className="stat-card__line" />
 
-            {/* Icon */}
+            {/* Icon — lucide component OR custom image */}
             <div className="stat-card__icon-wrap">
-                <Icon size={28} className="stat-card__icon" />
+                {imgSrc ? (
+                    <img
+                        src={imgSrc}
+                        alt={label}
+                        className="stat-card__icon-img"
+                        loading="lazy"
+                    />
+                ) : (
+                    <Icon size={28} className="stat-card__icon" />
+                )}
                 <div className="stat-card__icon-glow" />
             </div>
 

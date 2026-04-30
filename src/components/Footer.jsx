@@ -122,11 +122,12 @@ export default function Footer() {
             </div>
 
             {/* ── Bottom bar ── */}
+            <center>
             <div className="footer__bottom">
                 <div className="footer__bottom-inner">
-                    <p className="footer__copy">
-                        &copy; {year} <span className="footer__copy-brand">JUSCO</span>. All rights reserved.
-                    </p>
+                   <center><p className="footer__copy">
+                       &copy; {year} <span className="footer__copy-brand">JUSCO</span>. All rights reserved.
+                    </p></center>
                     <p className="footer__made">
                         Made with <Heart size={13} className="footer__heart" fill="currentColor" /> by the JUSCO Team
                     </p>
@@ -137,6 +138,7 @@ export default function Footer() {
                     </div> */}
                 </div>
             </div>
+            </center>
         </footer>
     );
 }

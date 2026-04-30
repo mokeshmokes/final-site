@@ -125,7 +125,7 @@
     gap: 1.75rem;
 }
 
-/* Card */
+/* Card — equal height, flex column so body fills remaining space */
 .team-card {
     position: relative;
     background: #ffffff;
@@ -133,18 +133,28 @@
     border-radius: 22px;
     overflow: hidden;
     cursor: default;
-    transition: border-color 0.35s ease, box-shadow 0.35s ease;
+    /* Equal height: fill the full slide height */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* Consistent shadow */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .team-card:hover {
     border-color: rgba(var(--tc-rgb), 0.3);
     box-shadow: 0 24px 60px rgba(37, 99, 235, 0.1), 0 0 0 1px rgba(var(--tc-rgb), 0.12);
+    transform: translateY(-8px);
 }
 
-/* Image */
+/* Image — fixed consistent height across all cards */
 .team-card__img-wrap {
     position: relative;
-    height: 280px;
+    height: 240px;
+    /* fixed — same for every card */
+    flex-shrink: 0;
+    /* never compress the image */
     overflow: hidden;
 }
 
@@ -226,9 +236,14 @@
     box-shadow: 0 4px 12px rgba(var(--tc-rgb), 0.4);
 }
 
-/* Body */
+/* Body — grows to fill remaining card height */
 .team-card__body {
     padding: 1.25rem 1.5rem 1.5rem;
+    flex: 1;
+    /* fill all space below the image */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .team-card__name {
@@ -287,37 +302,46 @@
     .team__container {
         padding: 0 1rem;
     }
+
+    .team-card__img-wrap {
+        height: 200px;
+    }
 }
 
 /* ── Swiper carousel overrides ── */
 .team__swiper {
     width: 100%;
     height: auto !important;
-    /* override global height: 100% */
     padding-bottom: 3.5rem !important;
-    /* room for pagination dots */
-    overflow: visible !important;
-    /* allow dots to render below slides */
+    overflow: hidden !important;
+    /* prevent jerk at loop point */
 }
 
+/* Force linear motion — no ease-in/out between slides */
 .team__swiper .swiper-wrapper {
     align-items: stretch;
-    /* equal-height slides */
+    transition-timing-function: linear !important;
 }
 
+/* Each slide is a flex column so the card fills it */
 .team__swiper .swiper-slide {
     height: auto;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Card fills the full slide */
 .team__swiper .team-card {
     height: 100%;
+    flex: 1;
 }
 
-/* Pagination dots */
+/* Pagination dots — centered below slider */
 .team__swiper .swiper-pagination {
     bottom: 0 !important;
     position: relative !important;
     margin-top: 1.5rem;
+    text-align: center;
 }
 
 .team__swiper .swiper-pagination-bullet {

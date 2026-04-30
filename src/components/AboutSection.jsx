@@ -15,7 +15,7 @@ const SKILLS = [
     { label: "PHP & MySQL", pct: 80, color: "#0891b2" },
     { label: "E-Commerce", pct: 70, color: "#059669" },
     { label: "Marketing", pct: 90, color: "#d97706" },
-    { label: "Branding", pct: 90, color: "#e11d48" },
+    { label: "Branding", pct: 90, color: "#6366f1" },
 ];
 
 /* ─── Highlights ─── */

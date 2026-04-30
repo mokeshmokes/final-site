@@ -129,11 +129,11 @@ export default function ContactSection() {
 
     /* ── Info cards data ── */
     const INFO_CARDS = [
-        { icon: Mail, label: "EMAIL", value: "info@jusco.com", href: "mailto:info@jusco.com" },
-        { icon: Phone, label: "PHONE", value: "+1 (800) 123-4567", href: "tel:+18001234567" },
+        { icon: Mail, label: "MAIL US", value: "info@jusco.com", href: "mailto:info@jusco.com" },
+        { icon: Phone, label: "CALL ME", value: "+1 (800) 123-4567", href: "tel:+18001234567" },
         { icon: MessageSquare, label: "SUPPORT", value: "support@jusco.com", href: "mailto:support@jusco.com" },
-        { icon: MapPin, label: "OFFICE", value: "Chennai, Tamil Nadu, India", href: null },
-        { icon: Clock, label: "WORKING HOURS", value: "Mon - Sat : 9:00 AM - 6:00 PM", href: null },
+        { icon: MapPin, label: "MY LOCATION", value: "Chennai, Tamil Nadu, India", href: null },
+        { icon: Clock, label: "OFFICE TIMEING", value: "Mon - Sat : 9:00 AM - 9:00 PM", href: null },
     ];
 
     return (
@@ -239,8 +239,8 @@ export default function ContactSection() {
                     ) : (
                         <form className="contact-sec__form" onSubmit={handleSubmit} noValidate>
                             <div className="contact-sec__form-header">
-                                <h3 className="contact-sec__form-title">Send Us a Message</h3>
-                                <p className="contact-sec__form-sub">All fields are required</p>
+                                <h3 className="contact-sec__form-title">LEAVE US YOUR INFO</h3>
+                                <p className="contact-sec__form-sub">And we will get back to you soon.</p>
                             </div>
 
                             {/* Name */}
@@ -262,13 +262,13 @@ export default function ContactSection() {
                             {/* Phone + Mobile */}
                             <div className="contact-sec__row">
                                 <Field
-                                    id="phone" label="Phone *" icon={Phone} type="tel"
+                                    id="phone" label="Mobile Number 1 *" icon={Phone} type="tel"
                                     placeholder="+91 XXXXX XXXXX"
                                     value={values.phone} error={errors.phone} touched={touched.phone}
                                     onChange={handleChange} onBlur={handleBlur}
                                 />
                                 <Field
-                                    id="mobile" label="Mobile Number *" icon={Phone} type="tel"
+                                    id="mobile" label="Mobile Number 2*" icon={Phone} type="tel"
                                     placeholder="+91 XXXXX XXXXX"
                                     value={values.mobile} error={errors.mobile} touched={touched.mobile}
                                     onChange={handleChange} onBlur={handleBlur}

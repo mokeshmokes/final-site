@@ -38,8 +38,37 @@
 
 /* Header */
 .testi__header {
+    position: relative;
+    /* anchor for the Justdial logo */
     text-align: center;
     margin-bottom: 3.5rem;
+}
+
+/* Justdial logo — top-right of header */
+.testi__justdial-logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    /* white version on dark bg */
+    opacity: 0.85;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.testi__justdial-logo:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .testi__justdial-logo {
+        position: static;
+        display: block;
+        margin: 0 auto 1rem;
+    }
 }
 
 .testi__tag {

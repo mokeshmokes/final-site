@@ -21,6 +21,8 @@ const THEMES = [
   { id: "amber", label: "Amber", color: "#F59E0B", rgb: "245,158,11", dark: "#D97706" },
   { id: "yellow", label: "Yellow", color: "#FFD700", rgb: "255,215,0", dark: "#D4AF00" },
   { id: "green", label: "Green", color: "#22C55E", rgb: "34,197,94", dark: "#16A34A" },
+  { id: "lightpink", label: "Light Pink", color: "#FFB6C1", rgb: "255,182,193", dark: "#FF8FA3" },
+  { id: "lightgreen", label: "Light Green", color: "#90EE90", rgb: "144,238,144", dark: "#5DBD5D" },
 ];
 
 /* ─── Nav link → section ID map ─── */
@@ -108,14 +110,14 @@ export default function Navbar() {
       <div className="navbar__inner">
 
         {/* ── Logo ── */}
-        <a href="#home" className="navbar__logo">
-          <span className="navbar__logo-icon">
-            <Globe size={20} />
-          </span>
-          <span className="navbar__logo-text">
-            Corp<span className="navbar__logo-accent">X</span>
-          </span>
-        </a>
+       <a href="/" className="navbar__logo">
+  <img
+    src="/images/companylogo.jpg"
+    alt="Company Logo"
+    className="navbar__logo-img"
+  />
+  <span className="navbar__logo-text">UT</span>
+</a>
 
         {/* ── Desktop nav links ── */}
         <ul className="navbar__links">

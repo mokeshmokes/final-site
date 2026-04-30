@@ -142,6 +142,8 @@
 .prod-card {
     position: relative;
     background: #F8FAFC;
+    height: 100%;
+    /* fill flip-front face */
     border: 1px solid #E2E8F0;
     border-radius: 18px;
     padding: 2rem 1.5rem 1.5rem;

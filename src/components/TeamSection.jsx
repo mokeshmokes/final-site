@@ -10,10 +10,10 @@ import "./TeamSection.css";
 
 const TEAM = [
     {
-        name: "Aria Saal",
-        role: "Manager",
-        desc: "Aria leads our project teams with a sharp strategic mind and a passion for delivering results. She ensures every client engagement runs smoothly from kickoff to launch.",
-        image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&q=80",
+        name: "Rajesh Kumar",
+        role: "Managing Director",
+        desc: "Rajesh drives the company's vision and strategic direction with over 15 years of leadership in the IT industry. His commitment to excellence sets the standard for every team and project.",
+        image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&q=80",
         color: "#2563eb",
         rgb: "37,99,235",
         socials: [
@@ -23,12 +23,25 @@ const TEAM = [
         ],
     },
     {
-        name: "Eliea Summers",
-        role: "Designer",
-        desc: "Eliea crafts stunning visual experiences that balance aesthetics with usability. Her eye for detail and creative instincts bring every brand story to life.",
-        image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&q=80",
+        name: "Arjun Mehta",
+        role: "Software Developer",
+        desc: "Arjun builds robust, scalable software solutions with expertise in full-stack development. He turns complex requirements into clean, efficient code that powers our clients' businesses.",
+        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=80",
         color: "#7c3aed",
         rgb: "124,58,237",
+        socials: [
+            { icon: FaXTwitter, href: "#" },
+            { icon: FaLinkedinIn, href: "#" },
+            { icon: FaGithub, href: "#" },
+        ],
+    },
+    {
+        name: "Priya Sharma",
+        role: "Web Developer",
+        desc: "Priya crafts responsive, high-performance websites that combine beautiful design with technical precision. Her attention to detail ensures every pixel and interaction is flawless.",
+        image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&q=80",
+        color: "#059669",
+        rgb: "5,150,105",
         socials: [
             { icon: FaXTwitter, href: "#" },
             { icon: FaLinkedinIn, href: "#" },
@@ -36,16 +49,42 @@ const TEAM = [
         ],
     },
     {
-        name: "Lola Business",
+        name: "Lola Fernandez",
         role: "Accountant",
         desc: "Lola keeps our financial operations precise and transparent. Her expertise in business finance ensures every project is delivered on budget with full accountability.",
         image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=500&q=80",
-        color: "#059669",
-        rgb: "5,150,105",
+        color: "#d97706",
+        rgb: "217,119,6",
+        socials: [
+            { icon: FaXTwitter, href: "#" },
+            { icon: FaLinkedinIn, href: "#" },
+            { icon: FaInstagram, href: "#" },
+        ],
+    },
+    {
+        name: "Vikram Nair",
+        role: "Hardware & Network Technician",
+        desc: "Vikram designs and maintains reliable network infrastructure and hardware systems. His hands-on expertise keeps our clients' IT environments running at peak performance.",
+        image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&q=80",
+        color: "#0891b2",
+        rgb: "8,145,178",
         socials: [
             { icon: FaXTwitter, href: "#" },
             { icon: FaLinkedinIn, href: "#" },
             { icon: FaGithub, href: "#" },
+        ],
+    },
+    {
+        name: "Suresh Babu",
+        role: "CCTV Technician",
+        desc: "Suresh specializes in the installation and maintenance of advanced surveillance systems. He ensures every security setup is optimized for maximum coverage and reliability.",
+        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&q=80",
+        color: "#6d28d9",
+        rgb: "109,40,217",
+        socials: [
+            { icon: FaXTwitter, href: "#" },
+            { icon: FaLinkedinIn, href: "#" },
+            { icon: FaInstagram, href: "#" },
         ],
     },
 ];
@@ -152,13 +191,13 @@ export default function TeamSection() {
                 <Swiper
                     modules={[Autoplay, Pagination]}
                     autoplay={{
-                        delay: 2500,
+                        delay: 1,
                         disableOnInteraction: false,
-                        pauseOnMouseEnter: true,
+                        pauseOnMouseEnter: false,
                     }}
                     pagination={{ clickable: true }}
                     loop
-                    speed={700}
+                    speed={4000}
                     spaceBetween={24}
                     breakpoints={{
                         0: { slidesPerView: 1, spaceBetween: 16 },

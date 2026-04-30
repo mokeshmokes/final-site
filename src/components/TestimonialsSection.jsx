@@ -76,7 +76,7 @@ export default function TestimonialsSection() {
             <div className="testi__overlay" />
 
             <div className="testi__container">
-                {/* Header */}
+                {/* Header — relative so Justdial logo can be positioned top-right */}
                 <div className="testi__header" ref={headerRef}>
                     <motion.div
                         className="testi__tag"
@@ -100,6 +100,16 @@ export default function TestimonialsSection() {
                         initial={{ scaleX: 0 }}
                         animate={headerView ? { scaleX: 1 } : { scaleX: 0 }}
                         transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                    />
+
+                    {/* Justdial logo — top-right of header */}
+                    <motion.img
+                        src="/images/justdial.png"
+                        alt="Justdial"
+                        className="testi__justdial-logo"
+                        initial={{ opacity: 0, scale: 0.85 }}
+                        animate={headerView ? { opacity: 1, scale: 1 } : {}}
+                        transition={{ delay: 0.5, duration: 0.5, ease: [0.34, 1.56, 0.64, 1] }}
                     />
                 </div>
 

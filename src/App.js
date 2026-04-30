@@ -11,8 +11,11 @@ import ShowcaseSection from "./components/ShowcaseSection";
 import ITServicesSection from "./components/ITServicesSection";
 import ProductsSection from "./components/ProductsSection";
 import TestimonialsSection from "./components/TestimonialsSection";
+import QualityBadges from "./components/QualityBadges";
 import ContactSection from "./components/ContactSection";
+import NewsletterSection from "./components/NewsletterSection";
 import PaymentSection from "./components/PaymentSection";
+import MediaShowcase from "./components/MediaShowcase";
 import Footer from "./components/Footer";
 import TawkChat from "./components/TawkChat";
 import "./App.css";
@@ -57,14 +60,23 @@ function App() {
         {/* 12 — Client Reviews (Testimonials) */}
         <TestimonialsSection />
 
+        {/* 12.5 — Quality Badges */}
+        <QualityBadges />
+
         {/* 13 — Contact Section */}
         <ContactSection />
 
+        {/* 13.5 — Newsletter Subscription */}
+        <NewsletterSection />
+
         {/* 14 — Mode of Payment */}
         <PaymentSection />
+
+        {/* 15 — Media Showcase */}
+        <MediaShowcase />
       </main>
 
-      {/* 15 — Footer */}
+      {/* 16 — Footer */}
       <Footer />
 
       {/* Live Chat — renders nothing, injects Tawk.to widget */}

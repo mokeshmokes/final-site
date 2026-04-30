@@ -1,7 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCube, Autoplay, Pagination, Navigation } from "swiper/modules";
-import { ArrowRight, Play, ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 import "swiper/css";
 import "swiper/css/effect-cube";
@@ -119,20 +119,6 @@ export default function HeroSlider() {
 
                 {/* Description */}
                 <p className="hero__description">{slide.description}</p>
-
-                {/* CTA buttons */}
-                <div className="hero__ctas">
-                  <button className="hero__btn hero__btn--primary">
-                    {slide.cta}
-                    <ArrowRight size={18} className="hero__btn-icon" />
-                  </button>
-                  <button className="hero__btn hero__btn--ghost">
-                    <span className="hero__play-ring">
-                      <Play size={14} fill="currentColor" />
-                    </span>
-                    {slide.ctaSecondary}
-                  </button>
-                </div>
 
                 {/* Stats row */}
                 <div className="hero__stats">

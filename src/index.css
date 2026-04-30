@@ -13,6 +13,10 @@
   --theme-color-dark: #1d4ed8;
   --theme-color-light: #3b82f6;
   --theme-rgb: 37, 99, 235;
+  /* ── Global text colour ── */
+  --text-primary: #4DA6FF;
+  --text-secondary: #7EC8FF;
+  --text-muted: #A8D8FF;
 }
 
 html {
@@ -26,8 +30,108 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #F8FAFC;
-  color: #1E293B;
+  color: var(--text-primary);
   overflow-x: hidden;
+}
+
+/* ── Global light-blue text overrides ── */
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-primary);
+}
+
+/* Body text */
+p,
+li,
+span,
+label {
+  color: var(--text-secondary);
+}
+
+/* Anchors that are plain text (not icon buttons) */
+a:not([class*="btn"]):not([class*="icon"]):not([class*="logo"]):not([class*="social"]) {
+  color: var(--text-primary);
+}
+
+/* Hardcoded dark greys → light blue */
+[style*="color: #1E293B"],
+[style*="color: #334155"],
+[style*="color: #475569"],
+[style*="color: #64748B"],
+[style*="color: #94A3B8"] {
+  color: var(--text-primary) !important;
+}
+
+/* CSS-class-based overrides for the most common text colour classes used
+   across component CSS files — replaces #1E293B, #334155, #64748B etc. */
+.about__heading,
+.about__expertise-title,
+.about__stat-value,
+.services__heading,
+.stats__heading,
+.team__heading,
+.skill-sec__heading,
+.it-services__heading,
+.products__heading,
+.payment__heading,
+.contact-sec__heading,
+.contact-sec__form-title,
+.contact-sec__info-value,
+.testi__heading,
+.intro__heading,
+.partners__heading,
+.team-card__name,
+.prod-card__title,
+.it-card__title,
+.svc-card__title,
+.stat-card__number,
+.pay-card__name,
+.skill-sec__card-title,
+.cf-field__label,
+.contact-sec__success-title {
+  color: var(--text-primary) !important;
+}
+
+.about__desc,
+.about__highlight,
+.about__expertise-sub,
+.services__subheading,
+.team__subheading,
+.skill-sec__desc,
+.skill-sec__sub-title,
+.it-services__subheading,
+.products__top-desc,
+.payment__subheading,
+.contact-sec__desc,
+.contact-sec__form-sub,
+.svc-card__desc,
+.it-card__desc,
+.prod-card__desc,
+.pay-card__qr-sub,
+.skill-sec__card-sub,
+.testi-card__text,
+.testi-card__role,
+.intro__sub,
+.partner-logo__name,
+.footer__brand-desc,
+.footer__col-link,
+.footer__contact-item,
+.footer__copy,
+.footer__made,
+.footer__bottom-link,
+.about__stat-label,
+.stat-card__label,
+.skill__label,
+.skill__pct,
+.sk-bar__label,
+.sk-bar__pct,
+.cf-field__error {
+  color: var(--text-secondary) !important;
 }
 
 /* ─── Swiper overrides ─── */

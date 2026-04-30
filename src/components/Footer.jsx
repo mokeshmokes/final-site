@@ -60,14 +60,16 @@ export default function Footer() {
             <div className="footer__container">
                 {/* ── Brand column ── */}
                 <div className="footer__brand">
-                    <a href="#home" className="footer__logo">
-                        <span className="footer__logo-icon">
-                            <Globe size={18} />
-                        </span>
-                        <span className="footer__logo-text">
-                            Corp<span className="footer__logo-accent">X</span>
-                        </span>
-                    </a>
+                    <a href="/" className="footer__logo">
+  <img
+    src="/images/companylogo.jpg"
+    alt="Company Logo"
+    className="footer__logo-img"
+  />
+  <span className="footer__logo-text">
+    <span className="footer__logo-accent">UT</span>
+  </span>
+</a>
 
                     <p className="footer__brand-desc">
                         A full-service digital agency delivering innovative web, IT, and
@@ -122,23 +124,19 @@ export default function Footer() {
             </div>
 
             {/* ── Bottom bar ── */}
-            <center>
-            <div className="footer__bottom">
-                <div className="footer__bottom-inner">
-                   <center><p className="footer__copy">
-                       &copy; {year} <span className="footer__copy-brand">JUSCO</span>. All rights reserved.
-                    </p></center>
-                    <p className="footer__made">
-                        Made with <Heart size={13} className="footer__heart" fill="currentColor" /> by the JUSCO Team
-                    </p>
-                    {/* <div className="footer__bottom-links">
-                        <a href="" className="footer__bottom-link">Privacy Policy</a>
-                        <span className="footer__bottom-sep">·</span>
-                        <a href="" className="footer__bottom-link">Terms of Service</a>
-                    </div> */}
-                </div>
-            </div>
-            </center>
+          <div className="footer__bottom">
+  <div className="footer__bottom-inner">
+    
+    <p className="footer__copy">
+      &copy; {year} <span className="footer__copy-brand">UT</span>. All rights reserved.
+    </p>
+
+    <p className="footer__made">
+      Made with <Heart size={13} className="footer__heart" fill="currentColor" /> by the UT Team
+    </p>
+
+  </div>
+</div>
         </footer>
     );
 }

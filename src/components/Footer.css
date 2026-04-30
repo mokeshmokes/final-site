@@ -92,6 +92,18 @@
 .footer__contact-item:hover {
     color: var(--theme-color);
 }
+.footer__logo-img {
+  height: 34px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect similar to old icon */
+.footer__logo:hover .footer__logo-img {
+  transform: scale(1.08);
+}
 
 /* Socials */
 .footer__socials {
@@ -187,87 +199,40 @@
 
 /* ── Bottom bar ── */
 .footer__bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .footer__bottom-inner {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 1.25rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 0.75rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.25rem 2rem;
+
+  display: flex;
+  flex-direction: column;     /* IMPORTANT */
+  align-items: center;        /* CENTER */
+  justify-content: center;    /* CENTER */
+  text-align: center;         /* TEXT CENTER */
+
+  gap: 0.75rem;
 }
 
 .footer__copy {
-    font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.3);
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .footer__copy-brand {
-    color: var(--theme-color);
-    font-weight: 700;
+  color: var(--theme-color);
+  font-weight: 700;
 }
 
 .footer__made {
-    display: flex;
-    align-items: center;
-    gap: 0.35rem;
-    font-size: 0.78rem;
-    color: rgba(255, 255, 255, 0.25);
-}
-
-.footer__heart {
-    color: #e11d48;
-    animation: heartbeat 1.4s ease infinite;
-}
-
-@keyframes heartbeat {
-
-    0%,
-    100% {
-        transform: scale(1);
-    }
-
-    14% {
-        transform: scale(1.25);
-    }
-
-    28% {
-        transform: scale(1);
-    }
-
-    42% {
-        transform: scale(1.15);
-    }
-
-    70% {
-        transform: scale(1);
-    }
-}
-
-.footer__bottom-links {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.footer__bottom-link {
-    font-size: 0.78rem;
-    color: rgba(255, 255, 255, 0.28);
-    text-decoration: none;
-    transition: color 0.25s ease;
-}
-
-.footer__bottom-link:hover {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.footer__bottom-sep {
-    color: rgba(255, 255, 255, 0.15);
-    font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;   /* CENTER */
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.25);
 }
 
 /* ═══════════════════════════════════════════

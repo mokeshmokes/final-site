@@ -11,7 +11,6 @@ import ShowcaseSection from "./components/ShowcaseSection";
 import ITServicesSection from "./components/ITServicesSection";
 import ProductsSection from "./components/ProductsSection";
 import TestimonialsSection from "./components/TestimonialsSection";
-import ContactBar from "./components/ContactBar";
 import ContactSection from "./components/ContactSection";
 import PaymentSection from "./components/PaymentSection";
 import Footer from "./components/Footer";
@@ -59,7 +58,6 @@ function App() {
         <TestimonialsSection />
 
         {/* 13 — Contact Section */}
-        <ContactBar />
         <ContactSection />
 
         {/* 14 — Mode of Payment */}

@@ -14,9 +14,9 @@
   --theme-color-light: #3b82f6;
   --theme-rgb: 37, 99, 235;
   /* ── Global text colour ── */
-  --text-primary: #4DA6FF;
-  --text-secondary: #7EC8FF;
-  --text-muted: #A8D8FF;
+  --text-primary: #60a5fa;
+  --text-secondary: #93c5fd;
+  --text-muted: #bfdbfe;
 }
 
 html {

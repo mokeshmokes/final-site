@@ -119,54 +119,64 @@
     transform-origin: left;
 }
 
-/* ── Two-column body: 60% cards / 40% slider ── */
+/* ── Two-column body: flex stretch for equal height ── */
 .payment__body {
-    display: grid;
-    grid-template-columns: 60% 40%;
+    display: flex;
     gap: 40px;
-    align-items: center;
+    align-items: stretch;
+    min-height: 600px;
 }
 
 .payment__left {
-    /* ensure cards are always visible — no transform/opacity tricks */
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     position: relative;
     z-index: 1;
 }
 
-/* ── Cards grid — 2 columns inside the 60% left panel ── */
+/* ── Cards grid — 2 columns inside the left panel ── */
 .payment__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
     justify-items: center;
-    /* guarantee visibility */
     opacity: 1 !important;
     visibility: visible !important;
 }
 
-/* ── Right — image slider ── */
+/* ── Right — image slider, same height as left ── */
 .payment__right {
-    position: relative;
+    flex: 4;
+    display: flex;
+    flex-direction: column;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 20px 60px rgba(37, 99, 235, 0.12);
 }
 
-/* Force linear continuous motion */
+/* Swiper fills the full right column height */
 .payment__img-swiper {
     width: 100%;
+    flex: 1;
+    height: 100%;
 }
 
 .payment__img-swiper .swiper-wrapper {
     transition-timing-function: linear !important;
+    height: 100%;
+}
+
+.payment__img-swiper .swiper-slide {
+    height: 100%;
 }
 
 .payment__owner-img {
     width: 100%;
-    height: 420px;
+    height: 100%;
     object-fit: cover;
     display: block;
-    border-radius: 0;
 }
 
 /* Active slide subtle zoom */
@@ -344,12 +354,21 @@
 
 @media (max-width: 900px) {
     .payment__body {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        min-height: auto;
     }
 
     .payment__right {
         width: 100%;
+        height: 320px;
+        flex: none;
         margin-top: 30px;
+    }
+
+    .payment__img-swiper,
+    .payment__img-swiper .swiper-wrapper,
+    .payment__img-swiper .swiper-slide {
+        height: 320px;
     }
 
     .payment__owner-img {

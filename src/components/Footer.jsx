@@ -1,5 +1,5 @@
 import React from "react";
-import { Globe, Mail, Phone, Heart } from "lucide-react";
+import { Mail, Phone, Heart } from "lucide-react";
 import { FaXTwitter, FaLinkedinIn, FaInstagram, FaFacebookF } from "react-icons/fa6";
 import "./Footer.css";
 
@@ -61,15 +61,15 @@ export default function Footer() {
                 {/* ── Brand column ── */}
                 <div className="footer__brand">
                     <a href="/" className="footer__logo">
-  <img
-    src="/images/companylogo.jpg"
-    alt="Company Logo"
-    className="footer__logo-img"
-  />
-  <span className="footer__logo-text">
-    <span className="footer__logo-accent">UT</span>
-  </span>
-</a>
+                        <img
+                            src="/images/companylogo.jpg"
+                            alt="Company Logo"
+                            className="footer__logo-img"
+                        />
+                        <span className="footer__logo-text">
+                            <span className="footer__logo-accent">UT</span>
+                        </span>
+                    </a>
 
                     <p className="footer__brand-desc">
                         A full-service digital agency delivering innovative web, IT, and
@@ -124,19 +124,19 @@ export default function Footer() {
             </div>
 
             {/* ── Bottom bar ── */}
-          <div className="footer__bottom">
-  <div className="footer__bottom-inner">
-    
-    <p className="footer__copy">
-      &copy; {year} <span className="footer__copy-brand">UT</span>. All rights reserved.
-    </p>
+            <div className="footer__bottom">
+                <div className="footer__bottom-inner">
 
-    <p className="footer__made">
-      Made with <Heart size={13} className="footer__heart" fill="currentColor" /> by the UT Team
-    </p>
+                    <p className="footer__copy">
+                        &copy; {year} <span className="footer__copy-brand">UT</span>. All rights reserved.
+                    </p>
 
-  </div>
-</div>
+                    <p className="footer__made">
+                        Made with <Heart size={13} className="footer__heart" fill="currentColor" /> by the UT Team
+                    </p>
+
+                </div>
+            </div>
         </footer>
     );
 }

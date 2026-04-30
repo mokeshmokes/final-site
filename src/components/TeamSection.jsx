@@ -1,6 +1,11 @@
 import React, { useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
 import { motion, useInView } from "framer-motion";
 import { FaXTwitter, FaLinkedinIn, FaInstagram, FaGithub } from "react-icons/fa6";
+
+import "swiper/css";
+import "swiper/css/pagination";
 import "./TeamSection.css";
 
 const TEAM = [
@@ -45,14 +50,6 @@ const TEAM = [
     },
 ];
 
-const cardVariants = {
-    hidden: { opacity: 0, y: 60 },
-    visible: (i) => ({
-        opacity: 1, y: 0,
-        transition: { duration: 0.7, delay: i * 0.15, ease: [0.22, 1, 0.36, 1] },
-    }),
-};
-
 const headingVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: (i) => ({
@@ -61,21 +58,9 @@ const headingVariants = {
     }),
 };
 
-function TeamCard({ name, role, desc, image, color, rgb, socials, index }) {
-    const ref = useRef(null);
-    const inView = useInView(ref, { once: true, margin: "-60px" });
-
+function TeamCard({ name, role, desc, image, color, rgb, socials }) {
     return (
-        <motion.div
-            ref={ref}
-            className="team-card"
-            style={{ "--tc-color": color, "--tc-rgb": rgb }}
-            variants={cardVariants}
-            custom={index}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            whileHover={{ y: -10, transition: { duration: 0.3, ease: "easeOut" } }}
-        >
+        <div className="team-card" style={{ "--tc-color": color, "--tc-rgb": rgb }}>
             {/* Image */}
             <div className="team-card__img-wrap">
                 <img src={image} alt={name} className="team-card__img" />
@@ -108,17 +93,16 @@ function TeamCard({ name, role, desc, image, color, rgb, socials, index }) {
 
             {/* Bottom accent */}
             <div className="team-card__accent" />
-        </motion.div>
+        </div>
     );
 }
 
 export default function TeamSection() {
-    const sectionRef = useRef(null);
     const headingRef = useRef(null);
     const headingView = useInView(headingRef, { once: true, margin: "-80px" });
 
     return (
-        <section className="team" id="team" ref={sectionRef}>
+        <section className="team" id="team">
             <div className="team__bg-orb team__bg-orb--1" />
             <div className="team__bg-orb team__bg-orb--2" />
 
@@ -159,12 +143,36 @@ export default function TeamSection() {
                     />
                 </div>
 
-                {/* Cards */}
-                <div className="team__grid">
-                    {TEAM.map((member, i) => (
-                        <TeamCard key={member.name} {...member} index={i} />
+                {/*
+         * Swiper carousel
+         * — pagination is managed internally (no external el selector)
+         *   so the instance always initialises correctly
+         * — pauseOnMouseEnter pauses autoplay when hovering any card
+         */}
+                <Swiper
+                    modules={[Autoplay, Pagination]}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
+                    }}
+                    pagination={{ clickable: true }}
+                    loop
+                    speed={700}
+                    spaceBetween={24}
+                    breakpoints={{
+                        0: { slidesPerView: 1, spaceBetween: 16 },
+                        768: { slidesPerView: 2, spaceBetween: 24 },
+                        1024: { slidesPerView: 3, spaceBetween: 24 },
+                    }}
+                    className="team__swiper"
+                >
+                    {TEAM.map((member) => (
+                        <SwiperSlide key={member.name}>
+                            <TeamCard {...member} />
+                        </SwiperSlide>
                     ))}
-                </div>
+                </Swiper>
             </div>
         </section>
     );

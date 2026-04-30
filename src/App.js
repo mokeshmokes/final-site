@@ -3,16 +3,17 @@ import Navbar from "./components/Navbar";
 import HeroSlider from "./components/HeroSlider";
 import AboutSection from "./components/AboutSection";
 import ServicesSection from "./components/ServicesSection";
-import ITServicesSection from "./components/ITServicesSection";
-import ProductsSection from "./components/ProductsSection";
 import StatsSection from "./components/StatsSection";
 import TeamSection from "./components/TeamSection";
 import SkillSection from "./components/SkillSection";
 import PartnersSection from "./components/PartnersSection";
 import ShowcaseSection from "./components/ShowcaseSection";
+import ITServicesSection from "./components/ITServicesSection";
+import ProductsSection from "./components/ProductsSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import ContactBar from "./components/ContactBar";
 import ContactSection from "./components/ContactSection";
+import PaymentSection from "./components/PaymentSection";
 import Footer from "./components/Footer";
 import TawkChat from "./components/TawkChat";
 import "./App.css";
@@ -20,44 +21,55 @@ import "./App.css";
 function App() {
   return (
     <div className="app">
+      {/* 1 — Navbar */}
       <Navbar />
+
       <main>
-        {/* Task 1 — Hero */}
+        {/* 2 — Hero Slider */}
         <HeroSlider />
 
-        {/* Task 2 — About + Services */}
+        {/* 3 — About Section */}
         <AboutSection />
+
+        {/* 4 — What Jusco Do (Services cards) */}
         <ServicesSection />
 
-        {/* Task 8 — IT Services + Products */}
-        <ITServicesSection />
-        <ProductsSection />
-
-        {/* Task 3 — Stats / Counters */}
+        {/* 5 — Numbers That Speak (Counter section) */}
         <StatsSection />
 
-        {/* Task 4 — Team + Skills */}
+        {/* 6 — Team of Experts (slider) */}
         <TeamSection />
+
+        {/* 7 — Evolution & Growth (Skills / progress bars) */}
         <SkillSection />
 
-        {/* Task 5 — Partners Logo Slider */}
+        {/* 8 — Trusted by Industry Leaders (Company logos slider) */}
         <PartnersSection />
 
-        {/* Task 6 — Showcase Slider + Tabs */}
+        {/* 9 — Services Slideshow Section */}
         <ShowcaseSection />
 
-        {/* Task 7 — Testimonials + Contact Info Bar */}
-        <TestimonialsSection />
-        <ContactBar />
+        {/* 10 — Our Products */}
+        <ProductsSection />
 
-        {/* Task 9 — Contact Form */}
+        {/* 11 — Professional IT Services */}
+        <ITServicesSection />
+
+        {/* 12 — Client Reviews (Testimonials) */}
+        <TestimonialsSection />
+
+        {/* 13 — Contact Section */}
+        <ContactBar />
         <ContactSection />
+
+        {/* 14 — Mode of Payment */}
+        <PaymentSection />
       </main>
 
-      {/* Task 9 — Footer */}
+      {/* 15 — Footer */}
       <Footer />
 
-      {/* Live Chat — Tawk.to (renders nothing, injects widget script) */}
+      {/* Live Chat — renders nothing, injects Tawk.to widget */}
       <TawkChat />
     </div>
   );

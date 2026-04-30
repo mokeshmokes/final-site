@@ -1,15 +1,15 @@
-import React, { useState, useCallback } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation, EffectFade } from "swiper/modules";
+import { EffectCube, Autoplay, Pagination, Navigation } from "swiper/modules";
 import { ArrowRight, Play, ChevronDown } from "lucide-react";
 
 import "swiper/css";
+import "swiper/css/effect-cube";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "swiper/css/effect-fade";
 import "./HeroSlider.css";
 
-/* ─── Slide data ─── */
+/* ─── Slide data (unchanged) ─── */
 const SLIDES = [
   {
     image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1600&q=80",
@@ -57,7 +57,7 @@ const SLIDES = [
   },
 ];
 
-/* ─── Stat counter ─── */
+/* ─── Stat counter (unchanged) ─── */
 const STATS = [
   { value: "500+", label: "Projects Delivered" },
   { value: "98%", label: "Client Satisfaction" },
@@ -66,30 +66,26 @@ const STATS = [
 ];
 
 export default function HeroSlider() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
-
-  const handleSlideChange = useCallback((swiper) => {
-    setIsAnimating(true);
-    setActiveIndex(swiper.realIndex);
-    setTimeout(() => setIsAnimating(false), 600);
-  }, []);
-
   return (
     <section className="hero" id="home">
       <Swiper
-        modules={[Autoplay, Pagination, Navigation, EffectFade]}
-        effect="fade"
-        fadeEffect={{ crossFade: true }}
-        autoplay={{ delay: 5500, disableOnInteraction: false }}
+        modules={[EffectCube, Autoplay, Pagination, Navigation]}
+        effect="cube"
+        grabCursor={false}
+        cubeEffect={{
+          shadow: true,
+          slideShadows: true,
+          shadowOffset: 20,
+          shadowScale: 0.94,
+        }}
+        autoplay={{ delay: 4000, disableOnInteraction: false }}
         pagination={{ clickable: true, el: ".hero__dots" }}
         navigation={{
           nextEl: ".hero__arrow--next",
           prevEl: ".hero__arrow--prev",
         }}
         loop
-        speed={900}
-        onSlideChange={handleSlideChange}
+        speed={800}
         className="hero__swiper"
       >
         {SLIDES.map((slide, i) => (
@@ -103,61 +99,58 @@ export default function HeroSlider() {
             <div className="hero__overlay" style={{ background: slide.gradient }} />
             {/* Noise texture */}
             <div className="hero__noise" />
+
+            {/* ── Slide content (inside each slide for cube effect) ── */}
+            <div className="hero__content hero__content--enter">
+              <div className="hero__content-inner">
+
+                {/* Tag */}
+                <div className="hero__tag">
+                  <span className="hero__tag-dot" />
+                  {slide.tag}
+                </div>
+
+                {/* Heading */}
+                <h1 className="hero__heading">
+                  {slide.title}
+                  <br />
+                  <span className="hero__heading-accent">{slide.titleAccent}</span>
+                </h1>
+
+                {/* Description */}
+                <p className="hero__description">{slide.description}</p>
+
+                {/* CTA buttons */}
+                <div className="hero__ctas">
+                  <button className="hero__btn hero__btn--primary">
+                    {slide.cta}
+                    <ArrowRight size={18} className="hero__btn-icon" />
+                  </button>
+                  <button className="hero__btn hero__btn--ghost">
+                    <span className="hero__play-ring">
+                      <Play size={14} fill="currentColor" />
+                    </span>
+                    {slide.ctaSecondary}
+                  </button>
+                </div>
+
+                {/* Stats row */}
+                <div className="hero__stats">
+                  {STATS.map((stat, j) => (
+                    <div key={j} className="hero__stat">
+                      <span className="hero__stat-value">{stat.value}</span>
+                      <span className="hero__stat-label">{stat.label}</span>
+                    </div>
+                  ))}
+                </div>
+
+              </div>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
 
-      {/* ── Content (outside Swiper so it animates independently) ── */}
-      <div className={`hero__content ${isAnimating ? "hero__content--exit" : "hero__content--enter"}`}>
-        <div className="hero__content-inner">
-
-          {/* Tag */}
-          <div className="hero__tag">
-            <span className="hero__tag-dot" />
-            {SLIDES[activeIndex].tag}
-          </div>
-
-          {/* Heading */}
-          <h1 className="hero__heading">
-            {SLIDES[activeIndex].title}
-            <br />
-            <span className="hero__heading-accent">
-              {SLIDES[activeIndex].titleAccent}
-            </span>
-          </h1>
-
-          {/* Description */}
-          <p className="hero__description">
-            {SLIDES[activeIndex].description}
-          </p>
-
-          {/* CTA buttons */}
-          <div className="hero__ctas">
-            <button className="hero__btn hero__btn--primary">
-              {SLIDES[activeIndex].cta}
-              <ArrowRight size={18} className="hero__btn-icon" />
-            </button>
-            <button className="hero__btn hero__btn--ghost">
-              <span className="hero__play-ring">
-                <Play size={14} fill="currentColor" />
-              </span>
-              {SLIDES[activeIndex].ctaSecondary}
-            </button>
-          </div>
-
-          {/* Stats row */}
-          <div className="hero__stats">
-            {STATS.map((stat, i) => (
-              <div key={i} className="hero__stat">
-                <span className="hero__stat-value">{stat.value}</span>
-                <span className="hero__stat-label">{stat.label}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* ── Custom navigation arrows ── */}
+      {/* ── Custom navigation arrows (outside Swiper, z-index above cube) ── */}
       <button className="hero__arrow hero__arrow--prev" aria-label="Previous slide">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
           <polyline points="15 18 9 12 15 6" />
@@ -172,19 +165,8 @@ export default function HeroSlider() {
       {/* ── Pagination dots ── */}
       <div className="hero__dots" />
 
-      {/* ── Slide counter ── */}
-      <div className="hero__counter">
-        <span className="hero__counter-current">
-          {String(activeIndex + 1).padStart(2, "0")}
-        </span>
-        <span className="hero__counter-sep" />
-        <span className="hero__counter-total">
-          {String(SLIDES.length).padStart(2, "0")}
-        </span>
-      </div>
-
       {/* ── Scroll indicator ── */}
-      <a href="#about-us" className="hero__scroll" aria-label="Scroll down">
+      <a href="#intro" className="hero__scroll" aria-label="Scroll down">
         <span className="hero__scroll-text">Scroll</span>
         <span className="hero__scroll-line">
           <ChevronDown size={16} className="hero__scroll-chevron" />

@@ -23,18 +23,6 @@
     inset: 0;
     background-size: cover;
     background-position: center;
-    transform: scale(1.06);
-    animation: kenBurns 6s ease-out forwards;
-}
-
-@keyframes kenBurns {
-    from {
-        transform: scale(1.06);
-    }
-
-    to {
-        transform: scale(1.0);
-    }
 }
 
 /* ── Overlays ── */
@@ -55,7 +43,7 @@
     pointer-events: none;
 }
 
-/* ── Content layer ── */
+/* ── Content layer (inside each slide for cube effect) ── */
 .hero__content {
     position: absolute;
     inset: 0;
@@ -64,7 +52,6 @@
     align-items: center;
     padding: 0 6vw;
     padding-top: 72px;
-    /* navbar height */
     pointer-events: none;
 }
 
@@ -73,7 +60,7 @@
     pointer-events: all;
 }
 
-/* Content animation states */
+/* Fade-in animation for content on each slide */
 .hero__content--enter .hero__tag,
 .hero__content--enter .hero__heading,
 .hero__content--enter .hero__description,
@@ -98,14 +85,6 @@
     animation-delay: 0.32s;
 }
 
-.hero__content--exit .hero__tag,
-.hero__content--exit .hero__heading,
-.hero__content--exit .hero__description,
-.hero__content--exit .hero__ctas,
-.hero__content--exit .hero__stats {
-    animation: slideDown 0.3s ease both;
-}
-
 @keyframes slideUp {
     from {
         opacity: 0;
@@ -115,18 +94,6 @@
     to {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-@keyframes slideDown {
-    from {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    to {
-        opacity: 0;
-        transform: translateY(-15px);
     }
 }
 
@@ -544,4 +511,25 @@
     .hero__orb--2 {
         opacity: 0.1;
     }
+}
+
+/* ── Swiper cube effect overrides ── */
+
+/* Each slide must be a positioned container */
+.hero__swiper .swiper-slide {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Cube shadow rendered by Swiper — keep it subtle */
+.hero__swiper .swiper-cube-shadow {
+    opacity: 0.25 !important;
+}
+
+/* Arrows and dots must sit above the cube z-stack */
+.hero__arrow,
+.hero__dots,
+.hero__scroll,
+.hero__orb {
+    z-index: 30;
 }

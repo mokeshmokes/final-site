@@ -5,7 +5,7 @@ import {
     useScroll,
     useTransform,
 } from "framer-motion";
-import { CheckCircle2, Award, Users, TrendingUp } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import "./AboutSection.css";
 
 /* ─── Progress bar data ─── */
@@ -16,13 +16,6 @@ const SKILLS = [
     { label: "E-Commerce", pct: 70, color: "#059669" },
     { label: "Marketing", pct: 90, color: "#d97706" },
     { label: "Branding", pct: 90, color: "#e11d48" },
-];
-
-/* ─── Stats ─── */
-const STATS = [
-    { icon: Award, value: "12+", label: "Years Experience" },
-    { icon: Users, value: "500+", label: "Happy Clients" },
-    { icon: TrendingUp, value: "98%", label: "Success Rate" },
 ];
 
 /* ─── Highlights ─── */
@@ -133,43 +126,13 @@ export default function AboutSection() {
                     animate={inView ? "visible" : "hidden"}
                 >
                     <div className="about__image-wrap">
-                        {/* Decorative frame */}
-                        <div className="about__image-frame" />
-
-                        {/* Parallax image */}
+                        {/* Parallax image — clean, no overlays */}
                         <motion.div className="about__image-inner" style={{ y: imgY }}>
                             <img
-                                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=700&q=80"
+                                src="https://theme-crazy.com/themeforest-html/jusco-preview/jusco/img/about-us/1.jpg"
                                 alt="JUSCO professional"
                                 className="about__img"
                             />
-                        </motion.div>
-
-                        {/* Floating badge */}
-                        <motion.div
-                            className="about__badge"
-                            initial={{ opacity: 0, scale: 0.7 }}
-                            animate={inView ? { opacity: 1, scale: 1 } : {}}
-                            transition={{ delay: 0.55, duration: 0.5, ease: [0.34, 1.56, 0.64, 1] }}
-                        >
-                            <span className="about__badge-value">12+</span>
-                            <span className="about__badge-label">Years of<br />Excellence</span>
-                        </motion.div>
-
-                        {/* Stats strip */}
-                        <motion.div
-                            className="about__stats-strip"
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={inView ? { opacity: 1, y: 0 } : {}}
-                            transition={{ delay: 0.65, duration: 0.55 }}
-                        >
-                            {STATS.map(({ icon: Icon, value, label }, i) => (
-                                <div key={i} className="about__stat">
-                                    <Icon size={18} className="about__stat-icon" />
-                                    <span className="about__stat-value">{value}</span>
-                                    <span className="about__stat-label">{label}</span>
-                                </div>
-                            ))}
                         </motion.div>
                     </div>
                 </motion.div>

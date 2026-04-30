@@ -1,8 +1,11 @@
 .app {
   min-height: 100vh;
-  background: #0a0a0a;
+  background: #F8FAFC;
+  overflow-x: hidden;
+  /* contain any component that overflows horizontally */
 }
 
 main {
   position: relative;
+  overflow-x: hidden;
 }

@@ -4,7 +4,7 @@
 
 .products {
     position: relative;
-    background: #0d0d12;
+    background: #ffffff;
     padding: 100px 0 110px;
     overflow: hidden;
 }
@@ -62,7 +62,7 @@
     background: rgba(var(--theme-rgb), 0.12);
     border: 1px solid rgba(var(--theme-rgb), 0.3);
     border-radius: 100px;
-    color: rgba(255, 255, 255, 0.85);
+    color: #64748B;
     font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 1.5px;
@@ -97,7 +97,7 @@
 .products__heading {
     font-size: clamp(2.2rem, 4vw, 3.2rem);
     font-weight: 800;
-    color: #fff;
+    color: #1E293B;
     letter-spacing: -1.5px;
     line-height: 1.1;
     margin-bottom: 1.25rem;
@@ -128,7 +128,7 @@
 .products__top-desc {
     font-size: 0.92rem;
     line-height: 1.8;
-    color: rgba(255, 255, 255, 0.48);
+    color: #64748B;
 }
 
 /* Grid */
@@ -141,8 +141,8 @@
 /* Card */
 .prod-card {
     position: relative;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.07);
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
     border-radius: 18px;
     padding: 2rem 1.5rem 1.5rem;
     text-align: center;
@@ -157,7 +157,7 @@
 
 .prod-card:hover {
     border-color: rgba(var(--pc-rgb), 0.35);
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(var(--pc-rgb), 0.12);
+    box-shadow: 0 16px 48px rgba(37, 99, 235, 0.1), 0 0 0 1px rgba(var(--pc-rgb), 0.12);
 }
 
 /* Icon */
@@ -233,7 +233,7 @@
 .prod-card__title {
     font-size: 0.95rem;
     font-weight: 700;
-    color: #fff;
+    color: #1E293B;
     margin-bottom: 0.6rem;
     letter-spacing: -0.2px;
     line-height: 1.3;
@@ -243,14 +243,14 @@
 .prod-card__desc {
     font-size: 0.8rem;
     line-height: 1.7;
-    color: rgba(255, 255, 255, 0.4);
+    color: #64748B;
     flex: 1;
     margin-bottom: 1.25rem;
     transition: color 0.3s;
 }
 
 .prod-card:hover .prod-card__desc {
-    color: rgba(255, 255, 255, 0.6);
+    color: #475569;
 }
 
 /* Bottom color bar */

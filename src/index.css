@@ -17,20 +17,29 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  /* prevent any section overflow creating a right-side gap */
 }
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #0a0a0a;
+  background: #F8FAFC;
+  color: #1E293B;
   overflow-x: hidden;
 }
 
 /* ─── Swiper overrides ─── */
-.swiper {
+/* height: 100% only for the hero slider — NOT applied globally */
+.hero__swiper.swiper {
   width: 100%;
   height: 100%;
+}
+
+/* All other Swiper instances use auto height */
+.swiper {
+  width: 100%;
 }
 
 .swiper-button-next,
@@ -73,16 +82,29 @@ body {
   border-radius: 5px !important;
 }
 
-/* ─── Scrollbar ─── */
+/* ─── Custom scrollbar ─── */
+
+/* Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #2563eb transparent;
+}
+
+/* Chrome / Edge / Safari */
 ::-webkit-scrollbar {
   width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #111;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--theme-color);
-  border-radius: 3px;
+  background: linear-gradient(180deg, #2563eb, #7c3aed);
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #1d4ed8, #6d28d9);
 }

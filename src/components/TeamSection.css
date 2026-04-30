@@ -4,9 +4,10 @@
 
 .team {
     position: relative;
-    background: #080810;
-    padding: 110px 0 100px;
+    background: #ffffff;
+    padding: 110px 0 120px;
     overflow: hidden;
+    /* restored — orbs were bleeding right causing scrollbar gap */
 }
 
 .team__bg-orb {
@@ -53,7 +54,7 @@
     background: rgba(var(--theme-rgb), 0.12);
     border: 1px solid rgba(var(--theme-rgb), 0.3);
     border-radius: 100px;
-    color: rgba(255, 255, 255, 0.85);
+    color: #64748B;
     font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.8px;
@@ -87,7 +88,7 @@
 .team__heading {
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 800;
-    color: #fff;
+    color: #1E293B;
     letter-spacing: -1.5px;
     line-height: 1.1;
     margin-bottom: 1rem;
@@ -102,7 +103,7 @@
 
 .team__subheading {
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.45);
+    color: #64748B;
     max-width: 520px;
     margin: 0 auto 1.5rem;
     line-height: 1.75;
@@ -127,8 +128,8 @@
 /* Card */
 .team-card {
     position: relative;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.07);
+    background: #ffffff;
+    border: 1px solid #E2E8F0;
     border-radius: 22px;
     overflow: hidden;
     cursor: default;
@@ -137,7 +138,7 @@
 
 .team-card:hover {
     border-color: rgba(var(--tc-rgb), 0.3);
-    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(var(--tc-rgb), 0.12);
+    box-shadow: 0 24px 60px rgba(37, 99, 235, 0.1), 0 0 0 1px rgba(var(--tc-rgb), 0.12);
 }
 
 /* Image */
@@ -233,7 +234,7 @@
 .team-card__name {
     font-size: 1.1rem;
     font-weight: 700;
-    color: #fff;
+    color: #1E293B;
     margin-bottom: 0.5rem;
     letter-spacing: -0.3px;
 }
@@ -241,12 +242,12 @@
 .team-card__desc {
     font-size: 0.83rem;
     line-height: 1.7;
-    color: rgba(255, 255, 255, 0.45);
+    color: #64748B;
     transition: color 0.3s ease;
 }
 
 .team-card:hover .team-card__desc {
-    color: rgba(255, 255, 255, 0.6);
+    color: #475569;
 }
 
 /* Bottom accent */
@@ -286,4 +287,49 @@
     .team__container {
         padding: 0 1rem;
     }
+}
+
+/* ── Swiper carousel overrides ── */
+.team__swiper {
+    width: 100%;
+    height: auto !important;
+    /* override global height: 100% */
+    padding-bottom: 3.5rem !important;
+    /* room for pagination dots */
+    overflow: visible !important;
+    /* allow dots to render below slides */
+}
+
+.team__swiper .swiper-wrapper {
+    align-items: stretch;
+    /* equal-height slides */
+}
+
+.team__swiper .swiper-slide {
+    height: auto;
+}
+
+.team__swiper .team-card {
+    height: 100%;
+}
+
+/* Pagination dots */
+.team__swiper .swiper-pagination {
+    bottom: 0 !important;
+    position: relative !important;
+    margin-top: 1.5rem;
+}
+
+.team__swiper .swiper-pagination-bullet {
+    width: 10px !important;
+    height: 10px !important;
+    background: #CBD5E1 !important;
+    opacity: 1 !important;
+    transition: all 0.3s ease !important;
+}
+
+.team__swiper .swiper-pagination-bullet-active {
+    background: var(--theme-color) !important;
+    width: 28px !important;
+    border-radius: 5px !important;
 }

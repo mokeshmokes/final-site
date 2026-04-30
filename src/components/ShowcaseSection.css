@@ -4,7 +4,7 @@
 
 .showcase {
     position: relative;
-    background: #080810;
+    background: #1E293B;
 }
 
 /* ── Slider ── */
@@ -172,7 +172,7 @@
     justify-content: center;
     margin-top: -1px;
     padding: 0 2rem;
-    background: #080810;
+    background: #1E293B;
 }
 
 .showcase__tabs {

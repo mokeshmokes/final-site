@@ -4,7 +4,7 @@
 
 .skill-sec {
     position: relative;
-    background: #0d0d12;
+    background: #F8FAFC;
     padding: 110px 0 100px;
     overflow: hidden;
 }
@@ -52,7 +52,7 @@
     background: rgba(var(--theme-rgb), 0.12);
     border: 1px solid rgba(var(--theme-rgb), 0.3);
     border-radius: 100px;
-    color: rgba(255, 255, 255, 0.85);
+    color: #64748B;
     font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.8px;
@@ -87,7 +87,7 @@
 .skill-sec__heading {
     font-size: clamp(1.9rem, 3.2vw, 2.7rem);
     font-weight: 800;
-    color: #fff;
+    color: #1E293B;
     letter-spacing: -1px;
     line-height: 1.15;
     margin-bottom: 0.6rem;
@@ -103,7 +103,7 @@
 .skill-sec__sub-title {
     font-size: 1rem;
     font-weight: 600;
-    color: rgba(255, 255, 255, 0.6);
+    color: #475569;
     margin-bottom: 1.25rem;
     letter-spacing: -0.2px;
 }
@@ -111,7 +111,7 @@
 .skill-sec__desc {
     font-size: 0.9rem;
     line-height: 1.8;
-    color: rgba(255, 255, 255, 0.45);
+    color: #64748B;
     margin-bottom: 1rem;
 }
 
@@ -124,12 +124,12 @@
 
 .skill-sec__pill {
     padding: 0.3rem 0.85rem;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #F1F5F9;
+    border: 1px solid #E2E8F0;
     border-radius: 100px;
     font-size: 0.75rem;
     font-weight: 600;
-    color: rgba(255, 255, 255, 0.6);
+    color: #64748B;
     transition: background 0.25s, color 0.25s, border-color 0.25s;
 }
 
@@ -181,18 +181,18 @@
 .sk-bar__label {
     font-size: 0.88rem;
     font-weight: 600;
-    color: rgba(255, 255, 255, 0.8);
+    color: #334155;
 }
 
 .sk-bar__pct {
     font-size: 0.82rem;
     font-weight: 700;
-    color: rgba(255, 255, 255, 0.5);
+    color: #64748B;
 }
 
 .sk-bar__track {
     height: 8px;
-    background: rgba(255, 255, 255, 0.07);
+    background: #E2E8F0;
     border-radius: 100px;
     overflow: hidden;
 }
@@ -239,8 +239,8 @@
     align-items: center;
     gap: 1rem;
     padding: 1.25rem 1.5rem;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #ffffff;
+    border: 1px solid #E2E8F0;
     border-radius: 16px;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -266,13 +266,13 @@
 .skill-sec__card-title {
     font-size: 0.95rem;
     font-weight: 700;
-    color: #fff;
+    color: #1E293B;
     margin-bottom: 0.2rem;
 }
 
 .skill-sec__card-sub {
     font-size: 0.78rem;
-    color: rgba(255, 255, 255, 0.4);
+    color: #94A3B8;
 }
 
 /* Responsive */

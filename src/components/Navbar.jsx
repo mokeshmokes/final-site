@@ -9,17 +9,18 @@ import {
   Menu,
   ChevronDown,
 } from "lucide-react";
+import { FaFacebookF, FaXTwitter, FaInstagram } from "react-icons/fa6";
 import "./Navbar.css";
 
 /* ─── Theme definitions ─── */
 const THEMES = [
-  { id: "blue", label: "Royal Blue", color: "#2563eb", rgb: "37,99,235", dark: "#1d4ed8" },
-  { id: "violet", label: "Deep Violet", color: "#7c3aed", rgb: "124,58,237", dark: "#6d28d9" },
-  { id: "rose", label: "Rose Red", color: "#e11d48", rgb: "225,29,72", dark: "#be123c" },
-  { id: "emerald", label: "Emerald", color: "#059669", rgb: "5,150,105", dark: "#047857" },
-  { id: "amber", label: "Amber Gold", color: "#d97706", rgb: "217,119,6", dark: "#b45309" },
-  { id: "cyan", label: "Cyan Tech", color: "#0891b2", rgb: "8,145,178", dark: "#0e7490" },
-  { id: "slate", label: "Slate Dark", color: "#334155", rgb: "51,65,85", dark: "#1e293b" },
+  { id: "blue", label: "Royal Blue", color: "#2563EB", rgb: "37,99,235", dark: "#1D4ED8" },
+  { id: "cyan", label: "Cyan", color: "#06B6D4", rgb: "6,182,212", dark: "#0891B2" },
+  { id: "teal", label: "Teal", color: "#0EA5E9", rgb: "14,165,233", dark: "#0284C7" },
+  { id: "violet", label: "Violet", color: "#7C3AED", rgb: "124,58,237", dark: "#6D28D9" },
+  { id: "amber", label: "Amber", color: "#F59E0B", rgb: "245,158,11", dark: "#D97706" },
+  { id: "yellow", label: "Yellow", color: "#FFD700", rgb: "255,215,0", dark: "#D4AF00" },
+  { id: "green", label: "Green", color: "#22C55E", rgb: "34,197,94", dark: "#16A34A" },
 ];
 
 /* ─── Nav link → section ID map ─── */
@@ -66,10 +67,22 @@ export default function Navbar() {
     applyTheme(activeTheme);
   }, []); // eslint-disable-line
 
-  /* Scroll listener */
+  /* Scroll listener — navbar scrolled state + active link detection */
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", onScroll);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 20);
+
+      // Determine which section is currently in view
+      const offset = 100; // px below navbar to trigger active
+      for (let i = NAV_LINKS.length - 1; i >= 0; i--) {
+        const el = document.getElementById(NAV_LINKS[i].id);
+        if (el && el.getBoundingClientRect().top <= offset) {
+          setActiveLink(NAV_LINKS[i].label);
+          break;
+        }
+      }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -129,10 +142,10 @@ export default function Navbar() {
         {/* ── Right icons ── */}
         <div className="navbar__actions">
           {/* Contact / utility icons */}
-          <a href="mailto:info@corpx.com" className="navbar__icon-btn" title="Email us">
+          <a href="mailto:info@jusco.com" className="navbar__icon-btn" title="Email us">
             <Mail size={18} />
           </a>
-          <a href="tel:+1234567890" className="navbar__icon-btn" title="Call us">
+          <a href="tel:+919944494299" className="navbar__icon-btn" title="Call us">
             <Phone size={18} />
           </a>
           <button
@@ -144,6 +157,42 @@ export default function Navbar() {
             <Globe size={18} />
           </button>
 
+          {/* ── Social icons ── */}
+          <span className="navbar__divider" aria-hidden="true" />
+          <div className="navbar__socials">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="navbar__icon-btn navbar__social-btn"
+              title="Facebook"
+              aria-label="Facebook"
+            >
+              <FaFacebookF style={{ fontSize: "16px" }} />
+            </a>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="navbar__icon-btn navbar__social-btn"
+              title="Twitter / X"
+              aria-label="Twitter / X"
+            >
+              <FaXTwitter style={{ fontSize: "16px" }} />
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="navbar__icon-btn navbar__social-btn"
+              title="Instagram"
+              aria-label="Instagram"
+            >
+              <FaInstagram style={{ fontSize: "16px" }} />
+            </a>
+          </div>
+          <span className="navbar__divider" aria-hidden="true" />
+
           {/* Settings trigger */}
           <div className="navbar__settings-wrap" ref={settingsRef}>
             <button
@@ -152,7 +201,7 @@ export default function Navbar() {
               title="Theme settings"
               aria-label="Open theme settings"
             >
-              <Settings size={18} className={showSettings ? "spin" : ""} />
+              <Settings size={18} className="settings-icon" />
             </button>
 
             {/* Settings panel */}

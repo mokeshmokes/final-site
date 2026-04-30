@@ -32,7 +32,7 @@
 .partners__heading {
     font-size: clamp(1.1rem, 2.2vw, 1.5rem);
     font-weight: 800;
-    color: #111827;
+    color: #1E293B;
     line-height: 1.35;
     letter-spacing: -0.3px;
     margin-bottom: 1.25rem;
@@ -143,30 +143,54 @@
     justify-content: center;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
+    background: #ffffff;
+    border: 1px solid #E2E8F0;
+    padding: 12px;
 }
 
 .partner-logo:hover .partner-logo__inner {
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
 }
 
-.partner-logo__letter {
-    font-size: 1.5rem;
+/* Real logo image */
+.partner-logo__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    filter: grayscale(30%);
+    transition: filter 0.3s ease;
+}
+
+.partner-logo:hover .partner-logo__img {
+    filter: grayscale(0%);
+}
+
+/* Fallback pill (shown only if image fails to load) */
+.partner-logo__initial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+    font-size: 1rem;
     font-weight: 900;
     color: #fff;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
     font-family: 'Inter', sans-serif;
 }
 
 .partner-logo__name {
     font-size: 0.75rem;
     font-weight: 600;
-    color: #6b7280;
+    color: #64748B;
     letter-spacing: 0.3px;
     transition: color 0.25s ease;
 }
 
 .partner-logo:hover .partner-logo__name {
-    color: #111827;
+    color: #1E293B;
 }
 
 /* Responsive */

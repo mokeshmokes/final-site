@@ -1,33 +1,101 @@
-import React from "react";
+import React, { useState } from "react";
 import "./PartnersSection.css";
 
+/*
+ * Primary:  Wikipedia SVG logos — unique per company, no hotlink block,
+ *           public domain / freely licensed.
+ * Fallback: Simple text initial rendered via CSS when both fail.
+ *
+ * Each entry has a completely different URL — no duplicates.
+ */
 const LOGOS = [
-    { name: "Dell", bg: "#007DB8", letter: "D" },
-    { name: "Samsung", bg: "#1428A0", letter: "S" },
-    { name: "HP", bg: "#0096D6", letter: "HP" },
-    { name: "Lenovo", bg: "#E2231A", letter: "L" },
-    { name: "Intel", bg: "#0071C5", letter: "i" },
-    { name: "AMD", bg: "#ED1C24", letter: "A" },
-    { name: "Wipro", bg: "#341F6A", letter: "W" },
-    { name: "IBM", bg: "#1F70C1", letter: "IBM" },
-    { name: "Acer", bg: "#83B81A", letter: "Ac" },
-    { name: "Apple", bg: "#555555", letter: "" },
+    {
+        name: "Dell",
+        img: "https://upload.wikimedia.org/wikipedia/commons/4/48/Dell_Logo.svg",
+        initial: "D",
+        color: "#007DB8",
+    },
+    {
+        name: "Samsung",
+        img: "https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg",
+        initial: "S",
+        color: "#1428A0",
+    },
+    {
+        name: "HP",
+        img: "https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg",
+        initial: "HP",
+        color: "#0096D6",
+    },
+    {
+        name: "Lenovo",
+        img: "https://upload.wikimedia.org/wikipedia/commons/b/b8/Lenovo_logo_2015.svg",
+        initial: "L",
+        color: "#E2231A",
+    },
+    {
+        name: "Intel",
+        img: "https://upload.wikimedia.org/wikipedia/commons/7/7d/Intel_logo_%282006-2020%29.svg",
+        initial: "i",
+        color: "#0071C5",
+    },
+    {
+        name: "AMD",
+        img: "https://upload.wikimedia.org/wikipedia/commons/7/7c/AMD_Logo.svg",
+        initial: "A",
+        color: "#ED1C24",
+    },
+    {
+        name: "Wipro",
+        img: "https://upload.wikimedia.org/wikipedia/commons/a/a0/Wipro_Primary_Logo_Color_RGB.svg",
+        initial: "W",
+        color: "#341F6A",
+    },
+    {
+        name: "IBM",
+        img: "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg",
+        initial: "IBM",
+        color: "#1F70C1",
+    },
+    {
+        name: "Acer",
+        img: "https://upload.wikimedia.org/wikipedia/commons/0/00/Acer_2011.svg",
+        initial: "Ac",
+        color: "#83B81A",
+    },
+    {
+        name: "Apple",
+        img: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
+        initial: "🍎",
+        color: "#555555",
+    },
 ];
 
-/* Duplicate for seamless infinite loop */
+/* Duplicate for seamless infinite CSS marquee loop */
 const TRACK = [...LOGOS, ...LOGOS];
 
-function LogoItem({ name, bg, letter }) {
+function LogoItem({ name, img, initial, color }) {
+    const [failed, setFailed] = useState(false);
+
     return (
         <div className="partner-logo" title={name}>
-            <div className="partner-logo__inner" style={{ background: bg }}>
-                {letter ? (
-                    <span className="partner-logo__letter">{letter}</span>
+            <div className="partner-logo__inner">
+                {failed ? (
+                    /* Unique colored initial shown only when image truly fails */
+                    <span
+                        className="partner-logo__initial"
+                        style={{ background: color }}
+                    >
+                        {initial}
+                    </span>
                 ) : (
-                    /* Apple — simple SVG apple shape */
-                    <svg viewBox="0 0 24 24" width="28" height="28" fill="white">
-                        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
-                    </svg>
+                    <img
+                        src={img}
+                        alt={`${name} logo`}
+                        className="partner-logo__img"
+                        loading="lazy"
+                        onError={() => setFailed(true)}
+                    />
                 )}
             </div>
             <span className="partner-logo__name">{name}</span>
@@ -57,11 +125,8 @@ export default function PartnersSection() {
 
                 {/* Marquee slider */}
                 <div className="partners__track-wrap">
-                    {/* Left fade */}
                     <div className="partners__fade partners__fade--left" />
-                    {/* Right fade */}
                     <div className="partners__fade partners__fade--right" />
-
                     <div className="partners__track">
                         {TRACK.map((logo, i) => (
                             <LogoItem key={`${logo.name}-${i}`} {...logo} />

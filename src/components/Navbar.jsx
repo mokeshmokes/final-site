@@ -135,9 +135,14 @@ export default function Navbar() {
           <a href="tel:+1234567890" className="navbar__icon-btn" title="Call us">
             <Phone size={18} />
           </a>
-          <a href="" className="navbar__icon-btn" title="Global">
+          <button
+            type="button"
+            className="navbar__icon-btn"
+            title="Global"
+            aria-label="Global"
+          >
             <Globe size={18} />
-          </a>
+          </button>
 
           {/* Settings trigger */}
           <div className="navbar__settings-wrap" ref={settingsRef}>
@@ -238,7 +243,7 @@ export default function Navbar() {
         <div className="navbar__mobile-icons">
           <a href="mailto:info@corpx.com" className="navbar__icon-btn" title="Email us"><Mail size={18} /></a>
           <a href="tel:+1234567890" className="navbar__icon-btn" title="Call us"><Phone size={18} /></a>
-          <a href="" className="navbar__icon-btn" title="Global"><Globe size={18} /></a>
+          <button type="button" className="navbar__icon-btn" title="Global" aria-label="Global"><Globe size={18} /></button>
         </div>
       </div>
     </nav>

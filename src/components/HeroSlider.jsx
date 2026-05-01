@@ -23,6 +23,17 @@ const SLIDES = [
     gradient: "linear-gradient(135deg, rgba(10,10,20,0.75) 0%, rgba(10,10,30,0.55) 100%)",
   },
   {
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1600&q=80",
+    tag: "Together We Create",
+    title: "Empowering Teams to",
+    titleAccent: "Build Better",
+    description:
+      "Great ideas become reality when talented people collaborate. Join a workspace where innovation meets execution, and every voice shapes the future.",
+    cta: "Join Our Team",
+    ctaSecondary: "View Projects",
+    gradient: "linear-gradient(135deg, rgba(10,10,20,0.75) 0%, rgba(10,10,30,0.55) 100%)",
+  },
+  {
     image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1600&q=80",
     tag: "World-Class Team",
     title: "Driven by Passion,",

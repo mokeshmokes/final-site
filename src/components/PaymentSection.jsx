@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import { motion, useInView } from "framer-motion";
@@ -24,8 +24,8 @@ const OWNER_IMAGES = [
     { src: "/images/owner3.jpg", alt: "Owner 3" },
     { src: "/images/owner4.jpg", alt: "Owner 4" },
     { src: "/images/owner5.jpg", alt: "Owner 5" },
-    { src: "/images/owner6.jpg", alt: "Owner 6" },
-    { src: "/images/owner7.jpg", alt: "Owner 7" },
+    // { src: "/images/owner6.jpg", alt: "Owner 6", name: "Owner 6" },
+    // { src: "/images/owner7.jpg", alt: "Owner 7", name: "Owner 7" },
 ];
 
 /* ─── Animation variants ─── */
@@ -73,40 +73,85 @@ function PaymentCard({ name, emoji, color, rgb, img }) {
     );
 }
 
-/* ─── QR code card (unchanged) ─── */
+/* ─── QR code card (with modal on click) ─── */
 function QRCard() {
+    const [showQR, setShowQR] = useState(false);
+
     return (
-        <motion.div
-            className="pay-card pay-card--qr"
-            style={{ "--pay-color": "#2563eb", "--pay-rgb": "37,99,235" }}
-            variants={cardVariants}
-            whileHover={{ y: -10, transition: { duration: 0.28, ease: "easeOut" } }}
-        >
-            <div className="pay-card__accent" />
-            <div className="pay-card__qr-wrap">
-                <div className="pay-card__qr-placeholder" aria-label="QR Code">
-                    <svg viewBox="0 0 100 100" width="90" height="90" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="5" y="5" width="30" height="30" rx="3" fill="#2563eb" opacity="0.15" />
-                        <rect x="10" y="10" width="20" height="20" rx="2" fill="#2563eb" opacity="0.3" />
-                        <rect x="14" y="14" width="12" height="12" rx="1" fill="#2563eb" />
-                        <rect x="65" y="5" width="30" height="30" rx="3" fill="#2563eb" opacity="0.15" />
-                        <rect x="70" y="10" width="20" height="20" rx="2" fill="#2563eb" opacity="0.3" />
-                        <rect x="74" y="14" width="12" height="12" rx="1" fill="#2563eb" />
-                        <rect x="5" y="65" width="30" height="30" rx="3" fill="#2563eb" opacity="0.15" />
-                        <rect x="10" y="70" width="20" height="20" rx="2" fill="#2563eb" opacity="0.3" />
-                        <rect x="14" y="74" width="12" height="12" rx="1" fill="#2563eb" />
-                        {[45, 50, 55, 60, 65, 70, 75, 80, 85, 90].map((x, i) =>
-                            [45, 50, 55, 60, 65, 70, 75, 80, 85, 90].map((y, j) =>
-                                (i + j) % 3 === 0 ? <rect key={`${i}-${j}`} x={x - 42} y={y - 42} width="4" height="4" rx="1" fill="#2563eb" opacity="0.6" /> : null
-                            )
-                        )}
-                    </svg>
+        <>
+            {/* Card — clickable */}
+            <motion.div
+                className="pay-card pay-card--qr"
+                style={{ "--pay-color": "#2563eb", "--pay-rgb": "37,99,235" }}
+                variants={cardVariants}
+                whileHover={{ y: -10, transition: { duration: 0.28, ease: "easeOut" } }}
+                onClick={() => setShowQR(true)}
+                role="button"
+                tabIndex={0}
+                aria-label="Open QR code to scan and pay"
+                onKeyDown={(e) => e.key === "Enter" && setShowQR(true)}
+            >
+                <div className="pay-card__accent" />
+                <div className="pay-card__qr-wrap">
+                    <div className="pay-card__qr-placeholder" aria-label="QR Code">
+                        <svg viewBox="0 0 100 100" width="90" height="90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="5" y="5" width="30" height="30" rx="3" fill="#2563eb" opacity="0.15" />
+                            <rect x="10" y="10" width="20" height="20" rx="2" fill="#2563eb" opacity="0.3" />
+                            <rect x="14" y="14" width="12" height="12" rx="1" fill="#2563eb" />
+                            <rect x="65" y="5" width="30" height="30" rx="3" fill="#2563eb" opacity="0.15" />
+                            <rect x="70" y="10" width="20" height="20" rx="2" fill="#2563eb" opacity="0.3" />
+                            <rect x="74" y="14" width="12" height="12" rx="1" fill="#2563eb" />
+                            <rect x="5" y="65" width="30" height="30" rx="3" fill="#2563eb" opacity="0.15" />
+                            <rect x="10" y="70" width="20" height="20" rx="2" fill="#2563eb" opacity="0.3" />
+                            <rect x="14" y="74" width="12" height="12" rx="1" fill="#2563eb" />
+                            {[45, 50, 55, 60, 65, 70, 75, 80, 85, 90].map((x, i) =>
+                                [45, 50, 55, 60, 65, 70, 75, 80, 85, 90].map((y, j) =>
+                                    (i + j) % 3 === 0 ? <rect key={`${i}-${j}`} x={x - 42} y={y - 42} width="4" height="4" rx="1" fill="#2563eb" opacity="0.6" /> : null
+                                )
+                            )}
+                        </svg>
+                    </div>
                 </div>
-            </div>
-            <p className="pay-card__name">Scan &amp; Pay</p>
-            <p className="pay-card__qr-sub">Point your camera to pay instantly</p>
-            <div className="pay-card__glow" />
-        </motion.div>
+                <p className="pay-card__name">Scan &amp; Pay</p>
+                <p className="pay-card__qr-sub">Tap to open QR code</p>
+                <div className="pay-card__glow" />
+            </motion.div>
+
+            {/* QR Modal */}
+            {showQR && (
+                <div
+                    className="qr-modal"
+                    onClick={() => setShowQR(false)}
+                    role="dialog"
+                    aria-modal="true"
+                    aria-label="QR Code payment"
+                >
+                    <motion.div
+                        className="qr-box"
+                        onClick={(e) => e.stopPropagation()}
+                        initial={{ opacity: 0, scale: 0.7 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.7 }}
+                        transition={{ duration: 0.3, ease: [0.34, 1.56, 0.64, 1] }}
+                    >
+                        <p className="qr-box__title">Scan &amp; Pay</p>
+                        <img
+                            src="/images/qrcode.jpg"
+                            alt="QR Code — Scan to Pay"
+                            className="qr-box__img"
+                        />
+                        <p className="qr-box__sub">Point your camera at the QR code to pay instantly</p>
+                        <button
+                            className="qr-box__close"
+                            onClick={() => setShowQR(false)}
+                            aria-label="Close QR code"
+                        >
+                            Close
+                        </button>
+                    </motion.div>
+                </div>
+            )}
+        </>
     );
 }
 
@@ -171,7 +216,7 @@ export default function PaymentSection() {
                         </motion.div>
                     </div>
 
-                    {/* RIGHT — continuous owner image slider */}
+                    {/* RIGHT — continuous owner image slider + owner details */}
                     <div className="payment__right">
                         <Swiper
                             modules={[Autoplay]}
@@ -181,17 +226,33 @@ export default function PaymentSection() {
                             autoplay={{ delay: 0, disableOnInteraction: false }}
                             className="payment__img-swiper"
                         >
-                            {OWNER_IMAGES.map(({ src, alt }) => (
+                            {OWNER_IMAGES.map(({ src, alt, name }) => (
                                 <SwiperSlide key={src}>
-                                    <img
-                                        src={src}
-                                        alt={alt}
-                                        className="payment__owner-img"
-                                        loading="lazy"
-                                    />
+                                    <div className="payment__owner-card">
+                                        <img
+                                            src={src}
+                                            alt={alt}
+                                            className="payment__owner-img"
+                                            loading="lazy"
+                                        />
+                                        <p className="payment__owner-name">{name}</p>
+                                    </div>
                                 </SwiperSlide>
                             ))}
                         </Swiper>
+
+                        {/* Owner details — below the slider */}
+                        <div className="payment__owner-details">
+                            <p className="payment__owner-details-name">
+                                C. SWAMINATHAN. MCP, BCA, PGDCA, DIM, DHE, DNE, DTP.
+                            </p>
+                            <p className="payment__owner-details-role">
+                                HUMAN RIGHTS — SALEM CITY ORGANIZER
+                            </p>
+                            <p className="payment__owner-details-role">
+                                LION CLUB OF SALEM — ACT. SECRETARY
+                            </p>
+                        </div>
                     </div>
 
                 </div>

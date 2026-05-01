@@ -150,14 +150,14 @@ export default function Navbar() {
           <a href="tel:+919944494299" className="navbar__icon-btn" title="Call us">
             <Phone size={18} />
           </a>
-          <button
+          {/* <button
             type="button"
             className="navbar__icon-btn"
             title="Global"
             aria-label="Global"
           >
             <Globe size={18} />
-          </button>
+          </button> */}
 
           {/* ── Social icons ── */}
           <span className="navbar__divider" aria-hidden="true" />

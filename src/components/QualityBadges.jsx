@@ -4,37 +4,36 @@ import "./QualityBadges.css";
 /*
  * Badge images — replace src values with your real badge images.
  * Drop files into public/images/ and update the paths below.
- * Until real images are added, styled placeholder tiles are shown.
  */
 const BADGES = [
     {
-        src: "/images/badge1.png",
+        src: "/images/satisfaction.jpg",
         alt: "Premium Quality",
         // label: "Premium Quality",
         fallbackIcon: "🏆",
         color: "#0f53e7ff",
     },
     {
-        src: "/images/badge2.png",
+        src: "/images/bestquality1.jpg",
         alt: "100% Satisfaction",
         // label: "100% Satisfaction",
         fallbackIcon: "⭐",
         color: "#7c3aed",
     },
     {
-        src: "/images/badge3.png",
+        src: "/images/bestquality.jpg",
         alt: "Best Service",
         // label: "Best Service",
         fallbackIcon: "✅",
         color: "#059669",
     },
-    {
-        src: "/images/badge4.png",
-        alt: "Trusted Brand",
-        // label: "Trusted Brand",
-        fallbackIcon: "🛡️",
-        color: "#d97706",
-    },
+    // {
+    //     src: "/images/badge4.png",
+    //     alt: "Trusted Brand",
+    //     // label: "Trusted Brand",
+    //     fallbackIcon: "🛡️",
+    //     color: "#d97706",
+    // },
 ];
 
 function Badge({ src, alt, label, fallbackIcon, color, index }) {
@@ -54,7 +53,9 @@ function Badge({ src, alt, label, fallbackIcon, color, index }) {
                 className="qb-badge__img"
                 onError={(e) => {
                     e.currentTarget.style.display = "none";
-                    e.currentTarget.nextSibling.style.display = "flex";
+                    if (e.currentTarget.nextSibling) {
+                        e.currentTarget.nextSibling.style.display = "flex";
+                    }
                 }}
             />
             {/* Fallback tile shown when image is missing */}
@@ -80,7 +81,7 @@ export default function QualityBadges() {
                     transition={{ duration: 0.6, ease: "easeOut" }}
                 >
                     <div className="quality-badges__tag">
-                        <span className="quality-badges__tag-dot" />
+                        <span className="quality-badges__tag-dot"/>
                         Our Commitment
                     </div>
                     <h2 className="quality-badges__heading">

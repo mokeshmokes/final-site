@@ -77,7 +77,7 @@
     background: rgba(var(--theme-rgb), 0.1);
     border: 1px solid rgba(var(--theme-rgb), 0.25);
     border-radius: 100px;
-    color: #64748B;
+    color: #0a5ce1;
     font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 1px;
@@ -515,6 +515,25 @@
 
     .contact-sec__dots-grid {
         display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-sec {
+        padding: 80px 0 70px;
+    }
+
+    .contact-sec__container {
+        padding: 0 1.25rem;
+        gap: 2rem;
+    }
+
+    .contact-sec__form-wrap {
+        padding: 1.75rem 1.25rem;
+    }
+
+    .contact-sec__map {
+        height: 200px;
     }
 }
 

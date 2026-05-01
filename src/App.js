@@ -18,70 +18,76 @@ import PaymentSection from "./components/PaymentSection";
 import MediaShowcase from "./components/MediaShowcase";
 import Footer from "./components/Footer";
 import TawkChat from "./components/TawkChat";
+import Loader from "./components/Loader";
 import "./App.css";
 
 function App() {
   return (
-    <div className="app">
-      {/* 1 — Navbar */}
-      <Navbar />
+    <>
+      {/* Page loader — shows on mount, auto-hides after 2.7 s */}
+      <Loader />
 
-      <main>
-        {/* 2 — Hero Slider */}
-        <HeroSlider />
+      <div className="app">
+        {/* 1 — Navbar */}
+        <Navbar />
 
-        {/* 3 — About Section */}
-        <AboutSection />
+        <main>
+          {/* 2 — Hero Slider */}
+          <HeroSlider />
 
-        {/* 4 — What Jusco Do (Services cards) */}
-        <ServicesSection />
+          {/* 3 — About Section */}
+          <AboutSection />
 
-        {/* 5 — Numbers That Speak (Counter section) */}
-        <StatsSection />
+          {/* 4 — What Jusco Do (Services cards) */}
+          <ServicesSection />
 
-        {/* 6 — Team of Experts (slider) */}
-        <TeamSection />
+          {/* 5 — Numbers That Speak (Counter section) */}
+          <StatsSection />
 
-        {/* 7 — Evolution & Growth (Skills / progress bars) */}
-        <SkillSection />
+          {/* 6 — Team of Experts (slider) */}
+          <TeamSection />
 
-        {/* 8 — Trusted by Industry Leaders (Company logos slider) */}
-        <PartnersSection />
+          {/* 7 — Evolution & Growth (Skills / progress bars) */}
+          <SkillSection />
 
-        {/* 9 — Services Slideshow Section */}
-        <ShowcaseSection />
+          {/* 8 — Trusted by Industry Leaders (Company logos slider) */}
+          <PartnersSection />
 
-        {/* 10 — Our Products */}
-        <ProductsSection />
+          {/* 9 — Services Slideshow Section */}
+          <ShowcaseSection />
 
-        {/* 11 — Professional IT Services */}
-        <ITServicesSection />
+          {/* 10 — Our Products */}
+          <ProductsSection />
 
-        {/* 12 — Client Reviews (Testimonials) */}
-        <TestimonialsSection />
+          {/* 11 — Professional IT Services */}
+          <ITServicesSection />
 
-        {/* 12.5 — Quality Badges */}
-        <QualityBadges />
+          {/* 12 — Client Reviews (Testimonials) */}
+          <TestimonialsSection />
 
-        {/* 13 — Contact Section */}
-        <ContactSection />
+          {/* 12.5 — Quality Badges */}
+          <QualityBadges />
 
-        {/* 13.5 — Newsletter Subscription */}
-        <NewsletterSection />
+          {/* 13 — Contact Section */}
+          <ContactSection />
 
-        {/* 14 — Mode of Payment */}
-        <PaymentSection />
+          {/* 13.5 — Newsletter Subscription */}
+          <NewsletterSection />
 
-        {/* 15 — Media Showcase */}
-        <MediaShowcase />
-      </main>
+          {/* 14 — Mode of Payment */}
+          <PaymentSection />
 
-      {/* 16 — Footer */}
-      <Footer />
+          {/* 15 — Media Showcase */}
+          <MediaShowcase />
+        </main>
 
-      {/* Live Chat — renders nothing, injects Tawk.to widget */}
-      <TawkChat />
-    </div>
+        {/* 16 — Footer */}
+        <Footer />
+
+        {/* Live Chat — renders nothing, injects Tawk.to widget */}
+        <TawkChat />
+      </div>
+    </>
   );
 }
 

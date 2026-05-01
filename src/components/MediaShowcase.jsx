@@ -150,9 +150,9 @@ export default function MediaShowcase() {
                             </audio>
                         </div>
 
-                        <p className="media-box__hint">
+                        {/* <p className="media-box__hint">
                             Replace <code>/audio/sample.mp3</code> with your real audio file.
-                        </p>
+                        </p> */}
                     </motion.div>
 
                     {/* ── VIDEO BOX ── */}
@@ -197,9 +197,9 @@ export default function MediaShowcase() {
                             </video>
                         </div>
 
-                        <p className="media-box__hint">
+                        {/* <p className="media-box__hint">
                             Replace <code>/video/sample.mp4</code> with your real video file.
-                        </p>
+                        </p> */}
                     </motion.div>
 
                 </div>

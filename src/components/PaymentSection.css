@@ -55,7 +55,7 @@
     background: rgba(var(--theme-rgb), 0.1);
     border: 1px solid rgba(var(--theme-rgb), 0.25);
     border-radius: 100px;
-    color: #64748B;
+    color: #0a5ce1;
     font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.8px;
@@ -170,19 +170,79 @@
 
 .payment__img-swiper .swiper-slide {
     height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Owner card — image + name stacked */
+.payment__owner-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
 .payment__owner-img {
     width: 100%;
-    height: 100%;
+    flex: 1;
+    /* image fills all available height above the name */
     object-fit: cover;
     display: block;
+    min-height: 0;
+    /* allow flex shrink */
 }
 
-/* Active slide subtle zoom */
+/* Owner name label */
+.payment__owner-name {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: rgba(37, 99, 235, 0.06);
+    border-top: 1px solid rgba(37, 99, 235, 0.12);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #2563eb;
+    text-align: center;
+    letter-spacing: 0.2px;
+    flex-shrink: 0;
+    /* never compress the name row */
+}
+
+/* Active slide subtle zoom — only on the image, not the name */
 .payment__img-swiper .swiper-slide-active .payment__owner-img {
     transform: scale(1.04);
     transition: transform 0.5s ease;
+}
+
+/* ── Owner details block (below slider) ── */
+.payment__owner-details {
+    flex-shrink: 0;
+    padding: 1.1rem 1.25rem;
+    background: #ffffff;
+    border-top: 2px solid #0a5ce1;
+    text-align: center;
+}
+
+.payment__owner-details-name {
+    font-size: 0.82rem;
+    font-weight: 800;
+    color: #0a5ce1;
+    letter-spacing: 0.3px;
+    line-height: 1.5;
+    margin-bottom: 0.4rem;
+}
+
+.payment__owner-details-role {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #2563eb;
+    letter-spacing: 0.4px;
+    line-height: 1.5;
+    margin-bottom: 0.2rem;
+}
+
+.payment__owner-details-role:last-child {
+    margin-bottom: 0;
 }
 
 /* ── Payment card ── */
@@ -422,4 +482,94 @@
     .payment__owner-img {
         height: 240px;
     }
+}
+
+/* ═══════════════════════════════════════════
+   QR CODE MODAL
+═══════════════════════════════════════════ */
+
+/* Make QR card feel clickable */
+.pay-card--qr {
+    cursor: pointer;
+}
+
+.pay-card--qr:active {
+    transform: scale(0.97);
+}
+
+/* Backdrop */
+.qr-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 1rem;
+}
+
+/* Modal box */
+.qr-box {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 2rem 2rem 1.75rem;
+    text-align: center;
+    box-shadow: 0 32px 80px rgba(0, 0, 0, 0.25);
+    max-width: 320px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.qr-box__title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #1E293B;
+    letter-spacing: -0.3px;
+    margin-bottom: 1.25rem;
+}
+
+.qr-box__img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 12px;
+    border: 1px solid #E2E8F0;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.qr-box__sub {
+    font-size: 0.78rem;
+    color: #64748B;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+    max-width: 220px;
+}
+
+.qr-box__close {
+    padding: 0.6rem 1.75rem;
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+}
+
+.qr-box__close:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.qr-box__close:active {
+    transform: translateY(0);
 }

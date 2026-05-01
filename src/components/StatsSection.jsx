@@ -6,8 +6,8 @@ import "./StatsSection.css";
 
 const STATS = [
     { icon: CheckSquare, value: 891, suffix: "+", label: "PROJECTS COMPLETED", color: "#2563eb", rgb: "37,99,235" },
-    { icon: Map, value: 291, suffix: "+", label: "STATES COVERED", color: "#7c3aed", rgb: "124,58,237" },
-    { icon: null, value: 291, suffix: "+", label: "DISTRICTS SERVED", color: "#059669", rgb: "5,150,105", imgSrc: "/images/tamilnadu-map.png" },
+    { icon: null, value: 291, suffix: "+", label: "STATES COVERED", color: "#7c3aed", rgb: "124,58,237" ,imgSrc: "/images/indiamap.jpg" },
+    { icon: null, value: 291, suffix: "+", label: "DISTRICTS SERVED", color: "#059669", rgb: "5,150,105", imgSrc: "/images/tamilnadu-map.jpg" },
     { icon: Smile, value: 3890, suffix: "+", label: "SATISFIED CLIENTS", color: "#d97706", rgb: "217,119,6" },
 ];
 

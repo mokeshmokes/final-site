@@ -55,7 +55,7 @@
     background: rgba(var(--theme-rgb), 0.1);
     border: 1px solid rgba(var(--theme-rgb), 0.25);
     border-radius: 100px;
-    color: #64748B;
+    color: #0a5ce1;
     font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 1px;
@@ -104,7 +104,7 @@
 
 .media__sub {
     font-size: 0.97rem;
-    color: #64748B;
+    color: #0a5ce1;
     line-height: 1.75;
     max-width: 520px;
     margin: 0 auto 1.5rem;
@@ -179,7 +179,7 @@
 /* Description */
 .media-box__desc {
     font-size: 0.86rem;
-    color: #64748B;
+    color: #0a5ce1;
     line-height: 1.7;
     margin-bottom: 1.5rem;
     max-width: 340px;

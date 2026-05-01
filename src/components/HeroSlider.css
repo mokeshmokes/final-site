@@ -106,7 +106,7 @@
     background: rgba(var(--theme-rgb), 0.18);
     border: 1px solid rgba(var(--theme-rgb), 0.35);
     border-radius: 100px;
-    color: rgba(255, 255, 255, 0.9);
+    color: #0a5ce1;
     font-size: 0.78rem;
     font-weight: 600;
     letter-spacing: 0.8px;

@@ -127,7 +127,7 @@ function TeamCard({ name, role, desc, image, color, rgb, socials }) {
             {/* Content */}
             <div className="team-card__body">
                 <h3 className="team-card__name">{name}</h3>
-                <p className="team-card__desc">{desc}</p>
+                <p className="team-card__desc" style={{ color: "#2563eb" }}>{desc}</p>
             </div>
 
             {/* Bottom accent */}

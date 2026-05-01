@@ -205,11 +205,11 @@ export default function NewsletterSection() {
                 )}
 
                 {/* Setup reminder — visible only when placeholder keys are present */}
-                {EMAILJS_PUBLIC_KEY === "YOUR_PUBLIC_KEY" && (
+                {/* {EMAILJS_PUBLIC_KEY === "YOUR_PUBLIC_KEY" && (
                     <p className="newsletter__setup-note">
                         ⚙️ Replace the EmailJS constants in <code>NewsletterSection.jsx</code> to activate email sending.
                     </p>
-                )}
+                )} */}
 
             </div>
         </section>

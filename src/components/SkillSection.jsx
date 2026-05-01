@@ -120,10 +120,10 @@ export default function SkillSection() {
 
                     {/* Decorative feature pills */}
                     <div className="skill-sec__pills">
-                        {["Clean Code", "Pixel Perfect", "SEO Optimized", "Fast Delivery"].map((p) => (
-                            <span key={p} className="skill-sec__pill">{p}</span>
-                        ))}
-                    </div>
+    {["Clean Code", "Pixel Perfect", "SEO Optimized", "Fast Delivery"].map((p) => (
+        <span key={p} className="skill-sec__pill" style={{ color: "#2563eb" }}>{p}</span>
+    ))}
+</div>
                 </motion.div>
 
                 {/* RIGHT */}
@@ -148,6 +148,7 @@ export default function SkillSection() {
                         <div>
                             <p className="skill-sec__card-title">100% Commitment</p>
                             <p className="skill-sec__card-sub">Every project, every time — no exceptions.</p>
+                            <p className="skill-sec__card-sub"style={{ fontWeight: 'bold' }}>The Name You Can Trust</p>
                         </div>
                     </div>
                 </motion.div>

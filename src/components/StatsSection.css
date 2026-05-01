@@ -53,7 +53,7 @@
     background: rgba(var(--theme-rgb), 0.12);
     border: 1px solid rgba(var(--theme-rgb), 0.3);
     border-radius: 100px;
-    color: #64748B;
+    color: #0a5ce1;
     font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.8px;
@@ -64,6 +64,7 @@
 .stats__tag-dot {
     width: 7px;
     height: 7px;
+    color: #0a5ce1;
     border-radius: 50%;
     background: var(--theme-color);
     box-shadow: 0 0 8px var(--theme-color);
@@ -242,6 +243,21 @@
 @media (max-width: 900px) {
     .stats__grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .stats {
+        padding: 80px 0 70px;
+    }
+
+    .stats__container {
+        padding: 0 1.5rem;
+    }
+
+    .stats__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
     }
 }
 

@@ -8,6 +8,12 @@
   padding: 0;
 }
 
+/* Global image safety — prevents overflow on any screen size */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 :root {
   --theme-color: #2563eb;
   --theme-color-dark: #1d4ed8;
@@ -22,7 +28,6 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-  /* prevent any section overflow creating a right-side gap */
 }
 
 body {
@@ -186,29 +191,21 @@ a:not([class*="btn"]):not([class*="icon"]):not([class*="logo"]):not([class*="soc
   border-radius: 5px !important;
 }
 
-/* ─── Custom scrollbar ─── */
+/* ─── Hide scrollbar (all browsers) — scroll still works ─── */
 
 /* Firefox */
 html {
-  scrollbar-width: thin;
-  scrollbar-color: #2563eb transparent;
+  scrollbar-width: none;
+}
+
+/* IE / Edge legacy */
+body {
+  -ms-overflow-style: none;
 }
 
 /* Chrome / Edge / Safari */
 ::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #2563eb, #7c3aed);
-  border-radius: 10px;
-  transition: background 0.3s ease;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #1d4ed8, #6d28d9);
+  width: 0px;
+  height: 0px;
+  display: none;
 }

@@ -103,14 +103,15 @@ export default function TestimonialsSection() {
                     />
 
                     {/* Justdial logo — top-right of header */}
-                    <motion.img
-                        src="/images/justdial.png"
-                        alt="Justdial"
-                        className="testi__justdial-logo"
-                        initial={{ opacity: 0, scale: 0.85 }}
-                        animate={headerView ? { opacity: 1, scale: 1 } : {}}
-                        transition={{ delay: 0.5, duration: 0.5, ease: [0.34, 1.56, 0.64, 1] }}
-                    />
+                  <motion.img
+    src="/images/justdial.jpg"
+    alt="Justdial"
+    className="testi__justdial-logo"
+    style={{ width: "180px", height: "auto" }}
+    initial={{ opacity: 0, scale: 0.85 }}
+    animate={headerView ? { opacity: 1, scale: 1.1 } : {}}
+    transition={{ delay: 0.5, duration: 0.5, ease: [0.34, 1.56, 0.64, 1] }}
+/> 
                 </div>
 
                 {/* Swiper carousel */}

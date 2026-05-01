@@ -37,27 +37,32 @@
 
 /* ── Logo ── */
 .navbar__logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
 }
 
 .navbar__logo-img {
-  height: 40px;
-  width: auto;
-  object-fit: contain;
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    background: transparent;
+    mix-blend-mode: multiply;
+    /* removes white box on light backgrounds */
+    border-radius: 0;
 }
 
 .navbar__logo-text {
-  font-size: 18px;
-  font-weight: 600;
-  color: #2563eb;
+    font-size: 18px;
+    font-weight: 600;
+    color: #2563eb;
 }
 
 .navbar__logo-accent {
-  color: #2563eb;
+    color: #2563eb;
 }
+
 /* ── Nav links ── */
 .navbar__links {
     display: flex;

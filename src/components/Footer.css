@@ -92,17 +92,21 @@
 .footer__contact-item:hover {
     color: var(--theme-color);
 }
+
 .footer__logo-img {
-  height: 34px;
-  width: auto;
-  object-fit: contain;
-  border-radius: 6px;
-  transition: transform 0.3s ease;
+    height: 34px;
+    width: auto;
+    object-fit: contain;
+    background: transparent;
+    mix-blend-mode: screen;
+    /* removes white box on dark footer background */
+    border-radius: 0;
+    transition: transform 0.3s ease;
 }
 
 /* Hover effect similar to old icon */
 .footer__logo:hover .footer__logo-img {
-  transform: scale(1.08);
+    transform: scale(1.08);
 }
 
 /* Socials */
@@ -199,40 +203,61 @@
 
 /* ── Bottom bar ── */
 .footer__bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .footer__bottom-inner {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 1.25rem 2rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1.25rem 2rem;
 
-  display: flex;
-  flex-direction: column;     /* IMPORTANT */
-  align-items: center;        /* CENTER */
-  justify-content: center;    /* CENTER */
-  text-align: center;         /* TEXT CENTER */
+    display: flex;
+    flex-direction: column;
+    /* IMPORTANT */
+    align-items: center;
+    /* CENTER */
+    justify-content: center;
+    /* CENTER */
+    text-align: center;
+    /* TEXT CENTER */
 
-  gap: 0.75rem;
+    gap: 0.75rem;
 }
 
 .footer__copy {
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.3);
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.3);
 }
 
 .footer__copy-brand {
-  color: var(--theme-color);
-  font-weight: 700;
+    color: var(--theme-color);
+    font-weight: 700;
 }
 
 .footer__made {
-  display: flex;
-  align-items: center;
-  justify-content: center;   /* CENTER */
-  gap: 0.35rem;
-  font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* CENTER */
+    gap: 0.35rem;
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.25);
+}
+.footer__heart {
+  animation: pulse 1s ease-in-out infinite;
+  color: #22c55e;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* ═══════════════════════════════════════════

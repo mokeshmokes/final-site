@@ -24,7 +24,7 @@ const OWNER_IMAGES = [
     { src: "/images/owner3.jpg", alt: "Owner 3" },
     { src: "/images/owner4.jpg", alt: "Owner 4" },
     { src: "/images/owner5.jpg", alt: "Owner 5" },
-    // { src: "/images/owner6.jpg", alt: "Owner 6", name: "Owner 6" },
+    { src: "/images/owner6.jpg", alt: "Owner 6" },
     // { src: "/images/owner7.jpg", alt: "Owner 7", name: "Owner 7" },
 ];
 

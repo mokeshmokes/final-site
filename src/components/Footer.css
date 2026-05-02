@@ -23,11 +23,27 @@
     max-width: 1280px;
     margin: 0 auto;
     padding: 4rem 2rem 3rem;
-    display: grid;
-    grid-template-columns: 1.6fr repeat(4, 1fr);
-    gap: 3rem;
-    align-items: stretch;
-    /* equal column heights */
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* ── Brand column ── */
+.footer__brand {
+    flex-shrink: 0;
+    width: 240px;
+}
+
+/* ── All link columns in one row ── */
+.footer__links {
+    flex: 1;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+    min-width: 0;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
 /* ── Brand column ── */
@@ -139,13 +155,12 @@
     transform: translateY(-3px) scale(1.1);
 }
 
-/* ── Link columns — equal height with brand column ── */
+/* ── Link columns ── */
 .footer__col {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    padding-top: 32%;
-    /* align headings with UT logo text level */
+    align-items: flex-start;
+    padding-top: 6%;
 }
 
 .footer__col-heading {
@@ -157,6 +172,7 @@
     margin-bottom: 1.1rem;
     position: relative;
     padding-bottom: 0.6rem;
+    
 }
 
 .footer__col-heading::after {
@@ -174,9 +190,8 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 0.55rem;
+    gap: 0.6rem;
     flex-grow: 1;
-    /* fill remaining column height */
 }
 
 .footer__col-link {
@@ -192,6 +207,22 @@
 .footer__col-link:hover {
     color: rgba(255, 255, 255, 0.85);
     gap: 0.65rem;
+}
+
+/* Button-style link (for section scroll links) */
+.footer__col-link--btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+    text-align: left;
+}
+
+/* Disabled / no-link items */
+.footer__col-link--disabled {
+    cursor: default;
+    opacity: 0.5;
 }
 
 .footer__col-link-dot {
@@ -273,33 +304,64 @@
    RESPONSIVE
 ═══════════════════════════════════════════ */
 
+@media (max-width: 1200px) {
+    .footer__links {
+        flex-wrap: wrap;
+        gap: 1.75rem;
+    }
+
+    .footer__col {
+        min-width: 140px;
+    }
+}
+
 @media (max-width: 1100px) {
     .footer__container {
-        grid-template-columns: 1fr 1fr 1fr;
+        flex-direction: column;
         gap: 2.5rem;
     }
 
     .footer__brand {
-        grid-column: 1 / -1;
+        width: 100%;
+        max-width: 380px;
+    }
+
+    .footer__links {
+        flex-wrap: wrap;
+        gap: 1.75rem;
+    }
+
+    .footer__col {
+        min-width: 140px;
     }
 }
 
 @media (max-width: 768px) {
     .footer__container {
-        grid-template-columns: 1fr 1fr;
         padding: 3rem 1.5rem 2rem;
         gap: 2rem;
     }
 
-    .footer__brand {
-        grid-column: 1 / -1;
+    .footer__links {
+        gap: 1.5rem;
+    }
+
+    .footer__col {
+        min-width: 130px;
     }
 }
 
 @media (max-width: 480px) {
     .footer__container {
-        grid-template-columns: 1fr;
         padding: 2.5rem 1rem 1.5rem;
+    }
+
+    .footer__links {
+        gap: 1.25rem;
+    }
+
+    .footer__col {
+        min-width: calc(50% - 0.625rem);
     }
 
     .footer__bottom-inner {

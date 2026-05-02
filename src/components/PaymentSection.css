@@ -146,7 +146,7 @@
     visibility: visible !important;
 }
 
-/* ── Right — image slider, same height as left ── */
+/* ── Right — image slider ── */
 .payment__right {
     flex: 4;
     display: flex;
@@ -154,6 +154,10 @@
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 20px 60px rgba(37, 99, 235, 0.12);
+    aspect-ratio: 3 / 4;
+    /* matches portrait photo ratio — no blank space */
+    align-self: flex-start;
+    /* don't stretch to match left column height */
 }
 
 /* Swiper fills the full right column height */
@@ -186,11 +190,12 @@
 .payment__owner-img {
     width: 100%;
     flex: 1;
-    /* image fills all available height above the name */
     object-fit: cover;
+    object-position: center 20%;
+    /* keeps face visible, not cropped to top */
     display: block;
     min-height: 0;
-    /* allow flex shrink */
+    max-width: 100%;
 }
 
 /* Owner name label */
@@ -208,10 +213,10 @@
     /* never compress the name row */
 }
 
-/* Active slide subtle zoom — only on the image, not the name */
+/* Remove zoom on active slide — causes cropping on portrait images */
 .payment__img-swiper .swiper-slide-active .payment__owner-img {
-    transform: scale(1.04);
-    transition: transform 0.5s ease;
+    transform: none;
+    transition: none;
 }
 
 /* ── Owner details block (below slider) ── */
@@ -420,19 +425,27 @@
 
     .payment__right {
         width: 100%;
-        height: 320px;
+        max-width: 400px;
+        aspect-ratio: 3 / 4;
         flex: none;
+        align-self: center;
         margin-top: 30px;
+        height: auto;
     }
 
     .payment__img-swiper,
     .payment__img-swiper .swiper-wrapper,
     .payment__img-swiper .swiper-slide {
-        height: 320px;
+        height: 100%;
+    }
+
+    .payment__owner-card {
+        height: 100%;
     }
 
     .payment__owner-img {
-        height: 320px;
+        object-fit: cover;
+        object-position: center 20%;
     }
 }
 
@@ -450,8 +463,9 @@
         gap: 1rem;
     }
 
-    .payment__owner-img {
-        height: 280px;
+    .payment__right {
+        max-width: 360px;
+        height: auto;
     }
 }
 
@@ -479,8 +493,9 @@
         height: 38px;
     }
 
-    .payment__owner-img {
-        height: 240px;
+    .payment__right {
+        max-width: 300px;
+        height: auto;
     }
 }
 

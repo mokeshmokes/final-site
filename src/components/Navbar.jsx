@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import {
   Globe,
   Mail,
@@ -29,10 +30,10 @@ const THEMES = [
 const NAV_LINKS = [
   { label: "Home", id: "home" },
   { label: "About Us", id: "about-us" },
-  { label: "Services", id: "services" },
+  { label: "Services", id: "it-services" },  // scrolls to Professional IT Services
   { label: "Products", id: "products" },
   { label: "Website", id: "showcase" },
-  { label: "Technical", id: "it-services" },
+  { label: "Technical", id: "business-services" },  // scrolls to Technical / Business Services
   { label: "Visit Us", id: "visit-us" },
 ];
 
@@ -44,8 +45,8 @@ function applyTheme(theme) {
   root.style.setProperty("--theme-rgb", theme.rgb);
 }
 
-/* Smooth scroll with navbar offset */
-function scrollToSection(id) {
+/* Smooth scroll with navbar offset — works on home page only */
+function scrollToSectionOnPage(id) {
   const el = document.getElementById(id);
   if (!el) return;
   const navbarHeight = 72;
@@ -63,6 +64,16 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [activeLink, setActiveLink] = useState("Home");
   const settingsRef = useRef(null);
+  const navigate = useNavigate();
+
+  /* Navigate to section — works from any page */
+  const scrollToSection = useCallback((id) => {
+    if (window.location.pathname !== "/") {
+      navigate("/#" + id);
+    } else {
+      scrollToSectionOnPage(id);
+    }
+  }, [navigate]);
 
   /* Apply saved theme on mount */
   useEffect(() => {
@@ -110,22 +121,22 @@ export default function Navbar() {
       <div className="navbar__inner">
 
         {/* ── Logo ── */}
-       <a href="/" className="navbar__logo">
-  <img
-    src="/images/companylogo.jpg"
-    alt="Company Logo"
-    className="navbar__logo-img"
-  />
-  <span 
-  className="navbar__logo-text"
-  style={{
-    color: "#ffd700",
-    fontWeight: "700"
-  }}
->
-  UT
-</span>
-</a>
+        <Link to="/" className="navbar__logo">
+          <img
+            src="/images/companylogo.jpg"
+            alt="Company Logo"
+            className="navbar__logo-img"
+          />
+          <span
+            className="navbar__logo-text"
+            style={{
+              color: "#ffd700",
+              fontWeight: "700"
+            }}
+          >
+            UT
+          </span>
+        </Link>
 
         {/* ── Desktop nav links ── */}
         <ul className="navbar__links">

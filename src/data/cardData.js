@@ -409,4 +409,63 @@ export const CARD_DATA = [
             "Firewall & VPN Configuration",
         ],
     },
+
+    /* ─── TECHNICAL ─────────────────────────────────────────────────────── */
+    {
+        id: "business-units",
+        category: "Technical",
+        title: "Business Units",
+        color: "#2563eb",
+        rgb: "37,99,235",
+        image: "/images/tech-business.jpg",
+        description:
+            "Structured business divisions delivering focused IT solutions across hardware, software, networking, and support.",
+        fullContent:
+            "Our business units are organized to deliver specialized expertise in every area we operate. Each unit is staffed by dedicated professionals who understand the unique challenges of their domain — from hardware procurement and network infrastructure to software development and client training. This structure ensures you always work with the right expert for your specific need, backed by the full resources of the organization.",
+        features: [
+            "Hardware Supply & Distribution",
+            "IT Services & Support Division",
+            "Web & Software Development Unit",
+            "Training & Skill Development",
+            "Dedicated Account Management",
+        ],
+    },
+    {
+        id: "software-development",
+        category: "Technical",
+        title: "Software Development",
+        color: "#7c3aed",
+        rgb: "124,58,237",
+        image: "/images/tech-software.jpg",
+        description:
+            "Custom software solutions built for scalability, performance, and long-term business value.",
+        fullContent:
+            "We design and develop custom software that solves real business problems. From internal workflow automation tools to customer-facing web applications, our development team follows agile methodologies to deliver working software quickly and iteratively. Every solution is built with clean architecture, thorough testing, and documentation — ensuring it remains maintainable and scalable as your business grows.",
+        features: [
+            "Custom Web Application Development",
+            "Business Process Automation",
+            "API Design & Integration",
+            "Database Architecture & Optimization",
+            "Agile Development & Sprint Delivery",
+        ],
+    },
+    {
+        id: "portfolio",
+        category: "Technical",
+        title: "Portfolio",
+        color: "#059669",
+        rgb: "5,150,105",
+        image: "/images/tech-portfolio.jpg",
+        description:
+            "A showcase of our successful projects and client solutions across industries and technology domains.",
+        fullContent:
+            "Our portfolio reflects over two decades of delivering technology solutions to businesses across Salem and beyond. From small business websites to enterprise IT infrastructure deployments, each project represents our commitment to quality, reliability, and client satisfaction. We are proud of the long-term relationships we have built with clients who return to us for every new technology challenge they face.",
+        features: [
+            "Enterprise IT Deployments",
+            "E-Commerce & Web Projects",
+            "Network Infrastructure Projects",
+            "CCTV & Security Installations",
+            "Corporate Training Programs",
+        ],
+    },
 ];

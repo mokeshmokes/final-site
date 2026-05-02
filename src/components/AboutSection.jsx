@@ -152,7 +152,7 @@ export default function AboutSection() {
 
                     {/* Heading */}
                     <motion.h2 className="about__heading" variants={fadeUp} custom={1}>
-                        About <span className="about__heading-accent">JUSCO</span>
+                        About <span className="about__heading-accent">Universal Technology</span>
                     </motion.h2>
 
                     {/* Description */}

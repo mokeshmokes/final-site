@@ -1,4 +1,4 @@
-import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { Mail, Phone, Heart } from "lucide-react";
 import { FaXTwitter, FaLinkedinIn, FaInstagram, FaFacebookF } from "react-icons/fa6";
 import "./Footer.css";
@@ -7,37 +7,63 @@ const FOOTER_LINKS = [
     {
         heading: "Company",
         links: [
-            { label: "About Us", href: "#about-us" },
-            { label: "Our Team", href: "#team" },
-            { label: "Careers", href: "" },
-            { label: "Blog", href: "" },
+            { label: "About Us", sectionId: "about-us" },
+            { label: "Our Team", sectionId: "team" },
+            { label: "Careers", sectionId: null },
+            { label: "Blog", sectionId: null },
         ],
     },
     {
         heading: "Services",
         links: [
-            { label: "Web Development", href: "#services" },
-            { label: "IT Services", href: "#it-services" },
-            { label: "E-Commerce", href: "#services" },
-            { label: "Branding & Design", href: "#services" },
+            { label: "IT Consulting", sectionId: "it-services" },
+            { label: "Installation Services", sectionId: "it-services" },
+            { label: "Annual Maintenance", sectionId: "it-services" },
+            { label: "Regular Maintenance", sectionId: "it-services" },
+            { label: "Oncall Support", sectionId: "it-services" },
+            { label: "Remote Management", sectionId: "it-services" },
+            { label: "Internet & Intranet", sectionId: "it-services" },
         ],
     },
     {
         heading: "Products",
         links: [
-            { label: "Desktop & Laptops", href: "#products" },
-            { label: "Servers", href: "#products" },
-            { label: "Networking", href: "#products" },
-            { label: "CCTV & Security", href: "#products" },
+            { label: "Desktop", sectionId: "products" },
+            { label: "Laptop", sectionId: "products" },
+            { label: "Server", sectionId: "products" },
+            { label: "Firewall", sectionId: "products" },
+            { label: "NAS Storage", sectionId: "products" },
+            { label: "Printer", sectionId: "products" },
+            { label: "Router & Switches", sectionId: "products" },
+            { label: "CCTV", sectionId: "products" },
+        ],
+    },
+    {
+        heading: "Website",
+        links: [
+            { label: "Web Development", sectionId: "services" },
+            { label: "WordPress", sectionId: "services" },
+            { label: "E-Commerce", sectionId: "services" },
+            { label: "Logo & Branding", sectionId: "services" },
+            { label: "Domain & Hosting", sectionId: "services" },
+            { label: "Professional Training", sectionId: "services" },
+        ],
+    },
+    {
+        heading: "Technical",
+        links: [
+            { label: "Business Units", sectionId: "business-services" },
+            { label: "Software Development", sectionId: "business-services" },
+            { label: "Portfolio", sectionId: "business-services" },
         ],
     },
     {
         heading: "Support",
         links: [
-            { label: "Contact Us", href: "#visit-us" },
-            { label: "AMC Plans", href: "#it-services" },
-            { label: "Remote Support", href: "#it-services" },
-            { label: "FAQ", href: "" },
+            { label: "Contact Us", sectionId: "visit-us" },
+            { label: "AMC Plans", sectionId: "it-services" },
+            { label: "Remote Support", sectionId: "it-services" },
+            { label: "FAQ", sectionId: null },
         ],
     },
 ];
@@ -51,6 +77,20 @@ const SOCIALS = [
 
 export default function Footer() {
     const year = new Date().getFullYear();
+    const navigate = useNavigate();
+
+    const handleSectionLink = (sectionId) => {
+        if (!sectionId) return;
+        if (window.location.pathname !== "/") {
+            navigate("/#" + sectionId);
+        } else {
+            const el = document.getElementById(sectionId);
+            if (el) {
+                const top = el.offsetTop - 80;
+                window.scrollTo({ top, behavior: "smooth" });
+            }
+        }
+    };
 
     return (
         <footer className="footer">
@@ -60,23 +100,23 @@ export default function Footer() {
             <div className="footer__container">
                 {/* ── Brand column ── */}
                 <div className="footer__brand">
-                    <a href="/" className="footer__logo">
+                    <Link to="/" className="footer__logo">
                         <img
                             src="/images/companylogo.jpg"
                             alt="Company Logo"
                             className="footer__logo-img"
                         />
                         <span className="footer__logo-text">
-  <span 
-    className="footer__logo-accent"
-    style={{
-      color: "#ffd700"
-    }}
-  >
-    UT
-  </span>
-</span>
-                    </a>
+                            <span
+                                className="footer__logo-accent"
+                                style={{
+                                    color: "#ffd700"
+                                }}
+                            >
+                                UT
+                            </span>
+                        </span>
+                    </Link>
 
                     <p className="footer__brand-desc">
                         A full-service digital agency delivering innovative web, IT, and
@@ -112,22 +152,34 @@ export default function Footer() {
                     </div>
                 </div>
 
-                {/* ── Link columns ── */}
-                {FOOTER_LINKS.map(({ heading, links }) => (
-                    <div key={heading} className="footer__col">
-                        <h4 className="footer__col-heading">{heading}</h4>
-                        <ul className="footer__col-links">
-                            {links.map(({ label, href }) => (
-                                <li key={label}>
-                                    <a href={href} className="footer__col-link">
-                                        <span className="footer__col-link-dot" />
-                                        {label}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                ))}
+                {/* ── Link columns — single row ── */}
+                <div className="footer__links">
+                    {FOOTER_LINKS.map(({ heading, links }) => (
+                        <div key={heading} className="footer__col">
+                            <h4 className="footer__col-heading">{heading}</h4>
+                            <ul className="footer__col-links">
+                                {links.map(({ label, sectionId }) => (
+                                    <li key={label}>
+                                        {sectionId ? (
+                                            <button
+                                                className="footer__col-link footer__col-link--btn"
+                                                onClick={() => handleSectionLink(sectionId)}
+                                            >
+                                                <span className="footer__col-link-dot" />
+                                                {label}
+                                            </button>
+                                        ) : (
+                                            <span className="footer__col-link footer__col-link--disabled">
+                                                <span className="footer__col-link-dot" />
+                                                {label}
+                                            </span>
+                                        )}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
             </div>
 
             {/* ── Bottom bar ── */}
@@ -135,11 +187,11 @@ export default function Footer() {
                 <div className="footer__bottom-inner">
 
                     <p className="footer__copy">
-                        &copy; {year} <span className="footer__copy-brand">UT</span>. All rights reserved.
+                        &copy; {year} <span className="footer__copy-brand">Universal Technology</span>. All copy rights reserved.
                     </p>
 
                     <p className="footer__made">
-                        Made with <Heart size={13} className="footer__heart" fill="currentColor" /> by the UT Team
+                        Made with <Heart size={13} className="footer__heart" fill="currentColor" /> by the Universal Technology Team
                     </p>
 
                 </div>

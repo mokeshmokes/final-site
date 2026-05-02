@@ -47,8 +47,8 @@ export default function CardDetail() {
     /* Scroll to top + set page title */
     useEffect(() => {
         window.scrollTo(0, 0);
-        document.title = card ? `${card.title} — JUSCO` : "JUSCO";
-        return () => { document.title = "JUSCO"; };
+        document.title = card ? `${card.title} | Universal Technology` : "Universal Technology";
+        return () => { document.title = "Universal Technology"; };
     }, [id, card]);
 
     /* Unknown card */
@@ -147,9 +147,9 @@ export default function CardDetail() {
                         </ul>
 
                         <div className="card-detail__cta-row">
-                            <a href="/#visit-us" className="card-detail__cta-btn" style={{ background: card.color }}>
+                            {/* <a href="/#visit-us" className="card-detail__cta-btn" style={{ background: card.color }}>
                                 Get a Quote
-                            </a>
+                            </a> */}
                             <button className="card-detail__back-btn" onClick={() => navigate(-1)}>
                                 <ArrowLeft size={16} /> Back
                             </button>

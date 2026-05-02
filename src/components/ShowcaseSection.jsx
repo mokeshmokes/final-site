@@ -16,7 +16,7 @@ import "./ShowcaseSection.css";
 const TABS = [
     {
         id: "realization",
-        label: "Realization",
+        label: "WEB SERVICES",
         icon: Lightbulb,
         image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1600&q=80",
         title: "Turning Vision Into Reality",
@@ -25,7 +25,7 @@ const TABS = [
     },
     {
         id: "tweek",
-        label: "Tweek & Update",
+        label: "WEB DEVELOPMENT",
         icon: RefreshCw,
         image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1600&q=80",
         title: "Continuous Improvement",
@@ -34,7 +34,7 @@ const TABS = [
     },
     {
         id: "marketing",
-        label: "Marketing",
+        label: "MOBILE APP DEVELOPMENT",
         icon: Megaphone,
         image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&q=80",
         title: "Amplify Your Brand",
@@ -43,7 +43,7 @@ const TABS = [
     },
     {
         id: "other",
-        label: "Other",
+        label: "WEB HOSTING",
         icon: MoreHorizontal,
         image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1600&q=80",
         title: "Beyond The Ordinary",
@@ -52,7 +52,16 @@ const TABS = [
     },
     {
         id: "planning",
-        label: "Planning The Project",
+        label: "SEARCH ENGINE OPTIMIZATION [SEO]",
+        icon: ClipboardList,
+        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&q=80",
+        title: "Strategic Project Planning",
+        desc: "Every successful project starts with a solid plan. We map out timelines, milestones, and deliverables to ensure seamless execution.",
+        cta: "Start Planning",
+    },
+    {
+        id: "planning1",
+        label: "DOMAIN REGISTRATION",
         icon: ClipboardList,
         image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&q=80",
         title: "Strategic Project Planning",

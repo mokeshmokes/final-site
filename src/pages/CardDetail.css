@@ -123,7 +123,7 @@
 .card-detail__title {
     font-size: clamp(1.5rem, 3vw, 2.2rem);
     font-weight: 800;
-    color: #1E293B;
+    color: #1e3a8a;
     letter-spacing: -0.8px;
     line-height: 1.2;
 }
@@ -131,7 +131,7 @@
 .card-detail__desc {
     font-size: 1rem;
     line-height: 1.8;
-    color: #64748B;
+    color: #0a5ce1;
     margin-bottom: 1rem;
 }
 
@@ -139,7 +139,7 @@
 .card-detail__full-content {
     font-size: 0.95rem;
     line-height: 1.85;
-    color: #475569;
+    color: #0a5ce1;
     margin-bottom: 2rem;
     padding: 1.25rem 1.5rem;
     background: #ffffff;
@@ -150,7 +150,7 @@
 .card-detail__features-heading {
     font-size: 1rem;
     font-weight: 700;
-    color: #1E293B;
+    color: #2563eb;
     margin-bottom: 1rem;
     letter-spacing: -0.2px;
 }
@@ -169,9 +169,9 @@
     gap: 0.65rem;
     font-size: 0.9rem;
     font-weight: 500;
-    color: #334155;
-    background: #ffffff;
-    border: 1px solid #E2E8F0;
+    color: #1e40af;
+    background: #eef2ff;
+    border: 1px solid #c7d2fe;
     border-radius: 10px;
     padding: 0.6rem 1rem;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
@@ -220,7 +220,7 @@
     gap: 0.4rem;
     padding: 0.8rem 1.5rem;
     background: #ffffff;
-    color: #64748B;
+    color: #0a5ce1;
     border: 1.5px solid #E2E8F0;
     border-radius: 12px;
     font-size: 0.9rem;
@@ -230,8 +230,8 @@
 }
 
 .card-detail__back-btn:hover {
-    border-color: #94A3B8;
-    color: #1E293B;
+    border-color: #93c5fd;
+    color: #1e3a8a;
     transform: translateY(-2px);
 }
 
@@ -248,7 +248,7 @@
 
 .card-detail__not-found h2 {
     font-size: 1.5rem;
-    color: #1E293B;
+    color: #1e3a8a;
 }
 
 .card-detail__not-found button {

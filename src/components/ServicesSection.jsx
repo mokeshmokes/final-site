@@ -6,12 +6,12 @@ import "./ServicesSection.css";
 import "./FlipCard.css";
 
 const SERVICES = [
-    { id: "web-development", icon: Globe, title: "Web Development", description: "We build fast, scalable, and visually stunning websites tailored to your brand — from landing pages to complex web applications.", color: "#2563eb", rgb: "37,99,235", tag: "Development" },
-    { id: "wordpress-customization", icon: Layers, title: "WordPress Customization", description: "Custom WordPress themes, plugins, and full-site builds that are easy to manage and optimized for performance and SEO.", color: "#7c3aed", rgb: "124,58,237", tag: "CMS" },
-    { id: "ecommerce-development", icon: ShoppingCart, title: "E-Commerce Development", description: "End-to-end e-commerce solutions with seamless checkout, payment integration, and inventory management built to convert.", color: "#059669", rgb: "5,150,105", tag: "E-Commerce" },
-    { id: "logo-brand-identity", icon: Palette, title: "Logo & Brand Identity", description: "Memorable logos and cohesive brand identities that communicate your values and leave a lasting impression on your audience.", color: "#e11d48", rgb: "225,29,72", tag: "Branding" },
-    { id: "domain-hosting", icon: Server, title: "Domain & Hosting", description: "Reliable domain registration and managed hosting solutions with 99.9% uptime, SSL certificates, and expert support.", color: "#0891b2", rgb: "8,145,178", tag: "Infrastructure" },
-    { id: "professional-training", icon: GraduationCap, title: "Professional Training", description: "Hands-on training programs in web development, design, and digital marketing — empowering individuals and teams to grow.", color: "#d97706", rgb: "217,119,6", tag: "Education" },
+    { id: "web-development", icon: Globe, title: "GREAT PEOPLE TRUSTED OUR SERVICES", description: "We build fast, scalable, and visually stunning websites tailored to your brand — from landing pages to complex web applications.", color: "#2563eb", rgb: "37,99,235", tag: "Development" },
+    { id: "wordpress-customization", icon: Layers, title: "ABOUT UNIVERSAL TECHNOLOGY", description: "Custom WordPress themes, plugins, and full-site builds that are easy to manage and optimized for performance and SEO.", color: "#7c3aed", rgb: "124,58,237", tag: "CMS" },
+    { id: "ecommerce-development", icon: ShoppingCart, title: "CUSTOMER SATISFACTION", description: "End-to-end e-commerce solutions with seamless checkout, payment integration, and inventory management built to convert.", color: "#059669", rgb: "5,150,105", tag: "E-Commerce" },
+    { id: "logo-brand-identity", icon: Palette, title: "WHY CHOOSE US?", description: "Memorable logos and cohesive brand identities that communicate your values and leave a lasting impression on your audience.", color: "#e11d48", rgb: "225,29,72", tag: "Branding" },
+    { id: "domain-hosting", icon: Server, title: "UNIVERSAL TECHNOLOGY QUALITY POLICY", description: "Reliable domain registration and managed hosting solutions with 99.9% uptime, SSL certificates, and expert support.", color: "#0891b2", rgb: "8,145,178", tag: "Infrastructure" },
+    { id: "professional-training", icon: GraduationCap, title: "UNIVERSAL TECHNOLOGY CUSTOMERS", description: "Hands-on training programs in web development, design, and digital marketing — empowering individuals and teams to grow.", color: "#d97706", rgb: "217,119,6", tag: "Education" },
 ];
 
 const containerVariants = { hidden: {}, visible: { transition: { staggerChildren: 0.12 } } };
@@ -61,7 +61,7 @@ export default function ServicesSection() {
                         <span className="services__tag-dot" />What We Offer
                     </motion.div>
                     <motion.h2 className="services__heading" variants={headingVariants} custom={1} initial="hidden" animate={headingInView ? "visible" : "hidden"}>
-                        What <span className="services__heading-accent">JUSCO</span> Do
+                        What <span className="services__heading-accent">Universal Technology</span>
                     </motion.h2>
                     <motion.p className="services__subheading" variants={headingVariants} custom={2} initial="hidden" animate={headingInView ? "visible" : "hidden"}>
                         From concept to launch, we deliver end-to-end digital solutions that help businesses grow, compete, and thrive in the digital age.

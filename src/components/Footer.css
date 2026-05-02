@@ -3,7 +3,7 @@
 ═══════════════════════════════════════════ */
 
 .footer {
-    background: #0F172A;
+    background: #132755;
     position: relative;
     overflow: hidden;
 }
@@ -25,6 +25,8 @@
     display: grid;
     grid-template-columns: 1.6fr repeat(4, 1fr);
     gap: 3rem;
+    align-items: stretch;
+    /* equal column heights */
 }
 
 /* ── Brand column ── */
@@ -137,10 +139,13 @@
     transform: translateY(-3px) scale(1.1);
 }
 
-/* ── Link columns ── */
+/* ── Link columns — equal height with brand column ── */
 .footer__col {
     display: flex;
     flex-direction: column;
+    height: 100%;
+    padding-top: 32%;
+    /* align headings with UT logo text level */
 }
 
 .footer__col-heading {
@@ -170,6 +175,8 @@
     display: flex;
     flex-direction: column;
     gap: 0.55rem;
+    flex-grow: 1;
+    /* fill remaining column height */
 }
 
 .footer__col-link {
@@ -243,21 +250,24 @@
     font-size: 0.78rem;
     color: rgba(255, 255, 255, 0.25);
 }
+
 .footer__heart {
-  animation: pulse 1s ease-in-out infinite;
-  color: #22c55e;
+    animation: pulse 1s ease-in-out infinite;
+    color: #22c55e;
 }
 
 @keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.3);
-  }
-  100% {
-    transform: scale(1);
-  }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 /* ═══════════════════════════════════════════

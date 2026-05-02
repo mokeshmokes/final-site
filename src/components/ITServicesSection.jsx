@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import {
     Lightbulb, Wrench, FileCheck, Settings, Headphones,
@@ -77,16 +77,19 @@ const headingVariants = {
     }),
 };
 
-function ITCard({ icon: Icon, title, desc, color, rgb, features }) {
+function ITCard({ icon: Icon, title, desc, color, rgb, features, onOpen }) {
     return (
-        <motion.div variants={cardVariants} className="flip-card">
+        <motion.div
+            variants={cardVariants}
+            className="flip-card"
+            onClick={() => onOpen({ title, features })}
+            role="button"
+            tabIndex={0}
+            aria-label={`Learn more about ${title}`}
+            onKeyDown={(e) => e.key === "Enter" && onOpen({ title, features })}
+        >
             <div className="flip-inner">
-
-                {/* ── FRONT ── */}
-                <div
-                    className="flip-front it-card"
-                    style={{ "--it-color": color, "--it-rgb": rgb }}
-                >
+                <div className="flip-front it-card" style={{ "--it-color": color, "--it-rgb": rgb }}>
                     <div className="it-card__accent" />
                     <div className="it-card__icon-wrap">
                         <Icon size={24} className="it-card__icon" />
@@ -94,18 +97,9 @@ function ITCard({ icon: Icon, title, desc, color, rgb, features }) {
                     </div>
                     <h3 className="it-card__title">{title}</h3>
                     <p className="it-card__desc">{desc}</p>
+                    <p className="card-hint">Tap to learn more</p>
                     <div className="it-card__hover-bg" />
                 </div>
-
-                {/* ── BACK ── */}
-                <div className="flip-back">
-                    <p className="flip-back__title">{title}</p>
-                    <ul className="flip-back__list">
-                        {features.map((f) => <li key={f}>{f}</li>)}
-                    </ul>
-                    <span className="flip-back__cta">Hover to explore</span>
-                </div>
-
             </div>
         </motion.div>
     );
@@ -116,6 +110,8 @@ export default function ITServicesSection() {
     const gridRef = useRef(null);
     const headerView = useInView(headerRef, { once: true, margin: "-80px" });
     const gridView = useInView(gridRef, { once: true, margin: "-60px" });
+
+    const [activeCard, setActiveCard] = useState(null);
 
     return (
         <section className="it-services" id="it-services">
@@ -151,10 +147,34 @@ export default function ITServicesSection() {
                     variants={containerVariants} initial="hidden"
                     animate={gridView ? "visible" : "hidden"}>
                     {IT_SERVICES.map((svc) => (
-                        <ITCard key={svc.title} {...svc} />
+                        <ITCard key={svc.title} {...svc} onOpen={setActiveCard} />
                     ))}
                 </motion.div>
             </div>
+
+            {/* ── Modal ── */}
+            {activeCard && (
+                <div className="card-modal-overlay" onClick={() => setActiveCard(null)}>
+                    <motion.div
+                        className="card-modal-box"
+                        onClick={(e) => e.stopPropagation()}
+                        initial={{ opacity: 0, scale: 0.85 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.3, ease: [0.34, 1.56, 0.64, 1] }}
+                    >
+                        <h2 className="card-modal-box__title">{activeCard.title}</h2>
+                        <div className="card-modal-box__content">
+                            {/* ── Add your custom content here ── */}
+                            <ul className="card-modal-box__list">
+                                {activeCard.features.map((f) => <li key={f}>{f}</li>)}
+                            </ul>
+                        </div>
+                        <button className="card-modal-box__close" onClick={() => setActiveCard(null)}>
+                            Close
+                        </button>
+                    </motion.div>
+                </div>
+            )}
         </section>
     );
 }

@@ -116,7 +116,15 @@ export default function Navbar() {
     alt="Company Logo"
     className="navbar__logo-img"
   />
-  <span className="navbar__logo-text">UT</span>
+  <span 
+  className="navbar__logo-text"
+  style={{
+    color: "#ffd700",
+    fontWeight: "700"
+  }}
+>
+  UT
+</span>
 </a>
 
         {/* ── Desktop nav links ── */}

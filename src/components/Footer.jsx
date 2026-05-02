@@ -67,8 +67,15 @@ export default function Footer() {
                             className="footer__logo-img"
                         />
                         <span className="footer__logo-text">
-                            <span className="footer__logo-accent">UT</span>
-                        </span>
+  <span 
+    className="footer__logo-accent"
+    style={{
+      color: "#ffd700"
+    }}
+  >
+    UT
+  </span>
+</span>
                     </a>
 
                     <p className="footer__brand-desc">

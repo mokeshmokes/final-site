@@ -4,7 +4,6 @@ import { Autoplay, Navigation, EffectFade } from "swiper/modules";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     Lightbulb, RefreshCw, Megaphone, MoreHorizontal, ClipboardList,
-    ArrowRight,
 } from "lucide-react";
 
 import "swiper/css";

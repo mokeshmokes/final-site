@@ -129,7 +129,7 @@ export default function AboutSection() {
                         {/* Parallax image — clean, no overlays */}
                         <motion.div className="about__image-inner" style={{ y: imgY }}>
                             <img
-                                src="https://theme-crazy.com/themeforest-html/jusco-preview/jusco/img/about-us/1.jpg"
+                                src="/images/about.jpg"
                                 alt="JUSCO professional"
                                 className="about__img"
                             />

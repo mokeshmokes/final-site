@@ -1,4 +1,10 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+/* ── Page components ── */
+import CardDetail from "./pages/CardDetail";
+
+/* ── Section components ── */
 import Navbar from "./components/Navbar";
 import HeroSlider from "./components/HeroSlider";
 import AboutSection from "./components/AboutSection";
@@ -21,74 +27,44 @@ import TawkChat from "./components/TawkChat";
 import Loader from "./components/Loader";
 import "./App.css";
 
-function App() {
+/* ── Home page (all sections) ── */
+function Home() {
   return (
-    <>
-      {/* Page loader — shows on mount, auto-hides after 2.7 s */}
-      <Loader />
-
-      <div className="app">
-        {/* 1 — Navbar */}
-        <Navbar />
-
-        <main>
-          {/* 2 — Hero Slider */}
-          <HeroSlider />
-
-          {/* 3 — About Section */}
-          <AboutSection />
-
-          {/* 4 — What Jusco Do (Services cards) */}
-          <ServicesSection />
-
-          {/* 5 — Numbers That Speak (Counter section) */}
-          <StatsSection />
-
-          {/* 6 — Team of Experts (slider) */}
-          <TeamSection />
-
-          {/* 7 — Evolution & Growth (Skills / progress bars) */}
-          <SkillSection />
-
-          {/* 8 — Trusted by Industry Leaders (Company logos slider) */}
-          <PartnersSection />
-
-          {/* 9 — Services Slideshow Section */}
-          <ShowcaseSection />
-
-          {/* 10 — Our Products */}
-          <ProductsSection />
-
-          {/* 11 — Professional IT Services */}
-          <ITServicesSection />
-
-          {/* 12 — Client Reviews (Testimonials) */}
-          <TestimonialsSection />
-
-          {/* 12.5 — Quality Badges */}
-          <QualityBadges />
-
-          {/* 13 — Contact Section */}
-          <ContactSection />
-
-          {/* 13.5 — Newsletter Subscription */}
-          <NewsletterSection />
-
-          {/* 14 — Mode of Payment */}
-          <PaymentSection />
-
-          {/* 15 — Media Showcase */}
-          <MediaShowcase />
-        </main>
-
-        {/* 16 — Footer */}
-        <Footer />
-
-        {/* Live Chat — renders nothing, injects Tawk.to widget */}
-        <TawkChat />
-      </div>
-    </>
+    <div className="app">
+      <Navbar />
+      <main>
+        <HeroSlider />
+        <AboutSection />
+        <ServicesSection />
+        <StatsSection />
+        <TeamSection />
+        <SkillSection />
+        <PartnersSection />
+        <ShowcaseSection />
+        <ProductsSection />
+        <ITServicesSection />
+        <TestimonialsSection />
+        <QualityBadges />
+        <ContactSection />
+        <NewsletterSection />
+        <PaymentSection />
+        <MediaShowcase />
+      </main>
+      <Footer />
+      <TawkChat />
+    </div>
   );
 }
 
-export default App;
+/* ── Root app with router ── */
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Loader />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/card/:id" element={<CardDetail />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}

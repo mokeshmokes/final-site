@@ -133,7 +133,19 @@ export default function CardDetail() {
                             <h2 className="card-detail__title">{card.title}</h2>
                         </div>
 
-                        <p className="card-detail__desc">{card.description}</p>
+                        {Array.isArray(card.description)
+                            ? card.description.map((item, i) => (
+                                typeof item === "object" && item.subtitle
+                                    ? (
+                                        <div key={i} className="card-detail__desc-block">
+                                            <h4 className="card-detail__desc-subtitle">{item.subtitle}</h4>
+                                            <p className="card-detail__desc">{item.text}</p>
+                                        </div>
+                                    )
+                                    : <p key={i} className="card-detail__desc">{item}</p>
+                            ))
+                            : <p className="card-detail__desc">{card.description}</p>
+                        }
                         <p className="card-detail__full-content">{card.fullContent}</p>
 
                         <h3 className="card-detail__features-heading">Key Features</h3>

@@ -67,8 +67,8 @@
 }
 
 .loader__logo {
-    width: 200px;
-    max-width: 60vw;
+    width: 260px;
+    max-width: 80vw;
     height: auto;
     object-fit: contain;
     border-radius: 0;
@@ -76,14 +76,14 @@
     background: transparent;
     mix-blend-mode: multiply;
     display: block;
-    filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.15));
+    filter: drop-shadow(0 16px 40px rgba(37, 99, 235, 0.4));
 }
 
 /* Fallback initials badge */
 .loader__logo-fallback {
-    width: 200px;
-    height: 200px;
-    border-radius: 32px;
+    width: 260px;
+    height: 260px;
+    border-radius: 40px;
     background: linear-gradient(135deg, #2563eb, #7c3aed);
     color: #fff;
     font-size: 3.5rem;
@@ -164,13 +164,13 @@
 @media (max-width: 768px) {
 
     .loader__logo {
-        width: 140px;
-        max-width: 55vw;
+        width: 180px;
+        max-width: 75vw;
     }
 
     .loader__logo-fallback {
-        width: 140px;
-        height: 140px;
+        width: 180px;
+        height: 180px;
         font-size: 2.6rem;
         border-radius: 24px;
     }

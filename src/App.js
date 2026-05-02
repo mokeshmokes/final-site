@@ -16,6 +16,7 @@ import PartnersSection from "./components/PartnersSection";
 import ShowcaseSection from "./components/ShowcaseSection";
 import ITServicesSection from "./components/ITServicesSection";
 import BusinessServices from "./components/BusinessServices";
+import TechnicalSection from "./components/TechnicalSection";
 import ProductsSection from "./components/ProductsSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import QualityBadges from "./components/QualityBadges";
@@ -64,6 +65,7 @@ function Home() {
         <HeroSlider />
         <AboutSection />
         <ServicesSection />
+        <TechnicalSection />
         <StatsSection />
         <TeamSection />
         <SkillSection />

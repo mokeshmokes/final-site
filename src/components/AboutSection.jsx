@@ -157,21 +157,45 @@ export default function AboutSection() {
 
                     {/* Description */}
                     <motion.p className="about__desc" variants={fadeUp} custom={2}>
-                        JUSCO is a full-service digital agency committed to transforming
-                        businesses through innovative technology and creative design. We
-                        blend strategy, design, and engineering to deliver digital
-                        experiences that drive real results and lasting impact.
+                        Universal technology is the leading technology enabler in SALEM that offers innovative and extensive range of software solutions and services to consumers. Our range of dedicated services and customized solution is designed to help our client more in step with a fast –  moving world and constantly ahead. At universal technology, access to technology products and services has become a delightful experience. The firm started its operation in 2001 with its first flagship in SALEM, India.
                     </motion.p>
-
+                    <motion.h2 className="about__heading" variants={fadeUp} custom={1}>
+                        <span className="about__heading-accent">Enterprise</span>
+                    </motion.h2>
+                    <motion.p className="about__desc" variants={fadeUp} custom={2}>
+                        Universal technology is recognized by its customers as a true IT expert. This is a key asset in a market where rapid changes in products and technologies are often confusing the customers. The role of UNIVERSAL TECHNOLOGY sales advisors is to understand customer’s needs and provide advice and solutions that best fit there requirements.
+Universal technology In sep 2001, Universal opened its first and for most concept Universal express at Salem.
+Universal express is a very dedicated and focused concept universal express at Salem.
+UNIVERSAL intends to roll express concept in similar dedicated market segments across the regoin to provide dedicated services or products to these markets. The Express concept is the retail business unit and carries a selection of retail products dedicated to fast moving mobile technology
+                    </motion.p>
+                    <motion.h2 className="about__heading" variants={fadeUp} custom={1}>
+                        <span className="about__heading-accent">Bargain</span>
+                    </motion.h2>
+                    <motion.p className="about__desc" variants={fadeUp} custom={2}>
+                        Universal Technology offers the best value for money on the market with unbeatable price / quality / bundle offer and service mix.
+                    </motion.p>
+                     <motion.h2 className="about__heading" variants={fadeUp} custom={1}>
+                        <span className="about__heading-accent">Easy in decision making</span>
+                    </motion.h2>
+                    <motion.p className="about__desc" variants={fadeUp} custom={2}>
+                       The customer is never alone. The depth of product selection, the range of offered BRAND’S IN PC’s, LAPTOPS, SERVERS, NETWORKING, STRUCTURED CABLING, AND AFTER SALES SERVICES, state that the customer will choose the best products for his use, is assured of its use due to availability of support repairs, upgrades, installation etc.
+                    </motion.p>
+                     <motion.h2 className="about__heading" variants={fadeUp} custom={1}>
+                        <span className="about__heading-accent">Strategy</span>
+                    </motion.h2>
+                    <motion.p className="about__desc" variants={fadeUp} custom={2}>
+                       Universal Technology Click Strategy
+Universal Technology strongly believes that electronic business in INDIA is developing fast, and hence is positioning the company to capitalize the oppurtunity. We are currently implementing BUSINESS TO BUSINESS solutions for our customers. Universal Express have got service persons in City to serve selected customer base. HARDWARE PRODUCTS LIKE consumables, cartridges, toner, printers will be delivered in 6 working hours in SALEM city. Universal Express is a complete Free service. Customers are requested to get in touch with Universal Technology.
+                    </motion.p>
                     {/* Highlights */}
-                    <motion.ul className="about__highlights" variants={fadeUp} custom={3}>
+                    {/* <motion.ul className="about__highlights" variants={fadeUp} custom={3}>
                         {HIGHLIGHTS.map((item, i) => (
                             <li key={i} className="about__highlight">
                                 <CheckCircle2 size={17} className="about__highlight-icon" />
                                 {item}
                             </li>
                         ))}
-                    </motion.ul>
+                    </motion.ul> */}
 
                     {/* Expertise heading */}
                     <motion.div className="about__expertise-header" variants={fadeUp} custom={4}>

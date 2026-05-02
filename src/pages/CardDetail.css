@@ -128,11 +128,31 @@
     line-height: 1.2;
 }
 
+/* Description blocks — subtitle + paragraph */
+.card-detail__desc-block {
+    margin-bottom: 1.1rem;
+}
+
+.card-detail__desc-block:last-of-type {
+    margin-bottom: 1.5rem;
+}
+
+.card-detail__desc-subtitle {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--cd-color, #2563eb);
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    margin-bottom: 0.3rem;
+    padding-left: 0.65rem;
+    border-left: 3px solid var(--cd-color, #2563eb);
+}
+
 .card-detail__desc {
-    font-size: 1rem;
-    line-height: 1.8;
+    font-size: 0.97rem;
+    line-height: 1.85;
     color: #0a5ce1;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
 }
 
 /* Expanded full content paragraph */

@@ -1,76 +1,157 @@
-import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
-import { useNavigate } from "react-router-dom";
-import { Globe, Layers, ShoppingCart, Palette, Server, GraduationCap } from "lucide-react";
+import { FaUsers, FaInfoCircle, FaSmile, FaCheckCircle, FaShieldAlt, FaUserGraduate } from "react-icons/fa";
 import "./ServicesSection.css";
-import "./FlipCard.css";
 
 const SERVICES = [
-    { id: "web-development", icon: Globe, title: "GREAT PEOPLE TRUSTED OUR SERVICES", description: "We build fast, scalable, and visually stunning websites tailored to your brand — from landing pages to complex web applications.", color: "#2563eb", rgb: "37,99,235", tag: "Development" },
-    { id: "wordpress-customization", icon: Layers, title: "ABOUT UNIVERSAL TECHNOLOGY", description: "Custom WordPress themes, plugins, and full-site builds that are easy to manage and optimized for performance and SEO.", color: "#7c3aed", rgb: "124,58,237", tag: "CMS" },
-    { id: "ecommerce-development", icon: ShoppingCart, title: "CUSTOMER SATISFACTION", description: "End-to-end e-commerce solutions with seamless checkout, payment integration, and inventory management built to convert.", color: "#059669", rgb: "5,150,105", tag: "E-Commerce" },
-    { id: "logo-brand-identity", icon: Palette, title: "WHY CHOOSE US?", description: "Memorable logos and cohesive brand identities that communicate your values and leave a lasting impression on your audience.", color: "#e11d48", rgb: "225,29,72", tag: "Branding" },
-    { id: "domain-hosting", icon: Server, title: "UNIVERSAL TECHNOLOGY QUALITY POLICY", description: "Reliable domain registration and managed hosting solutions with 99.9% uptime, SSL certificates, and expert support.", color: "#0891b2", rgb: "8,145,178", tag: "Infrastructure" },
-    { id: "professional-training", icon: GraduationCap, title: "UNIVERSAL TECHNOLOGY CUSTOMERS", description: "Hands-on training programs in web development, design, and digital marketing — empowering individuals and teams to grow.", color: "#d97706", rgb: "217,119,6", tag: "Education" },
+    {
+        icon: FaUsers,
+        title: "GREAT PEOPLE TRUSTED OUR SERVICES",
+        frontPoints: [
+            "Discover what's new at Universal Technology",
+            "Get impressed with great pricing",
+            "Evolving with consumer needs",
+        ],
+        backPoints: [
+            "UNIQUE PRODUCTS & CONSUMABLES!",
+            "MULTIBRAND SERVICE CENTER!",
+            "VALUE FOR QUALITY.SERVICE & MONEY",
+        ],
+        color: "#2563eb", rgb: "37,99,235",
+    },
+    {
+        icon: FaInfoCircle,
+        title: "ABOUT UNIVERSAL TECHNOLOGY",
+        frontPoints: [
+            "We Discover People with ideas and experience to develop a vision for the future.",
+            "We Build The right tools at the right time enhance the shared economy.",
+            "We Connect Integrating clients with partners is the focus of everyday business.",
+        ],
+        backPoints: [
+            "We Launch Bringing highly anticipated programs to the marketplace.",
+            "We Provide Creative solutions to clients around the world, creating things that get attention and meaningful.",
+           
+        ],
+        color: "#7c3aed", rgb: "124,58,237",
+    },
+    {
+        icon: FaSmile,
+        title: "CUSTOMER SATISFACTION",
+        frontPoints: [
+            "We are a UNIVERSAL TECHNOLOGY focused on IT CONSULTING SERVICES.NETWORKING.SECURITY SYSTEMS.OS INSTALLATION WEBSITE DESIGNING AND HOSTING SERVICES Simplicity is the one word we love and utilize through our projects everyday",
+        ],
+        backPoints: [
+            "We are a UNIVERSAL TECHNOLOGY focused on IT CONSULTING SERVICES.NETWORKING.SECURITY SYSTEMS.OS INSTALLATION WEBSITE DESIGNING AND HOSTING SERVICES Simplicity is the one word we love and utilize through our projects everyday",
+        ],
+        color: "#059669", rgb: "5,150,105",
+    },
+    {
+        icon: FaCheckCircle,
+        title: "WHY CHOOSE US?",
+        frontPoints: [
+            "We provide up front pricing and no hidden costs.",
+            "We meet their deadlines.",
+            "We maintain a single point of contact.",
+        ],
+        backPoints: [
+            "We keep them apprise of the status of their site design during the design process.",
+            "We became partners in the process and remained in contact with them after the site was completed to offer any needed assistance.",
+        ],
+        color: "#e11d48", rgb: "225,29,72",
+    },
+    {
+        icon: FaShieldAlt,
+        title: "UNIVERSAL TECHNOLOGY QUALITY POLICY",
+        frontPoints: [
+            "TEAM WORK",
+            "ASSURED QUALITY",
+            "FAST AND EFFECTIVE SERVICE",
+        ],
+        backPoints: [
+            "TRANSPARENT BUSINESS OPERATION",
+            "BUSINESS SERVICE",
+        ],
+        color: "#0891b2", rgb: "8,145,178",
+    },
+    {
+        icon: FaUserGraduate,
+        title: "UNIVERSAL TECHNOLOGY CUSTOMERS",
+        frontPoints: [
+            "HOME USERS",
+            "ADVISTRAMENT MEDIA",
+            "SCHOOL UNIVERSITY",
+            "CIVIL ENGINNERS & ENTERPRISES",
+        ],
+        backPoints: [
+            "GOVERNMENT STAFF",
+            "HOTELS & SPAA",
+            "INSURANCE COMPANIES",
+            "BPO & IT OFFICES",
+            "HOSPITAL & ETC",
+        ],
+        color: "#d97706", rgb: "217,119,6",
+    },
 ];
 
-const containerVariants = { hidden: {}, visible: { transition: { staggerChildren: 0.12 } } };
-const cardVariants = { hidden: { opacity: 0, y: 50 }, visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1] } } };
-const headingVariants = { hidden: { opacity: 0, y: 30 }, visible: (i) => ({ opacity: 1, y: 0, transition: { duration: 0.65, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] } }) };
-
-function ServiceCard({ id, icon: Icon, title, description, color, rgb, tag }) {
-    const navigate = useNavigate();
+function ServiceCard({ icon: Icon, title, frontPoints, backPoints, color, rgb }) {
     return (
-        <motion.div variants={cardVariants} className="flip-card"
-            onClick={() => navigate(`/card/${id}`)} role="button" tabIndex={0}
-            aria-label={`Learn more about ${title}`}
-            onKeyDown={(e) => e.key === "Enter" && navigate(`/card/${id}`)}>
-            <div className="flip-inner">
-                <div className="flip-front svc-card" style={{ "--card-color": color, "--card-rgb": rgb }}>
+        <div className="svc-flip" style={{ "--card-color": color, "--card-rgb": rgb }}>
+            <div className="svc-flip__inner">
+
+                {/* Front — short highlights */}
+                <div className="svc-flip__front svc-card">
                     <div className="svc-card__accent" />
                     <div className="svc-card__icon-wrap">
                         <Icon size={26} className="svc-card__icon" />
-                        <div className="svc-card__icon-glow" />
                     </div>
-                    <span className="svc-card__tag">{tag}</span>
                     <h3 className="svc-card__title">{title}</h3>
-                    <p className="svc-card__desc">{description}</p>
-                    <p className="card-hint">Tap to learn more</p>
-                    <div className="svc-card__hover-bg" />
+                    <ul className="svc-card__list">
+                        {(frontPoints || []).map((point, i) => (
+                            <li key={i}>{point}</li>
+                        ))}
+                    </ul>
                 </div>
+
+                {/* Back — detailed info */}
+                <div className="svc-flip__back">
+                    <div className="svc-flip__back-icon-wrap">
+                        <Icon size={32} />
+                    </div>
+                    <h3 className="svc-flip__back-title">{title}</h3>
+                    <ul className="svc-back__list">
+                        {(backPoints || []).map((point, i) => (
+                            <li key={i}>{point}</li>
+                        ))}
+                    </ul>
+                </div>
+
             </div>
-        </motion.div>
+        </div>
     );
 }
 
 export default function ServicesSection() {
-    const sectionRef = useRef(null);
-    const headingRef = useRef(null);
-    const gridRef = useRef(null);
-    const headingInView = useInView(headingRef, { once: true, margin: "-80px" });
-    const gridInView = useInView(gridRef, { once: true, margin: "-60px" });
-
     return (
-        <section className="services" id="services" ref={sectionRef}>
+        <section className="services" id="services">
             <div className="services__bg-grid" />
             <div className="services__bg-orb services__bg-orb--1" />
             <div className="services__bg-orb services__bg-orb--2" />
+
             <div className="services__container">
-                <div className="services__header" ref={headingRef}>
-                    <motion.div className="services__tag" variants={headingVariants} custom={0} initial="hidden" animate={headingInView ? "visible" : "hidden"}>
+                <div className="services__header">
+                    <div className="services__tag">
                         <span className="services__tag-dot" />What We Offer
-                    </motion.div>
-                    <motion.h2 className="services__heading" variants={headingVariants} custom={1} initial="hidden" animate={headingInView ? "visible" : "hidden"}>
+                    </div>
+                    <h2 className="services__heading">
                         What <span className="services__heading-accent">Universal Technology</span>
-                    </motion.h2>
-                    <motion.p className="services__subheading" variants={headingVariants} custom={2} initial="hidden" animate={headingInView ? "visible" : "hidden"}>
+                    </h2>
+                    <p className="services__subheading">
                         From concept to launch, we deliver end-to-end digital solutions that help businesses grow, compete, and thrive in the digital age.
-                    </motion.p>
-                    <motion.div className="services__divider" initial={{ scaleX: 0 }} animate={headingInView ? { scaleX: 1 } : { scaleX: 0 }} transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }} />
+                    </p>
+                    <div className="services__divider" />
                 </div>
-                <motion.div className="services__grid" ref={gridRef} variants={containerVariants} initial="hidden" animate={gridInView ? "visible" : "hidden"}>
-                    {SERVICES.map((svc) => <ServiceCard key={svc.id} {...svc} />)}
-                </motion.div>
+
+                <div className="services__grid">
+                    {SERVICES.map((svc) => <ServiceCard key={svc.title} {...svc} />)}
+                </div>
             </div>
         </section>
     );

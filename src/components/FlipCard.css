@@ -2,8 +2,7 @@
    SHARED CARD STYLES
    Used by ServicesSection, ProductsSection,
    and ITServicesSection
-   Flip animation REMOVED — replaced with
-   hover lift + click-to-modal interaction
+   All animations removed — fully static cards
 ═══════════════════════════════════════════ */
 
 /* Outer wrapper */
@@ -12,7 +11,7 @@
     cursor: pointer;
 }
 
-/* Inner wrapper — no 3D transform, just a container */
+/* Inner wrapper */
 .flip-inner {
     position: relative;
     width: 100%;
@@ -20,24 +19,30 @@
     min-height: 260px;
 }
 
-/* Front face fills the card */
+/* Front face — static, no hover changes */
 .flip-front {
     position: absolute;
     inset: 0;
     border-radius: 18px;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover lift — replaces flip */
-.flip-card:hover .flip-front {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
-}
-
-/* Back face hidden — content shown in modal instead */
+/* Back face hidden */
 .flip-back {
     display: none;
+}
+
+/* ── "Tap to learn more" hint — static ── */
+.card-hint {
+    margin-top: auto;
+    padding-top: 0.6rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #6b9cff;
+    text-align: center;
+    letter-spacing: 0.3px;
+    opacity: 0.75;
+    pointer-events: none;
 }
 
 /* ── Modal overlay ── */
@@ -67,19 +72,6 @@
     display: flex;
     flex-direction: column;
     gap: 0;
-    animation: cardModalIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both;
-}
-
-@keyframes cardModalIn {
-    from {
-        opacity: 0;
-        transform: scale(0.85);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
 }
 
 .card-modal-box__title {
@@ -92,29 +84,8 @@
     border-bottom: 2px solid #F1F5F9;
 }
 
-/* Content area — you can add any custom content here */
 .card-modal-box__content {
     margin-bottom: 1.25rem;
-}
-
-/* ── "Tap to learn more" hint ── */
-.card-hint {
-    margin-top: auto;
-    /* push to bottom of flex card */
-    padding-top: 0.6rem;
-    font-size: 0.72rem;
-    font-weight: 600;
-    color: #6b9cff;
-    text-align: center;
-    letter-spacing: 0.3px;
-    opacity: 0.75;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    pointer-events: none;
-}
-
-.flip-card:hover .card-hint {
-    opacity: 1;
-    transform: translateY(-2px);
 }
 
 .card-modal-box__list {
@@ -157,21 +128,10 @@
     font-weight: 700;
     cursor: pointer;
     box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
-    transition: background 0.2s ease, transform 0.2s ease;
-}
-
-.card-modal-box__close:hover {
-    background: #1d4ed8;
-    transform: translateY(-1px);
 }
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
-    .flip-card:hover .flip-front {
-        transform: none;
-        box-shadow: none;
-    }
-
     .card-modal-box {
         width: 90%;
         padding: 1.75rem 1.25rem 1.5rem;

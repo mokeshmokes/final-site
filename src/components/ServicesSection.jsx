@@ -55,7 +55,7 @@ const SERVICES = [
             "We keep them apprise of the status of their site design during the design process.",
             "We became partners in the process and remained in contact with them after the site was completed to offer any needed assistance.",
         ],
-        color: "#e11d48", rgb: "225,29,72",
+        color: "#e11d9cff", rgb: "225,29,72",
     },
     {
         icon: FaShieldAlt,

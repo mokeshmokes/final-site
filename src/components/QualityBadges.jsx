@@ -27,13 +27,13 @@ const BADGES = [
         fallbackIcon: "✅",
         color: "#059669",
     },
-    // {
-    //     src: "/images/badge4.png",
-    //     alt: "Trusted Brand",
-    //     // label: "Trusted Brand",
-    //     fallbackIcon: "🛡️",
-    //     color: "#d97706",
-    // },
+    {
+        src: "/images/iso.jpg",
+        alt: "Trusted Brand",
+        // label: "Trusted Brand",
+        fallbackIcon: "🛡️",
+        color: "#d97706",
+    },
 ];
 
 function Badge({ src, alt, label, fallbackIcon, color, index }) {

@@ -8,15 +8,28 @@ const CARDS = [
         title: "OUR FEATURES",
         Icon: FaFeatherAlt,
         frontPoints: [
-            "Modern tools & technologies",
-            "Scalable system architecture",
-            "Fast, optimised performance",
+"Corporate services",
+
+"Data recovery",
+
+"Corporate solutions",
+
+"Retail solutions",
+
+"CCTV solutions",
+
+"Network solutions",
         ],
         backPoints: [
-            "Advanced technology integration",
-            "Highly scalable infrastructure",
-            "Optimised for speed & efficiency",
-            "User-friendly interface design",
+"Consultancy",
+
+"Wireless solutions",
+
+"Consumable division",
+
+"System Administration",
+
+"Project Management",
         ],
         color: "#2563eb",
     },

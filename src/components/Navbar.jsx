@@ -158,6 +158,16 @@ export default function Navbar() {
               </a>
             </li>
           ))}
+          {/* Get Quote — sits right after Visit Us */}
+          <li className="navbar__link-item">
+            <a
+              href="#visit-us"
+              className="navbar__quote-btn"
+              onClick={(e) => { e.preventDefault(); scrollToSection("visit-us"); }}
+            >
+              Get Quote
+            </a>
+          </li>
         </ul>
 
         {/* ── Right icons ── */}

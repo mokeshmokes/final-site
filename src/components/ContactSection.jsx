@@ -160,11 +160,12 @@ export default function ContactSection() {
 
     /* ── Info cards data ── */
     const INFO_CARDS = [
-        { icon: Mail, label: "MAIL US", value: "swamijai@gmail.com", href: "swamijai@gmail.com" },
-        { icon: Phone, label: "CALL ME", value: "9944494399  9944494299", href: "tel:+9944494399  9944494299" },
-        { icon: MessageSquare, label: "SUPPORT", value: "swamijai@gmail.co", href: "swamijai@gmail.co" },
-        { icon: MapPin, label: "MY LOCATION", value: "UNIVERSAL TECHNOLOGY 250/187, GUPTHA NAGAR,ANGAMMAL COLONY,SALEM-636009,LAND MARK: NEAR KRISHNA MEDICALS.", href: "https://maps.app.goo.gl/QpYcVCLJZPwqbStk8" },
-        { icon: Clock, label: "OFFICE TIMEING", value: "Mon - Sat : 9:00 AM - 9:00 PM", href: null },
+        { icon: Mail, label: "MAIL US", value: "swamijai@gmail.com", href: "mailto:swamijai@gmail.com" },
+        { icon: Phone, label: "CALL ME", value: "9944494399", href: "tel:+919944494399" },
+        { icon: Phone, label: "CALL ME", value: "9944494299", href: "tel:+919944494299" },
+        { icon: MessageSquare, label: "SUPPORT", value: "swamijai@gmail.com", href: "mailto:swamijai@gmail.com" },
+        { icon: MapPin, label: "MY LOCATION", value: "UNIVERSAL TECHNOLOGY 250/187, GUPTHA NAGAR, ANGAMMAL COLONY, SALEM-636009. NEAR KRISHNA MEDICALS.", href: "https://maps.app.goo.gl/QpYcVCLJZPwqbStk8" },
+        { icon: Clock, label: "OFFICE TIMING", value: "Mon - Sat : 9:00 AM - 9:00 PM", href: null },
     ];
 
     return (

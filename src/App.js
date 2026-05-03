@@ -28,6 +28,7 @@ import Footer from "./components/Footer";
 import TawkChat from "./components/TawkChat";
 import Loader from "./components/Loader";
 import "./App.css";
+import "./responsive.css";
 
 /* ── Home page (all sections) ── */
 function Home() {

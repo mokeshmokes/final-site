@@ -10,10 +10,10 @@ import "./TeamSection.css";
 
 const TEAM = [
     {
-        name: "Rajesh Kumar",
+        name: "SWAMINATHAN",
         role: "Managing Director",
         desc: "Rajesh drives the company's vision and strategic direction with over 15 years of leadership in the IT industry. His commitment to excellence sets the standard for every team and project.",
-        image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&q=80",
+        image: "/images/owner2.jpg",
         color: "#2563eb",
         rgb: "37,99,235",
         socials: [
@@ -49,10 +49,10 @@ const TEAM = [
         ],
     },
     {
-        name: "Lola Fernandez",
-        role: "Accountant",
+        name: "SENGEETHA",
+        role: "AUDITOR",
         desc: "Lola keeps our financial operations precise and transparent. Her expertise in business finance ensures every project is delivered on budget with full accountability.",
-        image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=500&q=80",
+        image: "/images/auditor.jpg",
         color: "#d97706",
         rgb: "217,119,6",
         socials: [
@@ -62,10 +62,23 @@ const TEAM = [
         ],
     },
     {
-        name: "Vikram Nair",
+        name: "GUNASEKER",
+        role: "AUDITOR",
+        desc: "Lola keeps our financial operations precise and transparent. Her expertise in business finance ensures every project is delivered on budget with full accountability.",
+        image: "/images/GUNASEKER.jpg",
+        color: "#d97706",
+        rgb: "217,119,6",
+        socials: [
+            { icon: FaXTwitter, href: "#" },
+            { icon: FaLinkedinIn, href: "#" },
+            { icon: FaInstagram, href: "#" },
+        ],
+    },
+    {
+        name: "RAJESH",
         role: "Hardware & Network Technician",
         desc: "Vikram designs and maintains reliable network infrastructure and hardware systems. His hands-on expertise keeps our clients' IT environments running at peak performance.",
-        image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&q=80",
+        image: "/images/RAJESH.jpg",
         color: "#0891b2",
         rgb: "8,145,178",
         socials: [
@@ -75,10 +88,23 @@ const TEAM = [
         ],
     },
     {
-        name: "Suresh Babu",
+        name: "ABILASH",
         role: "CCTV Technician",
         desc: "Suresh specializes in the installation and maintenance of advanced surveillance systems. He ensures every security setup is optimized for maximum coverage and reliability.",
-        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&q=80",
+        image: "/images/ABILASH.jpg",
+        color: "#6d28d9",
+        rgb: "109,40,217",
+        socials: [
+            { icon: FaXTwitter, href: "#" },
+            { icon: FaLinkedinIn, href: "#" },
+            { icon: FaInstagram, href: "#" },
+        ],
+    },
+    {
+        name: "SARAVANAN",
+        role: "MARKETING",
+        desc: "Suresh specializes in the installation and maintenance of advanced surveillance systems. He ensures every security setup is optimized for maximum coverage and reliability.",
+        image: "/images/SARAVANAN.jpg",
         color: "#6d28d9",
         rgb: "109,40,217",
         socials: [

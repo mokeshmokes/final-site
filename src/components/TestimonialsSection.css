@@ -227,13 +227,14 @@
 }
 
 .testi-card__avatar-wrap {
-    width: 48px;
-    height: 48px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     overflow: hidden;
     border: 2px solid rgba(var(--theme-rgb), 0.4);
     flex-shrink: 0;
     transition: border-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(var(--theme-rgb), 0.15);
 }
 
 .testi-card:hover .testi-card__avatar-wrap {

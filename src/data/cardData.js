@@ -8,6 +8,7 @@ export const CARD_DATA = [
     /* ─── SERVICES ─────────────────────────────────────────────────────── */
     {
         id: "web-development",
+        imageGap: 4,
         category: "WEBSITE",
         title: "Web Services",
         color: "#2563eb",
@@ -16,16 +17,16 @@ export const CARD_DATA = [
         images: [
             "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&q=80",
             "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80",
-            "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80",
+            // "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80",
         ],
         description: [
             "We are very much committed in designing websites. We use Latest Technologies for creating Amazing experince for the visitors for your websites.UNIVERSAL TECHNOLOGY offers great quality website designs. Design of the website plays very important role as it attracts targeted customers. We have different type of design ready which are very unique and just mind blowing. UNIVERSAL TECHNOLOGY closely aligns with your marketing goals to deliver results based on performance. We are all about ideas, actions, and results. Our process has been thoroughly developed and contoured over the years, gathering as much of your requirements through our pre-development survey before the design is started. By adhering to this practice we’re able to develop a design concept that will meet both your expectations and your marketing goals.",
-"• Basic Website Designing",
-"• Responsive Website Designing",
-"• Corporate Website Designing",
-"• CMS Website Designing",
-"• Website Redesigning",
-"• Website Updates & Maintenance",
+            "• Basic Website Designing",
+            "• Responsive Website Designing",
+            "• Corporate Website Designing",
+            "• CMS Website Designing",
+            "• Website Redesigning",
+            "• Website Updates & Maintenance",
         ],
         fullContent:
             "",
@@ -49,7 +50,7 @@ export const CARD_DATA = [
             // "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&q=80",
         ],
         description: [
-           "Web development is a broad term for the work involved in developing a web site. This can include web design, web content development, client liaison, client-side server-side scripting, web server and network security configuration, and e-commerce development. Our team uses latest technologies to develop your websites in order to give you the best you need We have a team of technically well-endowed specialists, knowledgeable across multiple platforms. We make websites using the latest technological platforms keeping ourselves abreast of the latest technological developments. We ensure the websites we make for our clients are up to date with the constant evolution of both new hardware and operating systems. The websites we develop are technically strong with solid design, well-coded functions and robust security features.",
+            "Web development is a broad term for the work involved in developing a web site. This can include web design, web content development, client liaison, client-side server-side scripting, web server and network security configuration, and e-commerce development. Our team uses latest technologies to develop your websites in order to give you the best you need We have a team of technically well-endowed specialists, knowledgeable across multiple platforms. We make websites using the latest technological platforms keeping ourselves abreast of the latest technological developments. We ensure the websites we make for our clients are up to date with the constant evolution of both new hardware and operating systems. The websites we develop are technically strong with solid design, well-coded functions and robust security features.",
         ],
         fullContent:
             "",
@@ -74,9 +75,9 @@ export const CARD_DATA = [
             "https://www.metasyssoftware.com/wp-content/uploads/2023/07/Web-app-development-2.jpg",
         ],
         description: [
-           "At UNIVERSAL TECHNOLOGY we provide a wide range of android application development services, and build customized apps that can meet the requirements of any individual client. We have a powerful and experienced team of developers and engineers that can tackle any challenge and work on any Android platform.",
-           "With us, you will be able to convert your ideas into functional, user-friendly and easy-to-use applications, which significantly increase your chances of success at the global Android market, and provide you with many different options for further development and advance.",
-           "Android with 85% market share in mobiles, must be the first choice for any Mobile App development.",
+            "At UNIVERSAL TECHNOLOGY we provide a wide range of android application development services, and build customized apps that can meet the requirements of any individual client. We have a powerful and experienced team of developers and engineers that can tackle any challenge and work on any Android platform.",
+            "With us, you will be able to convert your ideas into functional, user-friendly and easy-to-use applications, which significantly increase your chances of success at the global Android market, and provide you with many different options for further development and advance.",
+            "Android with 85% market share in mobiles, must be the first choice for any Mobile App development.",
 
         ],
         fullContent:
@@ -91,6 +92,7 @@ export const CARD_DATA = [
     },
     {
         id: "logo-brand-identity",
+        imageGap: 280,
         category: "WEBSITE",
         title: "Domain Registration",
         color: "#e11d48",
@@ -102,12 +104,12 @@ export const CARD_DATA = [
             "https://www.techicy.com/wp-content/uploads/2019/10/domain-name-registration.jpg",
         ],
         description: [
-           "Just as we all want unique identification of our website, it openly links to the term Domain. The Domain names serve as the uniqueness of your business on the internet and it is always different for the entire website, which speaks your visitors to connect with you effortlessly. Choose your domain name from among flexible domain extensions (.com, .co.in, in etc)",
-           "Create and maintain the great impact with the great domain name. Pick the best and flexible domain extensions like .com, .net, .buzz, asia, .info, .wiki, .company, biz, .social, .org, and .us, etc in accordance with their prices suitable and affordable for you. Choose us and avoid difficulty and complexity to pick out most catchy domain name, perfectly apt for your business.",
-           "What is a domain name? If you look at the URL for this page, you’ll see it begins with www.swaminathansystems.com. Our domain name is the part that comes after the www, therefore it is UNIVERSAL TECHNOLOGY. The domain name should be unique and can give your company or organization an identity on the Internet.",
-           "Why do I need a domain name?  Domain name is your identity on the web. To promote yourself and your business on the web, it is highly recommended have one. Worldwide, people can visit your website online and can know about your business through your site.",
-           "How can I get a Domain Name? You can get a Domain name registered from one of the Domain name registrars. The pricing for Domains varies from registrar to registrar.",
-           "How long does it take to register a domain name? As soon as we receive the payment you Domain Name gets registered. Once domain is registered it will immediately show in the whois DNS mapping of the domain takes upto 48 hrs to fully take effect and show up on the WHOIS query of other registrars.",
+            "Just as we all want unique identification of our website, it openly links to the term Domain. The Domain names serve as the uniqueness of your business on the internet and it is always different for the entire website, which speaks your visitors to connect with you effortlessly. Choose your domain name from among flexible domain extensions (.com, .co.in, in etc)",
+            "Create and maintain the great impact with the great domain name. Pick the best and flexible domain extensions like .com, .net, .buzz, asia, .info, .wiki, .company, biz, .social, .org, and .us, etc in accordance with their prices suitable and affordable for you. Choose us and avoid difficulty and complexity to pick out most catchy domain name, perfectly apt for your business.",
+            "What is a domain name? If you look at the URL for this page, you’ll see it begins with www.swaminathansystems.com. Our domain name is the part that comes after the www, therefore it is UNIVERSAL TECHNOLOGY. The domain name should be unique and can give your company or organization an identity on the Internet.",
+            "Why do I need a domain name?  Domain name is your identity on the web. To promote yourself and your business on the web, it is highly recommended have one. Worldwide, people can visit your website online and can know about your business through your site.",
+            "How can I get a Domain Name? You can get a Domain name registered from one of the Domain name registrars. The pricing for Domains varies from registrar to registrar.",
+            "How long does it take to register a domain name? As soon as we receive the payment you Domain Name gets registered. Once domain is registered it will immediately show in the whois DNS mapping of the domain takes upto 48 hrs to fully take effect and show up on the WHOIS query of other registrars.",
         ],
         fullContent:
             "",
@@ -131,12 +133,12 @@ export const CARD_DATA = [
             "https://kinsta.com/wp-content/uploads/2021/11/what-is-web-hosting-1-1200x675.jpg",
         ],
         description: [
-           "As a one stop solution for web services and solutions, we offers web hosting services to organizations and individuals to host basic website to customized web applications. We believe in Quality and Reliable hosting with on time customer support when ever customer needs. We believe in our partners has allowed us to support from a decade with our in-house domain expertise and dedicated technical staffs with development to offer suitable and effective hosting solutions to existing and prospective customers.",
-"• Our specialists are experienced in hosting both static and dynamic websites. Our professionals suggest the suitable type of hosting based on client’s business requirements whether to choose high traffic websites (ecommerce) or enterprise website (complex hosting).",
-"• What is Web hosting?",
-"• Web hosting is the technology that puts your website online. It is one of the three essential components of establishing your Web presence: a domain name (Web address), a website and a Web host.",
-"• Does your hosting come with a control panel?",
-"• Yes, your hosting comes packed with control panel, cPanel.",
+            "As a one stop solution for web services and solutions, we offers web hosting services to organizations and individuals to host basic website to customized web applications. We believe in Quality and Reliable hosting with on time customer support when ever customer needs. We believe in our partners has allowed us to support from a decade with our in-house domain expertise and dedicated technical staffs with development to offer suitable and effective hosting solutions to existing and prospective customers.",
+            "• Our specialists are experienced in hosting both static and dynamic websites. Our professionals suggest the suitable type of hosting based on client’s business requirements whether to choose high traffic websites (ecommerce) or enterprise website (complex hosting).",
+            "• What is Web hosting?",
+            "• Web hosting is the technology that puts your website online. It is one of the three essential components of establishing your Web presence: a domain name (Web address), a website and a Web host.",
+            "• Does your hosting come with a control panel?",
+            "• Yes, your hosting comes packed with control panel, cPanel.",
         ],
         fullContent:
             "",
@@ -178,6 +180,7 @@ export const CARD_DATA = [
     /* ─── PRODUCTS ──────────────────────────────────────────────────────── */
     {
         id: "desktop",
+        imageGap: 13,
         category: "Products",
         title: "Desktop Computers",
         color: "#2563eb",
@@ -194,9 +197,9 @@ export const CARD_DATA = [
             "UNIVERSAL TECHNOLOGY Sales is dedicated to provide you with the absolute and advanced technical solutions irrespective of the size of the organization or the industry you may be in. We have always endeavoured to solve your issues and provide you with world-class products. For us, our main priority is Customer Satisfaction.",
 
             { subtitle: "Our Vission :", text: "To become one of the leading service provider in the world of technology." },
-            { subtitle:  "Our Mission :", text: "To provide never before world-class technology services to empower mankind.To make that choice easier, we have an extensive list of systems that covers everything from standalone towers, full system combos, all-in-ones, and mini PCs." },
+            { subtitle: "Our Mission :", text: "To provide never before world-class technology services to empower mankind.To make that choice easier, we have an extensive list of systems that covers everything from standalone towers, full system combos, all-in-ones, and mini PCs." },
             // { subtitle: "Service", text: "Our team provides configuration, delivery, and on-site installation support." },
-           "WITH ALL THE TOP BRANDS SUCH AS :",
+            "WITH ALL THE TOP BRANDS SUCH AS :",
             "•Dell",
             "•Hp",
             "•Lenovo",
@@ -224,6 +227,7 @@ export const CARD_DATA = [
     },
     {
         id: "laptop",
+        imageGap: 175,
         category: "Products",
         title: "Laptops",
         color: "#7c3aed",
@@ -308,6 +312,7 @@ export const CARD_DATA = [
     },
     {
         id: "firewall",
+        imageGap: 28,
         category: "Products",
         title: "Firewall & Security",
         color: "#e11d48",
@@ -316,6 +321,7 @@ export const CARD_DATA = [
         images: [
             "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800&q=80",
             "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80",
+            "https://www.cyberdb.co/wp-content/uploads/2024/05/aaa.png",
         ],
         description: ["Firewall is a network security device, either hardware or software based, which monitors all incoming and outgoing traffic and based on defined set of security rules it accept, reject or drop that specific traffic. A Firewall is a type of cybersecurity tool that is used to filter traffic on a network. Firewalls can be used to separate network nodes from external traffic sources, internal traffic sources, or even specific applications. The primary goal of a firewall is to block malicious traffic requests and data packets while allowing legitimate traffic through. The Internet is really one large network, which includes your computer. A firewall protects your computer by acting as a gate through which both all data must pass. By blocking certain kinds of traffic, the firewall protects your computer or network from unauthorized users and safeguards your data from attack.",
             "Why Firewall :",
@@ -347,13 +353,14 @@ export const CARD_DATA = [
     },
     {
         id: "nas",
+        imageGap: 120,
         category: "Products",
         title: "Network Attached Storage",
         color: "#0891b2",
         rgb: "8,145,178",
         image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&q=80",
         images: [
-            "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&q=80",
+            // "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&q=80",
             "https://www.ibm.com/content/dam/connectedassets-adobe-cms/worldwide-content/stock-assets/getty/image/photography/7e/cb/dsc6754.jpg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg",
             "https://stonefly.com/wp-content/uploads/2018/04/nAS-BANNER.jpg",
         ],
@@ -425,6 +432,7 @@ export const CARD_DATA = [
     },
     {
         id: "router-switches",
+        imageGap: 195,
         category: "Products",
         title: "Routers & Switches",
         color: "#6d28d9",
@@ -466,6 +474,7 @@ export const CARD_DATA = [
     },
     {
         id: "cctv",
+        imageGap: 52,
         category: "Products",
         title: "CCTV & Surveillance",
         color: "#dc2626",
@@ -474,7 +483,7 @@ export const CARD_DATA = [
         images: [
             "https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=800&q=80",
             "https://images.unsplash.com/photo-1582139329536-e7284fece509?w=800&q=80",
-            "https://business.moglix.com/_next/image?url=https%3A%2F%2Fblog.business.moglix.com%2Fwp-content%2Fuploads%2F2025%2F12%2FTop-10-best-CCTV-Camera-Manufacturers-in-India-2026.png&w=3840&q=75",
+            "https://www.atishenterprises.com/media/alter-img/cctv1.jpg",
             "https://standardcareservices.com/wp-content/uploads/2024/08/Webp.net-resizeimage-32-1.jpg",
         ],
         description: [
@@ -499,6 +508,7 @@ export const CARD_DATA = [
     /* ─── IT SERVICES ───────────────────────────────────────────────────── */
     {
         id: "it-consulting",
+        imageGap: 120,
         category: "IT Services",
         title: "IT Consulting",
         color: "#2563eb",
@@ -523,6 +533,7 @@ export const CARD_DATA = [
     },
     {
         id: "installation-services",
+        imageGap: 440,
         category: "IT Services",
         title: "One Time Installation Services",
         color: "#7c3aed",
@@ -535,7 +546,7 @@ export const CARD_DATA = [
         ],
         description: [
             "Starts from 500/- onwards More than 650 Products Installation Experienced Engineers Multi Brands systems and and equipments and Dealers Supports. ( Dell ,Lenovo,Hp, IBM,Acer, Asus , Quickheal, Epson, Tvs , Samsung , POS Machines , and Vendor Softwares ( Tally , Billing Softwares, Erp softwares, Etc.) As computers have become faster and lightweight, the software that you need to get your work done has become larger and more complex. We can take the stress out of installing the right software and settings for your Laptop, Desktop, or Server. We ensure the correct software is installed and all licenses are activated and used so you can do what you are great at without worrying about outdated or illegal software.",
-            
+
             "Software issues we deal :",
             "• Software s Slow processing or hangs",
             "• Windows, linuxOS installation and Updates",
@@ -584,13 +595,14 @@ export const CARD_DATA = [
     },
     {
         id: "amc",
+        imageGap: 410,
         category: "IT Services",
         title: "Annual Maintenance Contract",
         color: "#059669",
         rgb: "5,150,105",
         image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80",
         images: [
-            "https://www.shutterstock.com/image-photo/maintenance-engineer-technician-pointing-click-600nw-2153770463.jpg",
+            "https://static.vecteezy.com/system/resources/previews/070/707/793/non_2x/maintenance-operations-visualization-a-digital-display-of-repair-performance-monitoring-and-technical-service-with-visuals-photo.jpeg",
             "https://ad2brand.com/wp-content/uploads/2023/09/AMC-Package_-1-840x300-1.jpg",
             "https://productimages.withfloats.com/serviceimages/tile/633ebfb3ea47bade630fd40dannual-maintenance",
         ],
@@ -632,14 +644,15 @@ export const CARD_DATA = [
     },
     {
         id: "regular-maintenance",
+        imageGap: 240,
         category: "IT Services",
         title: "Regular Maintenance Services",
         color: "#d97706",
         rgb: "217,119,6",
         image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&q=80",
         images: [
-            "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&q=80",
-            "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80",
+            "https://leistertech.com/wp-content/uploads/2024/09/The-Importance-of-Regular-Maintenance.png",
+            "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3VVUcMbeShTJvuIXm8WfpfAfOEKSw5qfHGd8AHVRwI85cblctNNggnzTbagRu3j_EOLB1x10_UzLaVyVrCDqRquvkuG1Q5_Lw2blO6CNifJG1diMlbpxshTbOpXF4o6gFYxH_yFY0Mi0nPs4jbPzbmnMkFYfxdQwrMlbm__UqBTMDcPw4OfUwoMd_/w0/technician-service-removing-air-filter-air-conditioner-cleaning.jpg",
         ],
         description: [
             "Starts form 250/- per month Our technical support department provides prompt support by telephone and onsite support from a single source, where and when you need By Weekly and monthly visits basis . To that end, our Regular Maintenance Contract (RMC) ensures that your software is always supported and up to date We hire a team that is technically sound. All our team members are professional degree holders and hold extensive experience in their field. The years of experience they have help them in detecting the exact problem and repairing them at once. So, you do not need to worry if it is an emergency situation because our team is brilliant at identifying problems and fixing them within a few hours.",
@@ -716,14 +729,16 @@ export const CARD_DATA = [
     },
     {
         id: "internet-intranet",
+        imageGap: 125,
         category: "IT Services",
         title: "Internet & Intranet",
         color: "#6d28d9",
         rgb: "109,40,217",
         image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&q=80",
         images: [
-            "https://static.vecteezy.com/system/resources/previews/021/538/383/non_2x/intranet-global-network-connection-technology-concept-in-the-shape-of-polygonal-sphere-in-wireframe-hand-intranet-business-corporate-communication-document-management-system-dms-illustration-vector.jpg",
-            "https://www.shutterstock.com/image-photo/internet-things-iot-technology-ar-260nw-1101101900.jpg",
+            "https://substackcdn.com/image/fetch/$s_!3T8f!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4d4d292e-0c7b-452d-8f1e-c2196c3478e5_1536x1024.png",
+            "https://www.digitalarmour.com.au/wp-content/uploads/2024/07/business-cloud-solutions-1.jpg",
+            "https://img.freepik.com/premium-vector/internet-icon-technology-vector-communication-illustration-business-web-network-online-com_1013341-140103.jpg",
         ],
         description: [
             "Internet – Corporate/Retail Connection : The Internet is the global system of interconnected computer networks that uses the Internet protocol suite (TCP/IP) to communicate between networks and devices. It is a network of networks that consists of private, public, academic, business, and government networks of local to global scope, linked by a broad array of electronic, wireless, and optical networking technologies. The Internet carries a vast range of information resources and services, such as the inter-linked hypertext documents and applications of the World Wide Web (WWW), electronic mail, telephony, and file sharing.",
@@ -747,8 +762,10 @@ export const CARD_DATA = [
     /* ─── TECHNICAL ─────────────────────────────────────────────────────── */
     {
         id: "business-units",
+        imageGap: 290,
         category: "Technical",
         title: "Business Units",
+        
         color: "#2563eb",
         rgb: "37,99,235",
         image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
@@ -757,8 +774,10 @@ export const CARD_DATA = [
             "https://img-cdn.inc.com/image/upload/f_webp,q_auto,c_fit/vip/2025/01/GettyImages-2155192216.jpg",
             // "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80",
         ],
-        secondImage: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&q=80",
+        // secondImage: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&q=80",
+        // highlightPoints:[],
         description: [
+            
             "Business Units-RETAIL",
             "The hardware which includes equipment from the world’s leading technology provider such as INTEL, MICROSOFT, HCL, HP/COMPAQ,AMD, SEAGATE, DAX NETWORKS, LOGITECH, CANON. etc.,",
 
@@ -770,6 +789,7 @@ export const CARD_DATA = [
             "Technical Services ",
             "The sales and consultancy operations are backed by skilled after sales services specifically developed to ensure that neither,individuals nor business are affected by unwanted computer downtime.Our Service Centre will take care of all your problems. Customers also have uninterrupted 12 hours a day access to a technical help desk by phone or email or internet. Fully trained and Certified persons are always on hand to deal with all aspects of hardware and software maintenance, fault diagnosis and repair.Customers can buy ‘UNIVERSAL SUPPORT ME CARE PACK’ to extend Manufacturer’s warranties as long as they required.",
         ],
+        
         fullContent:
             "",
         features: [
@@ -782,16 +802,19 @@ export const CARD_DATA = [
     },
     {
         id: "software-development",
+        imageGap: 167,
         category: "Technical",
         title: "Software Development",
         color: "#7c3aed",
         rgb: "124,58,237",
         image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80",
         images: [
-            "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80",
+            // "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80",
             "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80",
             "https://jessup.edu/wp-content/uploads/2023/12/Differences-Between-Software-Developers-and-Software-Engineers.jpg",
             "https://www.yourfreecareertest.com/wp-content/uploads/2016/07/What-does-a-Software-Developer-do.jpg",
+            "https://www.tatvasoft.com/outsourcing/wp-content/uploads/2022/07/Best-Programming-Languages-for-Software-Development-1.jpg",
+            "https://miro.medium.com/1*fOdb_ET1sOd4uZStK4E8HA.jpeg",
         ],
         description: [
             "Are you looking RETAIL Super market, Grocery, Electronics, Gift Shops & Stationery, RESTAURANTS Take away, Self service, Ice cream parlor, Coffee shop, Bakery SERVICES Accountant, Lawyer, Consultant, Florist, Trainer, Photographer. GST billing software dealers in salem UNIVERSAL TECHNOLOGY is the best place to buy your invoicing and billing software in SALEM for all your accounting needs. You can expect our billing software at very lowest price in SALEM. We design and build best GST billing software in SALEM for the retail POS, restaurant, stores, and GST accounting that helps you to create invoices very easily, manage your accounts, track transactions, purchase and sales orders, create more reports & MIS and file GST returns extremely easily. Our business consultant know how the billing software works and adding value to the clients. They will collect the complete software requirements to build the best billing software ever if they are small shop owners or enterprise organizations. We have skilled designers and developers to build highly customizable GST software that gives fastest, accurate solutions. With our billing software you can manage your accounts, billings, pending and unpaid invoices that will give clear view of your business.",
@@ -847,14 +870,16 @@ export const CARD_DATA = [
     },
     {
         id: "portfolio",
+        imageGap: 90,
         category: "Technical",
         title: "Portfolio",
         color: "#059669",
         rgb: "5,150,105",
         image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
         images: [
-            "https://s3-alpha.figma.com/hub/file/2317162292462538586/f85d6581-39dd-4aba-ab38-d888e0669c15-cover.png",
-            "https://images.template.net/118072/creative-photography-portfolio-template-fa5t4.jpg",
+            "https://mir-s3-cdn-cf.behance.net/projects/404/c7aa6b218451955.Y3JvcCwxMzgwLDEwODAsMjcwLDA.png",
+            "https://penji.co/wp-content/uploads/2025/06/The-Smart-Marketers-Guide-to-Professional-Graphic-Design-Services-1200x675.jpg",
+            "https://images.ui8.net/uploads/9_1668003480324.jpg",
         ],
         description: [
             "What out clients are saying...",

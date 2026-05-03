@@ -1,0 +1,286 @@
+/* ═══════════════════════════════════════════
+   GLOBAL RESPONSIVE OVERRIDES
+   Imported in App.js — supplements per-file rules
+   Tablet : 769px – 1024px
+   Mobile : ≤ 768px
+   Small  : ≤ 480px
+═══════════════════════════════════════════ */
+
+/* ─────────────────────────────────────────
+   TABLET  769px – 1024px
+───────────────────────────────────────── */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    /* ── Navbar ── */
+    .navbar__link {
+        padding: 0.4rem 0.5rem;
+        font-size: 0.76rem;
+    }
+
+    .navbar__quote-btn {
+        padding: 0.4rem 0.85rem;
+        font-size: 0.76rem;
+    }
+
+    /* ── Hero ── */
+    .hero {
+        height: 80vh;
+        min-height: 520px;
+    }
+
+    /* ── About ── */
+    .about__container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .about__image-col {
+        max-width: 520px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .about__img {
+        min-height: 360px;
+    }
+
+    /* ── Services (What Universal Technology) ── */
+    .services__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .svc-flip {
+        height: 300px;
+    }
+
+    /* ── Technical flip cards ── */
+    .tech-sec__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ── IT Services ── */
+    .it-services__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ── Products ── */
+    .products__top {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .products__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ── Showcase / Web Services ── */
+    .showcase__top {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .showcase__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ── Business Services ── */
+    .biz-svc__grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .biz-card {
+        width: 100%;
+        max-width: 480px;
+    }
+
+    /* ── Skill section ── */
+    .skill-sec__container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    /* ── Contact ── */
+    .contact-sec__container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        padding: 0 1.5rem;
+    }
+
+    .contact-sec__info {
+        height: auto;
+    }
+
+    /* ── Card detail ── */
+    .card-detail__layout {
+        gap: 2rem;
+    }
+
+    .card-detail__images {
+        width: 220px;
+        flex-shrink: 0;
+    }
+
+    /* ── Footer ── */
+    .footer__container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .footer__brand {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .footer__links {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .footer__col {
+        min-width: 140px;
+    }
+}
+
+/* ─────────────────────────────────────────
+   MOBILE  ≤ 768px
+───────────────────────────────────────── */
+@media (max-width: 768px) {
+
+    /* ── Navbar ── */
+    .navbar__quote-btn {
+        display: none;
+    }
+
+    .navbar__logo-img {
+        height: 42px;
+    }
+
+    /* ── Services flip cards ── */
+    .svc-flip {
+        height: auto;
+        min-height: 280px;
+    }
+
+    .services__grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* ── Technical flip cards ── */
+    .tech-sec__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tc-flip {
+        height: 260px;
+    }
+
+    /* ── IT Services ── */
+    .it-services__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ── Products ── */
+    .products__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ── Showcase ── */
+    .showcase__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ── Card detail ── */
+    .card-detail__layout {
+        flex-direction: column;
+        gap: 1.75rem;
+    }
+
+    .card-detail__images {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.85rem;
+    }
+
+    .card-detail__img-wrap {
+        flex: none;
+        width: calc(50% - 0.425rem);
+        max-width: 280px;
+        aspect-ratio: 4 / 3;
+    }
+
+    .card-detail__title-row {
+        flex-wrap: wrap;
+    }
+
+    .card-detail__title {
+        font-size: clamp(1.1rem, 4vw, 1.6rem);
+    }
+
+    /* ── Footer ── */
+    .footer__links {
+        flex-wrap: wrap;
+        gap: 1.25rem;
+    }
+
+    .footer__col {
+        min-width: calc(50% - 0.625rem);
+    }
+
+    .footer__brand {
+        width: 100%;
+    }
+}
+
+/* ─────────────────────────────────────────
+   SMALL MOBILE  ≤ 480px
+───────────────────────────────────────── */
+@media (max-width: 480px) {
+
+    /* ── Technical flip cards — single column ── */
+    .tech-sec__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tc-flip {
+        height: 240px;
+    }
+
+    /* ── IT Services — single column ── */
+    .it-services__grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* ── Products — single column ── */
+    .products__grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* ── Showcase — single column ── */
+    .showcase__grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* ── Card detail images — stack vertically ── */
+    .card-detail__images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-detail__img-wrap {
+        width: 100%;
+        max-width: 100%;
+        aspect-ratio: 16 / 9;
+    }
+
+    /* ── Footer columns — single column ── */
+    .footer__col {
+        min-width: 100%;
+    }
+
+    /* ── Services flip cards ── */
+    .svc-flip {
+        min-height: 300px;
+    }
+}

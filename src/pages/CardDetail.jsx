@@ -12,6 +12,15 @@ import Footer from "../components/Footer";
 import { CARD_DATA } from "../data/cardData";
 import "./CardDetail.css";
 
+/* ── Category → section ID map ── */
+const CATEGORY_SECTION = {
+    "Services": "services",
+    "WEBSITE": "showcase",
+    "Products": "products",
+    "IT Services": "it-services",
+    "Technical": "business-services",
+};
+
 /* ── Icon map: card id → lucide icon component ── */
 const ICON_MAP = {
     "web-development": Globe,
@@ -43,6 +52,12 @@ export default function CardDetail() {
 
     const card = CARD_DATA.find((c) => c.id === id);
     const Icon = ICON_MAP[id] || Globe;
+
+    /* Navigate back to the section this card belongs to */
+    const handleBack = () => {
+        const sectionId = CATEGORY_SECTION[card?.category] || "home";
+        navigate(`/#${sectionId}`);
+    };
 
     /* Scroll to top + set page title */
     useEffect(() => {
@@ -94,79 +109,92 @@ export default function CardDetail() {
 
             {/* ── Main content ── */}
             <section className="card-detail__body">
-                <div className="card-detail__container">
+                <div className="card-detail__outer">
 
-                    {/* LEFT — image(s) */}
-                    <motion.div
-                        className="card-detail__left"
-                        initial={{ opacity: 0, x: -40 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-                    >
-                        {/* Render images array if present, otherwise fall back to single image */}
-                        {(card.images || [card.image]).map((src, i) => (
-                            <div
-                                key={i}
-                                className={`card-detail__img-wrap${i > 0 ? " card-detail__img-wrap--second" : ""}`}
-                                style={{ "--cd-color": card.color, "--cd-rgb": card.rgb }}
-                            >
-                                <img
-                                    src={src}
-                                    alt={`${card.title}${i > 0 ? ` — view ${i + 1}` : ""}`}
-                                    className="card-detail__img"
-                                    onError={(e) => {
-                                        e.currentTarget.parentElement.style.display = "none";
-                                    }}
-                                />
-                                {i === 0 && (
-                                    <div className="card-detail__img-fallback" style={{ display: "none" }}>
-                                        <Icon size={64} style={{ color: card.color }} />
+                    {/* 2-column: images LEFT, title+text RIGHT */}
+                    <div className="card-detail__layout">
+
+                        {/* LEFT — images stacked */}
+                        <motion.div
+                            className="card-detail__images"
+                            style={card.imageGap ? { gap: `${card.imageGap}px` } : undefined}
+                            initial={{ opacity: 0, x: -40 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+                        >
+                            {(card.images || [card.image]).map((src, i, arr) => {
+                                const isLast = i === arr.length - 1 && arr.length > 1;
+                                return (
+                                    <div
+                                        key={i}
+                                        className={`card-detail__img-wrap${isLast ? " card-detail__img-wrap--last" : ""}`}
+                                        style={{ "--cd-color": card.color, "--cd-rgb": card.rgb }}
+                                    >
+                                        <img
+                                            src={src}
+                                            alt={`${card.title}${i > 0 ? ` — view ${i + 1}` : ""}`}
+                                            className="card-detail__img"
+                                            onError={(e) => {
+                                                e.currentTarget.parentElement.style.display = "none";
+                                            }}
+                                        />
                                     </div>
-                                )}
-                            </div>
-                        ))}
-                    </motion.div>
+                                );
+                            })}
+                        </motion.div>
 
-                    {/* RIGHT — content */}
-                    <motion.div
-                        className="card-detail__right"
-                        initial={{ opacity: 0, x: 40 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-                    >
-                        <div className="card-detail__title-row">
-                            <div className="card-detail__icon-wrap" style={{ "--cd-color": card.color, "--cd-rgb": card.rgb }}>
-                                <Icon size={28} />
+                        {/* RIGHT — title + text content + back button */}
+                        <motion.div
+                            className="card-detail__content"
+                            initial={{ opacity: 0, x: 40 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+                        >
+                            {/* Title row — inside right column */}
+                            <div className="card-detail__title-row">
+                                <div className="card-detail__icon-wrap" style={{ "--cd-color": card.color, "--cd-rgb": card.rgb }}>
+                                    <Icon size={28} />
+                                </div>
+                                <h2 className="card-detail__title">{card.title}</h2>
                             </div>
-                            <h2 className="card-detail__title">{card.title}</h2>
-                        </div>
 
-                        {/* All content as clean paragraphs */}
-                        <div className="card-detail__paragraphs">
                             {Array.isArray(card.description)
-                                ? card.description.map((item, i) => (
-                                    typeof item === "object" && item.subtitle
-                                        ? (
+                                ? card.description.map((item, i) => {
+                                    const text = typeof item === "object" && item.subtitle ? null : (typeof item === "string" ? item : null);
+                                    const isHighlighted = text && card.highlightPoints?.includes(text);
+
+                                    if (typeof item === "object" && item.subtitle) {
+                                        return (
                                             <div key={i} className="card-detail__desc-block">
                                                 <h4 className="card-detail__desc-subtitle">{item.subtitle}</h4>
                                                 <p className="card-detail__desc">{item.text}</p>
                                             </div>
-                                        )
-                                        : <p key={i} className="card-detail__desc">{item}</p>
-                                ))
+                                        );
+                                    }
+                                    return (
+                                        <p
+                                            key={i}
+                                            className={isHighlighted ? "card-detail__desc card-detail__desc--highlight" : "card-detail__desc"}
+                                        >
+                                            {item}
+                                        </p>
+                                    );
+                                })
                                 : <p className="card-detail__desc">{card.description}</p>
                             }
                             {card.fullContent && (
                                 <p className="card-detail__desc">{card.fullContent}</p>
                             )}
-                        </div>
 
-                        <div className="card-detail__cta-row">
-                            <button className="card-detail__back-btn" onClick={() => navigate(-1)}>
-                                <ArrowLeft size={16} /> Back
-                            </button>
-                        </div>
-                    </motion.div>
+                            {/* Back button — inside content, left-aligned below text */}
+                            <div className="card-detail__cta-row">
+                                <button className="card-detail__back-btn" onClick={handleBack}>
+                                    <ArrowLeft size={16} /> Back
+                                </button>
+                            </div>
+                        </motion.div>
+
+                    </div>
 
                 </div>
             </section>

@@ -144,6 +144,7 @@ export default function SkillSection() {
                         <div>
                             <p className="skill-sec__card-title">100% Commitment</p>
                             <p className="skill-sec__card-sub">Every project, every time — no exceptions.</p>
+                            &nbsp;
                             <p className="skill-sec__card-sub"style={{ fontWeight: 'bold' }}>The Name You Can Trust</p>
                         </div>
                     </div>

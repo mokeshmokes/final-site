@@ -103,7 +103,7 @@ export default function ShowcaseSection() {
                             We provide complete web solutions — from design and development to hosting and optimization — helping your business grow and thrive in the digital age.
                         </p>
                         <p className="showcase__top-desc">
-                            Whether you need a simple landing page or a full-scale e-commerce platform, our team delivers fast, secure, and visually stunning results every time.
+                            Whether your needs involve a basic landing page or a complex e-commerce platform, our team consistently delivers rapid, secure, and visually compelling solutions.
                         </p>
                     </motion.div>
                 </div>

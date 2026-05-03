@@ -10,8 +10,7 @@ const FOOTER_LINKS = [
         links: [
             { label: "About Us", sectionId: "about-us" },
             { label: "Our Team", sectionId: "team" },
-            { label: "Careers", sectionId: null },
-            { label: "Blog", sectionId: null },
+            { label: "Get Quote", sectionId: "visit-us" },
         ],
     },
     {
@@ -64,7 +63,7 @@ const FOOTER_LINKS = [
             { label: "Contact Us", sectionId: "visit-us" },
             { label: "AMC Plans", sectionId: "it-services" },
             { label: "Remote Support", sectionId: "it-services" },
-            { label: "FAQ", sectionId: null },
+            // { label: "FAQ", sectionId: null },
         ],
     },
 ];
@@ -127,10 +126,18 @@ export default function Footer() {
                             >
                                 UT
                             </span>
+
                         </span>
+
                     </Link>
 
                     <p className="footer__brand-desc">
+                        <p className="footer__logo-accent"
+                            style={{
+                                color: "#ffd700"
+                            }}
+                        >
+                            Universal Technology</p>
                         A full-service digital agency delivering innovative web, IT, and
                         branding solutions that help businesses grow and thrive in the
                         digital age.
@@ -209,7 +216,7 @@ export default function Footer() {
                 </div>
 
                 {/* Visitor counter — absolutely positioned bottom-right */}
-                <p className="footer__visitors">
+                <p className="footer__visitors" style={{ fontSize: '0.8rem', color: 'white' }}>
                     Universal Technology 20 years of 👁 Visitors: <span className="footer__visitors-count">{visits.toLocaleString()}</span>
                 </p>
             </div>

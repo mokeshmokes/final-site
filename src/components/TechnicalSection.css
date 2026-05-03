@@ -134,7 +134,7 @@
 .tc-flip {
     perspective: 1000px;
     height: 300px;
-    cursor: default;
+    cursor: pointer;
 }
 
 /* 2. Rotating inner — owns the 3D transform */

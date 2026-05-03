@@ -124,6 +124,7 @@ export const CARD_DATA = [
     {
         id: "domain-hosting",
         category: "WEBSITE",
+       
         title: "Web Hosting",
         color: "#0891b2",
         rgb: "8,145,178",
@@ -281,6 +282,7 @@ export const CARD_DATA = [
     },
     {
         id: "server",
+        imageGap: 260,
         category: "Products",
         title: "Servers",
         color: "#059669",

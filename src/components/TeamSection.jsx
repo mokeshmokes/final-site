@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import { motion, useInView } from "framer-motion";
@@ -12,7 +12,7 @@ const TEAM = [
     {
         name: "SWAMINATHAN",
         role: "Managing Director",
-        desc: "Rajesh drives the company's vision and strategic direction with over 15 years of leadership in the IT industry. His commitment to excellence sets the standard for every team and project.",
+        desc: "As the Managing Director of Universal Technology, he leads the company with a strong vision, ensuring high-quality service delivery, innovation, and long-term client relationships.",
         image: "/images/owner2.jpg",
         color: "#2563eb",
         rgb: "37,99,235",
@@ -23,10 +23,10 @@ const TEAM = [
         ],
     },
     {
-        name: "Arjun Mehta",
+        name: "SOWMYA",
         role: "Software Developer",
-        desc: "Arjun builds robust, scalable software solutions with expertise in full-stack development. He turns complex requirements into clean, efficient code that powers our clients' businesses.",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=80",
+        desc: "At Universal Technology, she develops scalable and efficient software solutions, transforming business requirements into reliable applications that drive growth and performance.",
+        image: "/images/sowmyaa.jpg",
         color: "#7c3aed",
         rgb: "124,58,237",
         socials: [
@@ -36,10 +36,10 @@ const TEAM = [
         ],
     },
     {
-        name: "Priya Sharma",
+        name: "PRASANNA",
         role: "Web Developer",
-        desc: "Priya crafts responsive, high-performance websites that combine beautiful design with technical precision. Her attention to detail ensures every pixel and interaction is flawless.",
-        image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&q=80",
+        desc: "Responsible for designing and developing modern, responsive websites at Universal Technology, ensuring seamless user experience and high performance across all devices.",
+        image: "/images/PRASANNA.jpg",
         color: "#059669",
         rgb: "5,150,105",
         socials: [
@@ -50,8 +50,8 @@ const TEAM = [
     },
     {
         name: "SENGEETHA",
-        role: "AUDITOR",
-        desc: "Lola keeps our financial operations precise and transparent. Her expertise in business finance ensures every project is delivered on budget with full accountability.",
+        role: "Auditor",
+        desc: "Ensures financial accuracy and transparency at Universal Technology by maintaining proper auditing standards and supporting business compliance and accountability.",
         image: "/images/auditor.jpg",
         color: "#d97706",
         rgb: "217,119,6",
@@ -63,11 +63,11 @@ const TEAM = [
     },
     {
         name: "GUNASEKER",
-        role: "AUDITOR",
-        desc: "Lola keeps our financial operations precise and transparent. Her expertise in business finance ensures every project is delivered on budget with full accountability.",
+        role: "Auditor",
+        desc: "Plays a key role in managing financial audits and maintaining structured financial records, ensuring operational integrity across all departments at Universal Technology.",
         image: "/images/GUNASEKER.jpg",
-        color: "#d97706",
-        rgb: "217,119,6",
+        color: "#0891b2",
+        rgb: "8,145,178",
         socials: [
             { icon: FaXTwitter, href: "#" },
             { icon: FaLinkedinIn, href: "#" },
@@ -77,10 +77,10 @@ const TEAM = [
     {
         name: "RAJESH",
         role: "Hardware & Network Technician",
-        desc: "Vikram designs and maintains reliable network infrastructure and hardware systems. His hands-on expertise keeps our clients' IT environments running at peak performance.",
+        desc: "Handles system installations, network configurations, and hardware maintenance, ensuring uninterrupted IT operations for all Universal Technology clients.",
         image: "/images/RAJESH.jpg",
-        color: "#0891b2",
-        rgb: "8,145,178",
+        color: "#6d28d9",
+        rgb: "109,40,217",
         socials: [
             { icon: FaXTwitter, href: "#" },
             { icon: FaLinkedinIn, href: "#" },
@@ -90,10 +90,10 @@ const TEAM = [
     {
         name: "ABILASH",
         role: "CCTV Technician",
-        desc: "Suresh specializes in the installation and maintenance of advanced surveillance systems. He ensures every security setup is optimized for maximum coverage and reliability.",
+        desc: "Specializes in installing and maintaining surveillance systems, providing secure and reliable monitoring solutions for homes and businesses served by Universal Technology.",
         image: "/images/ABILASH.jpg",
-        color: "#6d28d9",
-        rgb: "109,40,217",
+        color: "#e11d48",
+        rgb: "225,29,72",
         socials: [
             { icon: FaXTwitter, href: "#" },
             { icon: FaLinkedinIn, href: "#" },
@@ -102,11 +102,37 @@ const TEAM = [
     },
     {
         name: "SARAVANAN",
-        role: "MARKETING",
-        desc: "Suresh specializes in the installation and maintenance of advanced surveillance systems. He ensures every security setup is optimized for maximum coverage and reliability.",
+        role: "Marketing",
+        desc: "Drives brand visibility and customer engagement for Universal Technology through strategic marketing initiatives, outreach campaigns, and strong client relationship management.",
         image: "/images/SARAVANAN.jpg",
-        color: "#6d28d9",
-        rgb: "109,40,217",
+        color: "#059669",
+        rgb: "5,150,105",
+        socials: [
+            { icon: FaXTwitter, href: "#" },
+            { icon: FaLinkedinIn, href: "#" },
+            { icon: FaInstagram, href: "#" },
+        ],
+    },
+    {
+        name: "UMA",
+        role: "General Client",
+        desc: "Represents the satisfied customers of Universal Technology, benefiting from reliable service, timely support, and quality IT solutions tailored to everyday needs.",
+        image: "/images/uma.jpg",
+        color: "#d97706",
+        rgb: "217,119,6",
+        socials: [
+            { icon: FaXTwitter, href: "#" },
+            { icon: FaLinkedinIn, href: "#" },
+            { icon: FaInstagram, href: "#" },
+        ],
+    },
+    {
+        name: "VIGNEESH",
+        role: "General Client",
+        desc: "A valued client of Universal Technology who experienced professional service delivery, efficient problem-solving, and a team that genuinely cares about customer satisfaction.",
+        image: "/images/VIGNESH.jpg",
+        color: "#2563eb",
+        rgb: "37,99,235",
         socials: [
             { icon: FaXTwitter, href: "#" },
             { icon: FaLinkedinIn, href: "#" },

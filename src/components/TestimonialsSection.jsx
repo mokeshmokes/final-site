@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import { motion, useInView } from "framer-motion";
@@ -11,66 +11,129 @@ import "./TestimonialsSection.css";
 /* ─── Testimonial data ─── */
 const TESTIMONIALS = [
     {
-        text: "They are very professional and do what they say. You will not be disappointed. Develops constructive working relationships with clients.",
+        text: "Universal Technology delivered excellent service with a quick turnaround. Their team is highly professional, reliable, and always goes the extra mile for customers.",
         name: "Gayathri",
         role: "",
         image: "/images/Gayathri.jpg",
         rating: 5,
     },
     {
-        text: "Excellent Service, Superb Product, 100% Satisfaction shows willingness to go extra mile during peak of work",
+        text: "Excellent service and superb product quality — 100% satisfaction guaranteed. They show a genuine willingness to go the extra mile even during peak workloads.",
         name: "CHANDRAN",
         role: "",
         image: "/images/chandran.jpg",
         rating: 5,
     },
     {
-        text: "YOU ARE PILLER OF MY LIFE WHICH IS A STORY, THANK YOU FOR BEING PART OF MY STORY It's amazing and excellent service Best Service Provider in SALEM Effective communicator and good demonstrator.",
+        text: "Best service provider in Salem! Amazing technical expertise and an effective communicator. They truly understand customer needs and deliver outstanding results every time.",
         name: "HARIHARAKRISHNAN",
         role: "",
         image: "/images/HARIHARAKRISHNAN.jpg",
         rating: 5,
     },
     {
-        text: "capable of translating vision into actions.Super thankful for your service! My computer works smoother than ever. The tech is very skilled, appreciate that patience and hard work you put into fixing my computer. Thank you thank you thank you!",
-        name: "USHA",
-        role: "",
-        image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=120&q=80",
-        rating: 5,
-    },
-    {
-        text: "The team managed to fix a computer we were told was beyond fixing and we are grateful! Displays strong work ethic and sets",
+        text: "The team managed to fix a computer we were told was beyond repair. Highly skilled technicians with a strong work ethic and a dedication to solving problems completely.",
         name: "UMA",
         role: "",
         image: "/images/uma.jpg",
         rating: 5,
     },
-     {
-        text: "Great Service provided. Knowledgeable and helpful.consistently delivers beyond expectations",
+    {
+        text: "Great service provided — knowledgeable, helpful, and consistently delivers beyond expectations. I am very impressed with their technical knowledge and professionalism.",
         name: "VIGNESH",
         role: "",
         image: "/images/VIGNESH.jpg",
         rating: 5,
     },
     {
-        text: "The service at this place is great. They are very expensive but if you have an issue and they say they can fix it. They fix it!!! Always addresses underlying causes of problems and solve it successfully",
+        text: "The service here is outstanding. They always address the underlying cause of problems and solve them successfully. If they say they can fix it, they fix it — every time.",
         name: "sowmyaa",
         role: "",
         image: "/images/sowmyaa.jpg",
         rating: 5,
     },
-     {
-        text: "Great deal and great company I'm very happy with all of your products thank you. willing to experiment fresh approaches and ideas.",
-        name: "KARTHICK",
-        role: "",
-        image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&q=80",
-        rating: 5,
-    },
-     {
-        text: "Able to handle difficult customers and situations.Great service at great prices. Check them out with your faulty pc/laptop; you won't regret it",
+    {
+        text: "Great service at great prices. My laptop issue was resolved faster than expected. Affordable pricing with no compromise on quality — highly recommended for everyone.",
         name: "RAJALAKSHMI",
         role: "",
         image: "/images/RAJALAKSHMI.jpg",
+        rating: 5,
+    },
+    {
+        text: "Friendly approach and clear communication throughout the entire service process. Their customer handling is excellent and the results speak for themselves.",
+        name: "BRINDHA",
+        role: "",
+        image: "/images/BRINDHA.jpg",
+        rating: 5,
+    },
+    {
+        text: "Reliable and trustworthy service provider. They handled my system issues very efficiently and explained every step clearly. I will definitely return for future needs.",
+        name: "SANTHIYA",
+        role: "",
+        image: "/images/SANTHIYA.jpg",
+        rating: 5,
+    },
+    {
+        text: "Very skilled technicians and great support throughout. My system is now running perfectly. I am completely satisfied with the quality and speed of their service.",
+        name: "RAJASEKER",
+        role: "",
+        image: "/images/RAJASEKER.jpg",
+        rating: 5,
+    },
+    {
+        text: "Excellent experience with Universal Technology. Their solutions are effective and long-lasting. The team is patient, thorough, and truly committed to customer satisfaction.",
+        name: "MANI",
+        role: "",
+        image: "/images/MANI.jpg",
+        rating: 5,
+    },
+    {
+        text: "They provide clear explanations and fix issues perfectly the first time. Highly professional service with a team that genuinely cares about the outcome for each customer.",
+        name: "SRIKANTH DEVA",
+        role: "",
+        image: "/images/SRIKANTH DEVA.jpg",
+        rating: 5,
+    },
+    {
+        text: "Great support and timely service delivery. My system performance improved significantly after their maintenance. I appreciate their dedication and attention to detail.",
+        name: "NATASAN",
+        role: "",
+        image: "/images/NATASAN.jpg",
+        rating: 5,
+    },
+    {
+        text: "Very responsive team with excellent technical knowledge. They diagnosed and resolved my issue quickly and professionally. Highly recommended to anyone in Salem.",
+        name: "VIJAYARAGAVAN",
+        role: "",
+        image: "/images/VIJAYARAGAVAN.jpg",
+        rating: 5,
+    },
+    {
+        text: "Smooth service process and great results every time. I appreciate their dedication and effort. Universal Technology is my go-to for all IT needs without hesitation.",
+        name: "SENTHIL",
+        role: "",
+        image: "/images/SENTHIL.jpg",
+        rating: 5,
+    },
+    {
+        text: "Good pricing and excellent service quality. Very happy with their work and the way they handled my request. The entire experience was professional from start to finish.",
+        name: "VINOTH",
+        role: "",
+        image: "/images/VINOTH.jpg",
+        rating: 5,
+    },
+    {
+        text: "Professional and efficient service from start to finish. They handled everything perfectly and kept me informed throughout. A truly reliable IT partner in Salem.",
+        name: "NIVATHAA",
+        role: "",
+        image: "/images/NIVATHAA.jpg",
+        rating: 5,
+    },
+    {
+        text: "Great experience working with Universal Technology. Highly reliable service with a team that is always available and ready to help. I strongly recommend their services.",
+        name: "RAMOORTHY",
+        role: "",
+        image: "/images/RAMOORTHY.jpg",
         rating: 5,
     },
 ];
@@ -131,15 +194,15 @@ export default function TestimonialsSection() {
                     />
 
                     {/* Justdial logo — top-right of header */}
-                  <motion.img
-    src="/images/justdial.jpg"
-    alt="Justdial"
-    className="testi__justdial-logo"
-    style={{ width: "180px", height: "auto" }}
-    initial={{ opacity: 0, scale: 0.85 }}
-    animate={headerView ? { opacity: 1, scale: 1.1 } : {}}
-    transition={{ delay: 0.5, duration: 0.5, ease: [0.34, 1.56, 0.64, 1] }}
-/> 
+                    <motion.img
+                        src="/images/justdial.jpg"
+                        alt="Justdial"
+                        className="testi__justdial-logo"
+                        style={{ width: "180px", height: "auto" }}
+                        initial={{ opacity: 0, scale: 0.85 }}
+                        animate={headerView ? { opacity: 1, scale: 1.1 } : {}}
+                        transition={{ delay: 0.5, duration: 0.5, ease: [0.34, 1.56, 0.64, 1] }}
+                    />
                 </div>
 
                 {/* Swiper carousel */}

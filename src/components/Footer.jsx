@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Mail, Phone, Heart } from "lucide-react";
 import { FaXTwitter, FaLinkedinIn, FaInstagram, FaFacebookF } from "react-icons/fa6";
@@ -41,12 +42,12 @@ const FOOTER_LINKS = [
     {
         heading: "Website",
         links: [
-            { label: "Web Development", sectionId: "services" },
-            { label: "WordPress", sectionId: "services" },
-            { label: "E-Commerce", sectionId: "services" },
-            { label: "Logo & Branding", sectionId: "services" },
-            { label: "Domain & Hosting", sectionId: "services" },
-            { label: "Professional Training", sectionId: "services" },
+            { label: "Web Services", sectionId: "showcase" },
+            { label: "Web Development", sectionId: "showcase" },
+            { label: "Mobile App Development", sectionId: "showcase" },
+            { label: "Web Hosting", sectionId: "showcase" },
+            { label: "SEO Optimization", sectionId: "showcase" },
+            { label: "Domain Registration", sectionId: "showcase" },
         ],
     },
     {
@@ -78,15 +79,26 @@ const SOCIALS = [
 export default function Footer() {
     const year = new Date().getFullYear();
     const navigate = useNavigate();
+    const [visits, setVisits] = useState(0);
+
+    /* Increment visit count once per component mount */
+    useEffect(() => {
+        const stored = parseInt(localStorage.getItem("ut_site_visits") || "0", 10);
+        const updated = stored + 1;
+        localStorage.setItem("ut_site_visits", updated);
+        setVisits(updated);
+    }, []);
 
     const handleSectionLink = (sectionId) => {
         if (!sectionId) return;
         if (window.location.pathname !== "/") {
+            // From a detail page — navigate to home with hash, same as header
             navigate("/#" + sectionId);
         } else {
+            // Already on home — scroll with navbar offset, same as header
             const el = document.getElementById(sectionId);
             if (el) {
-                const top = el.offsetTop - 80;
+                const top = el.getBoundingClientRect().top + window.scrollY - 72;
                 window.scrollTo({ top, behavior: "smooth" });
             }
         }
@@ -195,6 +207,11 @@ export default function Footer() {
                     </p>
 
                 </div>
+
+                {/* Visitor counter — absolutely positioned bottom-right */}
+                <p className="footer__visitors">
+                    👁 Visitors: <span className="footer__visitors-count">{visits.toLocaleString()}</span>
+                </p>
             </div>
         </footer>
     );

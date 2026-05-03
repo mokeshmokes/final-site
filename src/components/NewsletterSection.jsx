@@ -131,8 +131,7 @@ export default function NewsletterSection() {
                     animate={inView ? { opacity: 1 } : {}}
                     transition={{ delay: 0.35, duration: 0.6 }}
                 >
-                    Subscribe for the latest updates, offers, and promotions from JUSCO.
-                    No spam — only what matters.
+                    Subscribe for the latest updates, offers, and promotions from Universal Technology — no spam, only what matters.
                 </motion.p>
 
                 {/* Form */}

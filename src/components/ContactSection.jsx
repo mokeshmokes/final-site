@@ -132,7 +132,7 @@ export default function ContactSection() {
         { icon: Mail, label: "MAIL US", value: "info@jusco.com", href: "mailto:info@jusco.com" },
         { icon: Phone, label: "CALL ME", value: "+1 (800) 123-4567", href: "tel:+18001234567" },
         { icon: MessageSquare, label: "SUPPORT", value: "support@jusco.com", href: "mailto:support@jusco.com" },
-        { icon: MapPin, label: "MY LOCATION", value: "Chennai, Tamil Nadu, India", href: null },
+        { icon: MapPin, label: "MY LOCATION", value: "UNIVERSAL TECHNOLOGY 250/187, GUPTHA NAGAR,ANGAMMAL COLONY,SALEM-636009,LAND MARK: NEAR KRISHNA MEDICALS.", href: null },
         { icon: Clock, label: "OFFICE TIMEING", value: "Mon - Sat : 9:00 AM - 9:00 PM", href: null },
     ];
 

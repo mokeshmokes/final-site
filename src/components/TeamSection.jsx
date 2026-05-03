@@ -170,8 +170,7 @@ export default function TeamSection() {
                         variants={headingVariants} custom={2}
                         initial="hidden" animate={headingView ? "visible" : "hidden"}
                     >
-                        Meet the talented people behind every project — a diverse team
-                        united by a shared passion for excellence and innovation.
+                        United by excellence and driven by innovation, we collaborate closely with you to bring every project to life with precision and care.
                     </motion.p>
 
                     <motion.div

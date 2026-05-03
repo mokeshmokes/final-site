@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation, useNavigate } from "react-router-dom";
 
 /* ── Page components ── */
 import CardDetail from "./pages/CardDetail";
@@ -70,9 +70,9 @@ function Home() {
         <TeamSection />
         <SkillSection />
         <PartnersSection />
-        <ShowcaseSection />
-        <ProductsSection />
         <ITServicesSection />
+        <ProductsSection />
+        <ShowcaseSection />
         <BusinessServices />
         <TestimonialsSection />
         <QualityBadges />
@@ -87,10 +87,25 @@ function Home() {
   );
 }
 
+/* ── Redirect to home on page refresh ── */
+function RefreshRedirect() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const navEntry = window.performance?.getEntriesByType?.("navigation")?.[0];
+    if (navEntry?.type === "reload") {
+      navigate("/", { replace: true });
+    }
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  return null;
+}
+
 /* ── Root app with router ── */
 export default function App() {
   return (
     <BrowserRouter>
+      <RefreshRedirect />
       <Loader />
       <Routes>
         <Route path="/" element={<Home />} />

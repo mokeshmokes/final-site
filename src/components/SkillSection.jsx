@@ -105,25 +105,21 @@ export default function SkillSection() {
                     <h3 className="skill-sec__sub-title">Concept of Skill and Mastery</h3>
 
                     <p className="skill-sec__desc">
-                        At JUSCO, we believe mastery is a continuous journey. Our team
-                        invests relentlessly in sharpening technical skills, design
-                        thinking, and strategic execution — ensuring every deliverable
-                        reflects the highest standard of craft.
+                        At Universal Technology, we believe mastery is never a destination — it's a continuous journey of learning, refining, and evolving.Our team invests relentlessly in sharpening technical skills, design thinking, and strategic execution to stay ahead of the curve.
+                        From clean code architecture to pixel-perfect interfaces, every deliverable reflects the highest standard of craft and care.
                     </p>
 
                     <p className="skill-sec__desc">
-                        From clean code architecture to pixel-perfect interfaces and
-                        data-driven marketing strategies, our expertise spans the full
-                        digital spectrum. We don't just build products — we build
-                        excellence.
+                       We pair data-driven marketing strategies with human-centered design to create solutions that are both powerful and purposeful.Our expertise spans the full digital spectrum — from concept to launch, from growth to scale.
+                       We don't just build products — we build excellence, one project at a time.
                     </p>
 
                     {/* Decorative feature pills */}
-                    <div className="skill-sec__pills">
+                    {/* <div className="skill-sec__pills">
     {["Clean Code", "Pixel Perfect", "SEO Optimized", "Fast Delivery"].map((p) => (
         <span key={p} className="skill-sec__pill" style={{ color: "#2563eb" }}>{p}</span>
     ))}
-</div>
+</div> */}
                 </motion.div>
 
                 {/* RIGHT */}

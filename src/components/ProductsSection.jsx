@@ -1,19 +1,19 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { Monitor, Laptop, Server, Shield, HardDrive, Printer, Network, Camera } from "lucide-react";
+import { FaDesktop, FaLaptopCode, FaServer, FaShieldAlt, FaDatabase, FaPrint, FaNetworkWired, FaCamera } from "react-icons/fa";
 import "./ProductsSection.css";
 import "./FlipCard.css";
 
 const PRODUCTS = [
-    { id: "desktop", icon: Monitor, title: "Desktop", desc: "High-performance desktop computers for business, workstations, and enterprise environments.", color: "#2563eb", rgb: "37,99,235" },
-    { id: "laptop", icon: Laptop, title: "Laptop", desc: "Premium laptops for professionals — lightweight, powerful, and built for productivity on the go.", color: "#7c3aed", rgb: "124,58,237" },
-    { id: "server", icon: Server, title: "Server", desc: "Rack, tower, and blade servers engineered for reliability, scalability, and enterprise workloads.", color: "#059669", rgb: "5,150,105" },
-    { id: "firewall", icon: Shield, title: "Firewall", desc: "Next-generation firewall solutions to protect your network from threats and unauthorized access.", color: "#e11d48", rgb: "225,29,72" },
-    { id: "nas", icon: HardDrive, title: "Network Attached Storage", desc: "NAS solutions for centralized, secure, and scalable data storage across your organization.", color: "#0891b2", rgb: "8,145,178" },
-    { id: "printer", icon: Printer, title: "Printer", desc: "Commercial-grade printers and multifunction devices for high-volume, high-quality document output.", color: "#d97706", rgb: "217,119,6" },
-    { id: "router-switches", icon: Network, title: "Router & Switches", desc: "Enterprise networking hardware for fast, reliable, and secure wired and wireless connectivity.", color: "#6d28d9", rgb: "109,40,217" },
-    { id: "cctv", icon: Camera, title: "CCTV", desc: "Advanced surveillance camera systems for comprehensive security monitoring of your premises.", color: "#dc2626", rgb: "220,38,38" },
+    { id: "desktop", icon: FaDesktop, title: "Desktop", desc: "High-performance desktop computers for business, workstations, and enterprise environments.", color: "#2563eb", rgb: "37,99,235" },
+    { id: "laptop", icon: FaLaptopCode, title: "Laptop", desc: "Premium laptops for professionals — lightweight, powerful, and built for productivity on the go.", color: "#7c3aed", rgb: "124,58,237" },
+    { id: "server", icon: FaServer, title: "Server", desc: "Rack, tower, and blade servers engineered for reliability, scalability, and enterprise workloads.", color: "#059669", rgb: "5,150,105" },
+    { id: "firewall", icon: FaShieldAlt, title: "Firewall", desc: "Next-generation firewall solutions to protect your network from threats and unauthorized access.", color: "#e11d48", rgb: "225,29,72" },
+    { id: "nas", icon: FaDatabase, title: "Network Attached Storage", desc: "NAS solutions for centralized, secure, and scalable data storage across your organization.", color: "#0891b2", rgb: "8,145,178" },
+    { id: "printer", icon: FaPrint, title: "Printer", desc: "Commercial-grade printers and multifunction devices for high-volume, high-quality document output.", color: "#d97706", rgb: "217,119,6" },
+    { id: "router-switches", icon: FaNetworkWired, title: "Router & Switches", desc: "Enterprise networking hardware for fast, reliable, and secure wired and wireless connectivity.", color: "#6d28d9", rgb: "109,40,217" },
+    { id: "cctv", icon: FaCamera, title: "CCTV", desc: "Advanced surveillance camera systems for comprehensive security monitoring of your premises.", color: "#dc2626", rgb: "220,38,38" },
 ];
 
 const containerVariants = { hidden: {}, visible: { transition: { staggerChildren: 0.09 } } };
@@ -63,8 +63,8 @@ export default function ProductsSection() {
                         <motion.div className="products__divider" initial={{ scaleX: 0 }} animate={headerView ? { scaleX: 1 } : { scaleX: 0 }} transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }} />
                     </motion.div>
                     <motion.div className="products__top-right" ref={contentRef} initial={{ opacity: 0, x: 40 }} animate={contentView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}>
-                        <p className="products__top-desc">We supply and distribute a comprehensive range of premium hardware products from the world's leading brands. Whether you're equipping a startup or scaling an enterprise, our product portfolio covers every technology need — from workstations to surveillance systems.</p>
-                        <p className="products__top-desc">All products come with manufacturer warranties, professional installation support, and ongoing maintenance options through our AMC and support service plans.</p>
+                        <p className="products__top-desc">We supply and distribute a comprehensive range of premium hardware products from the world's leading brands — from workstations and peripherals to networking gear and surveillance systems.</p>
+                        <p className="products__top-desc">All products come with manufacturer warranties, professional installation support, and flexible maintenance options through our AMC and support service plans.</p>
                     </motion.div>
                 </div>
                 <motion.div className="products__grid" ref={gridRef} variants={containerVariants} initial="hidden" animate={gridView ? "visible" : "hidden"}>

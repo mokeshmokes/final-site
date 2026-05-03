@@ -8,18 +8,27 @@ export const CARD_DATA = [
     /* ─── SERVICES ─────────────────────────────────────────────────────── */
     {
         id: "web-development",
-        category: "Services",
-        title: "Web Development",
+        category: "WEBSITE",
+        title: "Web Services",
         color: "#2563eb",
         rgb: "37,99,235",
         image: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&q=80",
+        images: [
+            "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&q=80",
+            "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80",
+            "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80",
+        ],
         description: [
-            { subtitle: "Overview", text: "We build fast, scalable, and visually stunning websites tailored to your brand." },
-            { subtitle: "Capabilities", text: "From landing pages to complex web applications, we cover the full spectrum." },
-            { subtitle: "Performance", text: "Every project is optimised for performance, accessibility, and SEO from day one." },
+            "We are very much committed in designing websites. We use Latest Technologies for creating Amazing experince for the visitors for your websites.UNIVERSAL TECHNOLOGY offers great quality website designs. Design of the website plays very important role as it attracts targeted customers. We have different type of design ready which are very unique and just mind blowing. UNIVERSAL TECHNOLOGY closely aligns with your marketing goals to deliver results based on performance. We are all about ideas, actions, and results. Our process has been thoroughly developed and contoured over the years, gathering as much of your requirements through our pre-development survey before the design is started. By adhering to this practice we’re able to develop a design concept that will meet both your expectations and your marketing goals.",
+"• Basic Website Designing",
+"• Responsive Website Designing",
+"• Corporate Website Designing",
+"• CMS Website Designing",
+"• Website Redesigning",
+"• Website Updates & Maintenance",
         ],
         fullContent:
-            "Our web development team combines cutting-edge technology with creative design to deliver websites that not only look great but perform exceptionally. We work with modern frameworks and follow best practices for performance, accessibility, and SEO. Every project begins with a deep understanding of your business goals, target audience, and competitive landscape — ensuring the final product drives real results.",
+            "",
         features: [
             "Custom Design & Development",
             "SEO Optimized Architecture",
@@ -30,18 +39,20 @@ export const CARD_DATA = [
     },
     {
         id: "wordpress-customization",
-        category: "Services",
-        title: "WordPress Customization",
+        category: "WEBSITE",
+        title: "Web Development",
         color: "#7c3aed",
         rgb: "124,58,237",
         image: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=800&q=80",
+        images: [
+            "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=800&q=80",
+            // "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&q=80",
+        ],
         description: [
-            { subtitle: "Overview", text: "Custom WordPress themes, plugins, and full-site builds that are easy to manage." },
-            { subtitle: "Optimisation", text: "We optimise every WordPress site for performance, security, and search engines." },
-            { subtitle: "Support", text: "Our team handles migrations, audits, and ongoing maintenance with care." },
+           "Web development is a broad term for the work involved in developing a web site. This can include web design, web content development, client liaison, client-side server-side scripting, web server and network security configuration, and e-commerce development. Our team uses latest technologies to develop your websites in order to give you the best you need We have a team of technically well-endowed specialists, knowledgeable across multiple platforms. We make websites using the latest technological platforms keeping ourselves abreast of the latest technological developments. We ensure the websites we make for our clients are up to date with the constant evolution of both new hardware and operating systems. The websites we develop are technically strong with solid design, well-coded functions and robust security features.",
         ],
         fullContent:
-            "WordPress powers over 40% of the web — and we make it work harder for you. From bespoke theme development to complex plugin integrations, our WordPress specialists deliver solutions that are fast, secure, and easy for your team to manage. We also handle migrations, performance audits, and ongoing maintenance so your site stays ahead of the curve.",
+            "",
         features: [
             "Custom Theme Development",
             "Plugin Integration & Development",
@@ -52,18 +63,24 @@ export const CARD_DATA = [
     },
     {
         id: "ecommerce-development",
-        category: "Services",
-        title: "E-Commerce Development",
+        category: "WEBSITE",
+        title: "Mobile App Development",
         color: "#059669",
         rgb: "5,150,105",
         image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
+        images: [
+            // "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
+            // "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80",
+            "https://www.metasyssoftware.com/wp-content/uploads/2023/07/Web-app-development-2.jpg",
+        ],
         description: [
-            { subtitle: "Overview", text: "End-to-end e-commerce solutions with seamless checkout and payment integration." },
-            { subtitle: "Scalability", text: "We build inventory management systems designed to scale with your business." },
-            { subtitle: "Conversion", text: "Every element is crafted with conversion and customer experience in mind." },
+           "At UNIVERSAL TECHNOLOGY we provide a wide range of android application development services, and build customized apps that can meet the requirements of any individual client. We have a powerful and experienced team of developers and engineers that can tackle any challenge and work on any Android platform.",
+           "With us, you will be able to convert your ideas into functional, user-friendly and easy-to-use applications, which significantly increase your chances of success at the global Android market, and provide you with many different options for further development and advance.",
+           "Android with 85% market share in mobiles, must be the first choice for any Mobile App development.",
+
         ],
         fullContent:
-            "We build e-commerce experiences that convert browsers into buyers. From product catalog architecture to one-click checkout flows, every element is designed with conversion in mind. We integrate leading payment gateways, build custom inventory systems, and implement analytics dashboards so you always know what's working and what to improve.",
+            "",
         features: [
             "Secure Payment Gateway Integration",
             "Inventory Management System",
@@ -74,18 +91,26 @@ export const CARD_DATA = [
     },
     {
         id: "logo-brand-identity",
-        category: "Services",
-        title: "Logo & Brand Identity",
+        category: "WEBSITE",
+        title: "Domain Registration",
         color: "#e11d48",
         rgb: "225,29,72",
         image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&q=80",
+        images: [
+            "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&q=80",
+            // "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&q=80",
+            "https://www.techicy.com/wp-content/uploads/2019/10/domain-name-registration.jpg",
+        ],
         description: [
-            { subtitle: "Overview", text: "Memorable logos and cohesive brand identities that communicate your values." },
-            { subtitle: "Visual System", text: "We craft visual systems — logo, typography, colour palette, and usage guidelines." },
-            { subtitle: "Impact", text: "Your brand will leave a lasting impression across every customer touchpoint." },
+           "Just as we all want unique identification of our website, it openly links to the term Domain. The Domain names serve as the uniqueness of your business on the internet and it is always different for the entire website, which speaks your visitors to connect with you effortlessly. Choose your domain name from among flexible domain extensions (.com, .co.in, in etc)",
+           "Create and maintain the great impact with the great domain name. Pick the best and flexible domain extensions like .com, .net, .buzz, asia, .info, .wiki, .company, biz, .social, .org, and .us, etc in accordance with their prices suitable and affordable for you. Choose us and avoid difficulty and complexity to pick out most catchy domain name, perfectly apt for your business.",
+           "What is a domain name? If you look at the URL for this page, you’ll see it begins with www.swaminathansystems.com. Our domain name is the part that comes after the www, therefore it is UNIVERSAL TECHNOLOGY. The domain name should be unique and can give your company or organization an identity on the Internet.",
+           "Why do I need a domain name?  Domain name is your identity on the web. To promote yourself and your business on the web, it is highly recommended have one. Worldwide, people can visit your website online and can know about your business through your site.",
+           "How can I get a Domain Name? You can get a Domain name registered from one of the Domain name registrars. The pricing for Domains varies from registrar to registrar.",
+           "How long does it take to register a domain name? As soon as we receive the payment you Domain Name gets registered. Once domain is registered it will immediately show in the whois DNS mapping of the domain takes upto 48 hrs to fully take effect and show up on the WHOIS query of other registrars.",
         ],
         fullContent:
-            "Your brand is more than a logo — it's the complete visual and emotional experience your customers have with your business. Our brand identity process starts with discovery: understanding your values, audience, and competitive positioning. We then craft a visual system — logo, typography, colour palette, and usage guidelines — that tells your story consistently across every touchpoint.",
+            "",
         features: [
             "Logo Design (Multiple Concepts)",
             "Brand Style Guide",
@@ -96,18 +121,25 @@ export const CARD_DATA = [
     },
     {
         id: "domain-hosting",
-        category: "Services",
-        title: "Domain & Hosting",
+        category: "WEBSITE",
+        title: "Web Hosting",
         color: "#0891b2",
         rgb: "8,145,178",
         image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
+        images: [
+            "https://cdn.nishtyainfotech.com/content/learnings/data/blog/banner/6889e4315bc234.12272652.webp",
+            "https://kinsta.com/wp-content/uploads/2021/11/what-is-web-hosting-1-1200x675.jpg",
+        ],
         description: [
-            { subtitle: "Overview", text: "Reliable domain registration and managed hosting with 99.9% uptime guarantee." },
-            { subtitle: "Inclusions", text: "Every plan includes free SSL certificates and automated daily backups." },
-            { subtitle: "Peace of Mind", text: "Our team handles all technical complexity so you can focus on your business." },
+           "As a one stop solution for web services and solutions, we offers web hosting services to organizations and individuals to host basic website to customized web applications. We believe in Quality and Reliable hosting with on time customer support when ever customer needs. We believe in our partners has allowed us to support from a decade with our in-house domain expertise and dedicated technical staffs with development to offer suitable and effective hosting solutions to existing and prospective customers.",
+"• Our specialists are experienced in hosting both static and dynamic websites. Our professionals suggest the suitable type of hosting based on client’s business requirements whether to choose high traffic websites (ecommerce) or enterprise website (complex hosting).",
+"• What is Web hosting?",
+"• Web hosting is the technology that puts your website online. It is one of the three essential components of establishing your Web presence: a domain name (Web address), a website and a Web host.",
+"• Does your hosting come with a control panel?",
+"• Yes, your hosting comes packed with control panel, cPanel.",
         ],
         fullContent:
-            "A fast, reliable hosting environment is the foundation of every successful website. We provide managed cloud hosting with 99.9% uptime SLA, free SSL certificates, automated daily backups, and proactive security monitoring. Our team handles all the technical complexity so you can focus on growing your business — not managing servers.",
+            "",
         features: [
             "Domain Registration & Transfer",
             "Managed Cloud Hosting",
@@ -118,18 +150,22 @@ export const CARD_DATA = [
     },
     {
         id: "professional-training",
-        category: "Services",
-        title: "Professional Training",
+        category: "WEBSITE",
+        title: "SEO Optimization",
         color: "#d97706",
         rgb: "217,119,6",
         image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80",
+        images: [
+            // "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80",
+            // "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80",
+            "https://5.imimg.com/data5/SELLER/Default/2025/11/561190709/AJ/QP/LR/256628361/seo-isn-t-just-about-traffic-jpeg-500x500.jpeg",
+        ],
         description: [
-            { subtitle: "Overview", text: "Hands-on training programs in web development, design, and digital marketing." },
-            { subtitle: "Methodology", text: "Sessions combine theory with practical projects for real-world application." },
-            { subtitle: "Outcome", text: "Participants leave with skills, a portfolio, and a certificate of completion." },
+            "SEO is to make your website appear on Google Top Listings for relevant keywords of your business. It is very important part of every website. Having a website build with everything & having no SEO is like having a store without any visitors. Through SEO lots & lots of visitors come into your website & explore. Visitors through SEO, gain trust & create Brand Image for the company.",
+            "With the flourishing internet users, we have a lot of opportunities to get deals over the internet, precisely, Google. So what does it take to reach up to the target audience? Search Engine Optimization being the only strategy to drive in more users to your website via Search Engines like Google, Bing, Yahoo, etc., you need to hold on to UNIVERSAL TECHNOLOGY",
         ],
         fullContent:
-            "Our training programs are built for real-world application. Whether you're an individual looking to upskill or a corporate team needing structured learning, we deliver instructor-led sessions that combine theory with hands-on practice. Participants leave with practical skills, a portfolio of work, and a certificate of completion they can be proud of.",
+            "",
         features: [
             "Live Instructor-Led Sessions",
             "Hands-on Project Work",
@@ -147,17 +183,32 @@ export const CARD_DATA = [
         color: "#2563eb",
         rgb: "37,99,235",
         image: "https://images.unsplash.com/photo-1593640408182-31c228b2b7e8?w=800&q=80",
+        images: [
+            "https://images.unsplash.com/photo-1593640408182-31c228b2b7e8?w=800&q=80",
+            "https://images.unsplash.com/photo-1587831990711-23ca6441447b?w=800&q=80",
+            "https://rog.asus.com/media/1644549597584.jpg",
+            "https://cdn.sanity.io/images/mqc7p4g4/production/ab9f43c662856f49402234f20cbb64aa4a648e86-800x594.png?w=3840&q=75&fit=clip&auto=format",
+        ],
         description: [
             "UNIVERSAL TECHNOLOGY is one of the leading companies in Computer (Desktop)Sales that is gaining momentum each day. Backed with a strong team of highly-experienced professionals. We sell to our customers the latest and most reliable computers (Desktop)which meet industry standards and come with the finest features and functions.",
             "UNIVERSAL TECHNOLOGY Sales is dedicated to provide you with the absolute and advanced technical solutions irrespective of the size of the organization or the industry you may be in. We have always endeavoured to solve your issues and provide you with world-class products. For us, our main priority is Customer Satisfaction.",
 
             { subtitle: "Our Vission :", text: "To become one of the leading service provider in the world of technology." },
-            // { subtitle: "Range", text: "We stock the latest models from top brands meeting all industry standards." },
+            { subtitle:  "Our Mission :", text: "To provide never before world-class technology services to empower mankind.To make that choice easier, we have an extensive list of systems that covers everything from standalone towers, full system combos, all-in-ones, and mini PCs." },
             // { subtitle: "Service", text: "Our team provides configuration, delivery, and on-site installation support." },
-            "Our Mission :",
+           "WITH ALL THE TOP BRANDS SUCH AS :",
+            "•Dell",
+            "•Hp",
+            "•Lenovo",
+            "•Acer",
+            "•Apple",
+            "•IBM",
+            "•SONY",
+            "•Asus",
+            "•HCL",
         ],
         fullContent:
-            "To provide never before world-class technology services to empower mankind.To make that choice easier, we have an extensive list of systems that covers everything from standalone towers, full system combos, all-in-ones, and mini PCs.",
+            "",
         features: [
             "WITH ALL THE TOP BRANDS SUCH AS :",
             "Dell",
@@ -178,8 +229,16 @@ export const CARD_DATA = [
         color: "#7c3aed",
         rgb: "124,58,237",
         image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&q=80",
+        images: [
+            "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&q=80",
+            "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&q=80",
+            "https://www.cnet.com/a/img/resize/3229dc019346cc46f70d40d76478a3fd01e775cf/hub/2026/01/28/a607f46f-73e9-4382-a9f7-b0b13093156e/best-laptops.png?auto=webp&fit=crop&height=900&width=1200",
+            "https://i.rtings.com/assets/pages/6dRuEBex/best-gaming-laptops-20242028-medium.jpg?format=auto",
+
+        ],
         description: [
-            "A must have device for everyone UNIVERSAL TECHNOLOGY selling Portable, easy-to-use, and efficient; laptops. It’s made our lives supremely easy. Whether it’s work, gaming or personal use, laptops have simplified complicated processes and store all sizes of information securely. These days, computers are fast being replaced by laptops because they are compatible and handy. There are many laptops available from us with different features and pricing. Because of the number of options available, it can be very difficult to choose the perfect laptop.",
+            "A must have device for everyone",
+            "UNIVERSAL TECHNOLOGY selling Portable, easy-to-use, and efficient; laptops. It’s made our lives supremely easy. Whether it’s work, gaming or personal use, laptops have simplified complicated processes and store all sizes of information securely. These days, computers are fast being replaced by laptops because they are compatible and handy. There are many laptops available from us with different features and pricing. Because of the number of options available, it can be very difficult to choose the perfect laptop.",
             "Latest technology in laptops :",
             "As an important purchase and a necessary investment in your life, the features of a laptop should be on the top of your list. While there are different laptops available with advanced technology and functionalities, it’s important that you keep in mind your professional, personal and other requirements while buying a laptop. Following are some of the best available laptops in UNIVERSAL TECHNOLOGY",
             { subtitle: "1.Notebook Laptops", text: "This is a general term for a full-sized laptop that strikes a balance between portability and functionality. These can vary greatly in overall size and specification – processor speed, storage capacity, memory (RAM) and screen size." },
@@ -187,9 +246,21 @@ export const CARD_DATA = [
             { subtitle: "3.Tablet Laptops", text: "Just as convertible laptops can do double-duty as a tablet, some tablets can be used as a laptop with the addition of a detachable keyboard. However, unlike a 2-in-1, they can quickly be used in tablet mode without the added weight and bulk of a keyboard." },
             { subtitle: "4.Convertible 2 in 1 Laptops", text: "These combine the features of a laptop and a tablet. They can quickly switch between touchscreen tablet mode and traditional keyboard mode, transforming in a variety of ways, including detaching, sliding, twisting and fold-back mechanisms." },
             { subtitle: "5.Gaming Laptops", text: "They give intense performance compared to normal laptops, have a specially designed cooling system and high-speed fans, high-end dedicated graphics and sophisticated features like backlit keyboards, sleek designs and high power-consuming compressors." },
+            "WE HAVE TOP BRAND LAPTOPS SUCH AS :",
+            "•Dell",
+            "•Asus",
+            "•Hp",
+            "•Lenovo",
+            "•Acer",
+            "•Apple",
+            "•Razer",
+            "•SONY",
+            "•Huawei",
+            "•HCL",
+            "•Samsung",
         ],
         fullContent:
-            "WE HAVE TOP BRAND LAPTOPS SUCH AS :",
+            "",
         features: [
             "Dell",
             "Asus",
@@ -211,6 +282,10 @@ export const CARD_DATA = [
         color: "#059669",
         rgb: "5,150,105",
         image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
+        images: [
+            "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
+            "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&q=80",
+        ],
         description: [
             "A server is a specially designed computer system which can process requests and deliver data to other computers over a local network. Servers are typically conﬁgured with additional processing power, memory and storage capacity. Servers are designed to run 24/7 and oﬀer additional redundancy for data storage and power.",
             "Hardware speciﬁcations and budgets can vary considerably based on your infrastructure needs. Our highly experienced and professional team have designed, supplied and installed hundreds of new and upgraded server solutions for all types of businesses. Are you looking to upgrade an older system, or do you need help designing a new implementation from scratch? We have the skills on hand! Our team have been installing servers for the last 10 years and can support both physical and virtual installations.",
@@ -238,17 +313,29 @@ export const CARD_DATA = [
         color: "#e11d48",
         rgb: "225,29,72",
         image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800&q=80",
+        images: [
+            "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800&q=80",
+            "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80",
+        ],
         description: ["Firewall is a network security device, either hardware or software based, which monitors all incoming and outgoing traffic and based on defined set of security rules it accept, reject or drop that specific traffic. A Firewall is a type of cybersecurity tool that is used to filter traffic on a network. Firewalls can be used to separate network nodes from external traffic sources, internal traffic sources, or even specific applications. The primary goal of a firewall is to block malicious traffic requests and data packets while allowing legitimate traffic through. The Internet is really one large network, which includes your computer. A firewall protects your computer by acting as a gate through which both all data must pass. By blocking certain kinds of traffic, the firewall protects your computer or network from unauthorized users and safeguards your data from attack.",
             "Why Firewall :",
-            " There are 65536 ports in our web",
-            " By we are using more than 20 ports only",
-            "Other ports are by default opened by ISP providers",
-            "The hackers and virus are using the opened ports to hack your systems and your network",
-            "The only way is FIREWALL",
-            "It will control your servers and networks",
+            "• There are 65536 ports in our web",
+            "• By we are using more than 20 ports only",
+            "• Other ports are by default opened by ISP providers",
+            "• The hackers and virus are using the opened ports to hack your systems and your network",
+            "• The only way is FIREWALL",
+            "• It will control your servers and networks",
+            "Basic features:",
+            "• Port blocking",
+            "• Web security",
+            "• Mac binding",
+            "• Nating / Triggering",
+            "• VPN-virtual private networking",
+            "• Customized parental control and bandwidth allocation",
+
         ],
         fullContent:
-            "Cyber threats are evolving every day — your network security must evolve with them. We supply and configure next-generation firewalls from Fortinet, Cisco, and SonicWall that provide deep packet inspection, intrusion prevention, application control, and VPN capabilities. Our security engineers handle deployment, policy configuration, and ongoing monitoring.",
+            "",
         features: [
             "Port blocking",
             "Web security",
@@ -265,12 +352,23 @@ export const CARD_DATA = [
         color: "#0891b2",
         rgb: "8,145,178",
         image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&q=80",
+        images: [
+            "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&q=80",
+            "https://www.ibm.com/content/dam/connectedassets-adobe-cms/worldwide-content/stock-assets/getty/image/photography/7e/cb/dsc6754.jpg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg",
+            "https://stonefly.com/wp-content/uploads/2018/04/nAS-BANNER.jpg",
+        ],
         description: ["NAS device is a storage device connected to a network that allows storage and retrieval of data from a central location for authorised network users and varied clients. NAS devices are flexible and scale out, meaning that as you need additional storage, you can add to what you have. NAS is like having a private cloud in the office. It’s faster, less expensive and provides all the benefits of a public cloud on site, giving you complete control.",
             "Data is a critical asset for companies Without access to their data, companies may not provide their customers with the expected level of service. Poor customer service, loss of sales or team collaboration problems are all examples of what can happen when information is not available.",
             "Each of these issues contribute to lack of efficiency and potential loss of income if customers cannot wait for a data outage to be corrected. Additionally, when it comes to data storage, small businesses find themselves faced with other storage-related needs such as: ",
+            "• Lower cost options",
+            "• Ease of operation (many small businesses do not have IT staff)",
+            "• Ease of data backup (and it’s always accessible when you need it)",
+            "• Growth capability",
+            "• Simple to operate, a dedicated IT professional is often not required",
+            "• Good at centralizing data storage in a safe, reliable way",
         ],
         fullContent:
-            "Centralize your organization's data with a NAS solution that grows with your business. We supply Synology, QNAP, and Western Digital NAS systems configured with the right RAID level, capacity, and access controls for your needs. Remote access, automated backup, and cloud sync capabilities ensure your data is always available and protected.",
+            "",
         features: [
             "Lower cost options",
             " Ease of operation (many small businesses do not have IT staff)",
@@ -287,20 +385,34 @@ export const CARD_DATA = [
         color: "#d97706",
         rgb: "217,119,6",
         image: "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=800&q=80",
+        images: [
+            "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=800&q=80",
+            "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&q=80",
+            "https://5.imimg.com/data5/UF/NC/TK/SELLER-28111010/printer-or-scanner-for-office-home-use.jpg",
+            "https://bdsdoc.com/wp-content/uploads/2023/08/all-in-one-printer.jpg",
+        ],
         description: [
-            "In computing, a printer is a peripheral device which makes a persistent representation of graphics or text, usually on paper. While most output is human-readable, bar code printers are an example of an expanded use for printers.Printing a document has become pretty easy in today’s time primarily because of the inexpensive pricing of this all-important electronic item. Printers nowadays not only provide black and white printouts but also collared printouts as well and are a must-have in any office and household. On our online shopping website you can purchase all kinds of printers. In addition to that, printers can also be used for scanning, copying and faxing a document.",
+            "In computing, a printer is a peripheral device which makes a persistent representation of graphics or text, usually on paper. While most output is human-readable, bar code printers are an example of an expanded use for printers.",
+            "Printing a document has become pretty easy in today’s time primarily because of the inexpensive pricing of this all-important electronic item. Printers nowadays not only provide black and white printouts but also collared printouts as well and are a must-have in any office and household. On our online shopping website you can purchase all kinds of printers. In addition to that, printers can also be used for scanning, copying and faxing a document.",
             "Printing, traditionally, a technique for applying under pressure a certain quantity of colouring agent onto a specified surface to form a body of text or an illustration. Certain modern processes for reproducing texts and illustrations, however, are no longer dependent on the mechanical concept of pressure or even on the material concept of colouring agent. Because these processes represent an important development that may ultimately replace the other processes, printing should probably now be defined as any of several techniques for reproducing texts and illustrations, in black and in colour, on a durable surface and in a desired number of identical copies. There is no reason why this broad definition should not be retained, for the whole history of printing is a progression away from those things that originally characterized it: lead, ink, and the press.",
             "Explore various kinds of Printers including :",
-            "All-In-One Printers",
-            "Ink Tank Printers",
-            "Inkjet Printers",
-            " Laser Printer",
-            "Matrix Printers and",
-            "Photo Printers",
-
+            "• All-In-One Printers",
+            "• Ink Tank Printers",
+            "• Inkjet Printers",
+            "• Laser Printer",
+            "• Matrix Printers and",
+            "• Photo Printers",
+            "From popular brands like:",
+            "• HP printers",
+            "• Canon Printers",
+            "• Epson Printers",
+            "• Xerox",
+            "• Ricoh",
+            "• Brother Printers",
+            "• Samsung Printers and more…",
         ],
         fullContent:
-            "From desktop inkjets to high-volume laser MFPs, we supply and service printers from HP, Canon, Epson, and Xerox. Our team helps you choose the right device for your print volume, quality requirements, and budget — then handles installation, network configuration, and consumable supply. AMC plans available for worry-free operation.",
+            "",
         features: [
             "HP printers",
             "Canon Printers",
@@ -318,18 +430,30 @@ export const CARD_DATA = [
         color: "#6d28d9",
         rgb: "109,40,217",
         image: "https://images.unsplash.com/photo-1606904825846-647eb07f5be2?w=800&q=80",
+        images: [
+            "https://images.unsplash.com/photo-1606904825846-647eb07f5be2?w=800&q=80",
+            "https://static.diffen.com/uploadz/0/03/switch.jpg",
+            "https://windowspost.com/wp-content/uploads/2025/10/difference-between-router-and-switch.jpg",
+        ],
         description: [
             "Router :",
             "A router is a networking device that connects to various local area networks and wide area networks in the Internet. It allows multiple computers or devices to connect to the Internet through a single connection. It transfers packets of data between networks to establish and sustain communication between two nodes in an internetwork. Besides, it automatically selects and sets routes according to the channel conditions, and sends signals in the optimal path in order.",
             "Router works at the third layer (network layer) of the OSI model. A router uses the destination IP address in a data packet to determine where to forward the packet. In addition, it manages the flow of data so that each computer gets the right information it needs. Routers also can be used to connect multiple networks.",
             "A wireless router is a device that performs the functions of a router and also includes the functions of a wireless access point. It is used to provide access to the Internet or a private computer network. Depending on the manufacturer and model, it can function in a wired local area network, in a wireless-only LAN, or in a mixed wired and wireless network.",
             "Welcome to the UNIVERSAL TECHNOLOGY Routers store.",
-            "Switches :",
+            "Shop for a wide range of wifi routers from top brands like :",
+            "• Mi",
+            "• D-Link",
+            "• TP-Link",
+            "• Netgear",
+            "• Digisol",
+            "• Huawei and more….",
+            "Switches:",
             "A managed switch is a configurable network switch, which offers greater security, flexibility, and capacity than an unmanaged switch or normal switch. It serves as a controller, enabling networked devices to talk to each other efficiently. As a network switch, it works at the second layer (data link layer) of the OSI reference model.",
             "Managed switches are usually used to offer the most comprehensive functions for a network. Endowed with various function managements such as VLAN, CLI, SNMP, IP routing, QoS, etc, a managed switch is often seen in the core layer of a network, especially in large and complex data centers. With the increasing needs, parts of the most common two network switches, Gigabit Ethernet switch and 10GbE switch, are designed as managed switches.",
         ],
         fullContent:
-            "Shop for a wide range of wifi routers from top brands like :",
+            "",
         features: [
             "Mi",
             " D-Link",
@@ -347,6 +471,12 @@ export const CARD_DATA = [
         color: "#dc2626",
         rgb: "220,38,38",
         image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=800&q=80",
+        images: [
+            "https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=800&q=80",
+            "https://images.unsplash.com/photo-1582139329536-e7284fece509?w=800&q=80",
+            "https://business.moglix.com/_next/image?url=https%3A%2F%2Fblog.business.moglix.com%2Fwp-content%2Fuploads%2F2025%2F12%2FTop-10-best-CCTV-Camera-Manufacturers-in-India-2026.png&w=3840&q=75",
+            "https://standardcareservices.com/wp-content/uploads/2024/08/Webp.net-resizeimage-32-1.jpg",
+        ],
         description: [
             "Increasing the home / business security becomes crucial. The chances of entry of anonymous people or intruders cannot be predicted all the times. However, at the same time, by increasing the security across the region, it becomes possible to ensure the safety and restrict anonymous entry.",
             "CCTV HD CAMERAS :",
@@ -360,7 +490,7 @@ export const CARD_DATA = [
             "Wireless cameras are proving very popular among modern security consumers due to their low installation costs (there is no need to run expensive video extension cables) and flexible mounting options; wireless cameras can be mounted/installed in locations previously unavailable to standard wired cameras. In addition to the ease of use and convenience of access, wireless security camera allows users to leverage broadband wireless internet to provide seamless video streaming over-internet."
         ],
         fullContent:
-            "Protect your premises with a professionally designed CCTV system. We supply and install IP cameras, DVR/NVR systems, and video management software from Hikvision, Dahua, and CP Plus. Our security engineers conduct a site survey, design the optimal camera placement, and handle full installation and commissioning — including remote viewing setup on your mobile device.",
+            "",
         features: [
             "Full HD & 4K Recording",
         ],
@@ -374,9 +504,15 @@ export const CARD_DATA = [
         color: "#2563eb",
         rgb: "37,99,235",
         image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80",
+        images: [
+            // "https://t4.ftcdn.net/jpg/03/89/39/17/360_F_389391783_ujJjCn2nGUdeDi2jUl97utjhIeEx7tqr.jpg",
+            "https://t4.ftcdn.net/jpg/03/89/39/17/360_F_389391783_ujJjCn2nGUdeDi2jUl97utjhIeEx7tqr.jpg",
+            "https://i0.wp.com/inforizonit.com/wp-content/uploads/2023/11/it-consulting-1.webp?fit=1920%2C1080&ssl=1",
+            // "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80",
+        ],
         description: [
             "We are a IT consulting partner with innovative solutions, well-defined strategies and deep domain expertise. UNIVERSAL TECHNOLOGY consultants define, design and execute strategies that drive your business growth, reduce costs and create new revenue streams We help you achieve these qualities in your IT strategy by providing a range of services – from custom application development, testing and maintenance through package deployment, upgrades and consulting. Our solutions help customers reduce cost, minimize risk and achieve improved ROI from their IT applications.",
-            "We understand the ever increasing need for talented IT professionals and we translate the knowledge and resources into advice and action that saves our clients time and money. We are fostered by a dedicated client-centric service focus resulting in over 75% of our clients.",
+            "We understand the ever increasing need for talented IT professionals and we translate the knowledge and resources into advice and action that saves our clients time and money. We are fostered by a dedicated client-centric service focus resulting in over 75% of our clients",
             "We’ll alleviate the administrative burden of recruiting, evaluating, screening, and interviewing full-time employees by providing you with highly qualified candidates. Together, we’ll establish an agreed-upon time frame for you to evaluate each candidate on-the-job, and we will retain the individual on our payroll during that time.",
         ],
         fullContent:
@@ -392,7 +528,14 @@ export const CARD_DATA = [
         color: "#7c3aed",
         rgb: "124,58,237",
         image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80",
-        description: ["Starts from 500/- onwards More than 650 Products Installation Experienced Engineers Multi Brands systems and and equipments and Dealers Supports. ( Dell ,Lenovo,Hp, IBM,Acer, Asus , Quickheal, Epson, Tvs , Samsung , POS Machines , and Vendor Softwares ( Tally , Billing Softwares, Erp softwares, Etc.) As computers have become faster and lightweight, the software that you need to get your work done has become larger and more complex. We can take the stress out of installing the right software and settings for your Laptop, Desktop, or Server. We ensure the correct software is installed and all licenses are activated and used so you can do what you are great at without worrying about outdated or illegal software.",
+        images: [
+            "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80",
+            "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&q=80",
+            "https://img.freepik.com/free-photo/part-male-construction-worker_329181-3734.jpg?semt=ais_hybrid&w=740&q=80",
+        ],
+        description: [
+            "Starts from 500/- onwards More than 650 Products Installation Experienced Engineers Multi Brands systems and and equipments and Dealers Supports. ( Dell ,Lenovo,Hp, IBM,Acer, Asus , Quickheal, Epson, Tvs , Samsung , POS Machines , and Vendor Softwares ( Tally , Billing Softwares, Erp softwares, Etc.) As computers have become faster and lightweight, the software that you need to get your work done has become larger and more complex. We can take the stress out of installing the right software and settings for your Laptop, Desktop, or Server. We ensure the correct software is installed and all licenses are activated and used so you can do what you are great at without worrying about outdated or illegal software.",
+            
             "Software issues we deal :",
             "• Software s Slow processing or hangs",
             "• Windows, linuxOS installation and Updates",
@@ -403,6 +546,7 @@ export const CARD_DATA = [
             "• Internet issues Wi-Fi issues",
             "• Other software installation",
             "• Other software issues",
+
             "We can help you in installing trouble shooting bellow all jobs :",
             "• AutoCAD all versions installation",
             "• Basic data recovery from formatted and deleted partitions",
@@ -429,7 +573,7 @@ export const CARD_DATA = [
             "• Installing windows in GPT partition without loss of partitions and data",
         ],
         fullContent:
-            "Getting new technology up and running correctly from day one prevents costly problems down the road. Our installation engineers handle everything from unboxing and physical setup to software configuration, network integration, and user acceptance testing. We document every configuration so your team has a clear record for future reference.",
+            "",
         features: [
             "Hardware Unboxing & Setup",
             "Software Installation & Configuration",
@@ -445,6 +589,11 @@ export const CARD_DATA = [
         color: "#059669",
         rgb: "5,150,105",
         image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80",
+        images: [
+            "https://www.shutterstock.com/image-photo/maintenance-engineer-technician-pointing-click-600nw-2153770463.jpg",
+            "https://ad2brand.com/wp-content/uploads/2023/09/AMC-Package_-1-840x300-1.jpg",
+            "https://productimages.withfloats.com/serviceimages/tile/633ebfb3ea47bade630fd40dannual-maintenance",
+        ],
         description: [
             "We offer annual software maintenance services to our customers from different industrial segments. Our Annual Maintenance package ensures that you get the highest level of support and service, when you need it the most. We understand that your work can not come to a stand still while you wait for technical support and service.",
             "A computer AMC service offers multiple types of computer support options such as software support, hardware support, operating system support, antivirus support and much more. There are many benefits that your business can have if you avail computer AMC from a trusted support service provider.",
@@ -472,7 +621,7 @@ export const CARD_DATA = [
             "• Security against hackers",
         ],
         fullContent:
-            "Preventive maintenance is always more cost-effective than emergency repairs. Our AMC plans provide scheduled visits, priority support response, and comprehensive coverage for your IT infrastructure. You get a dedicated account manager, quarterly health reports, and the peace of mind that comes from knowing your systems are in expert hands year-round.",
+            "",
         features: [
             "Scheduled Preventive Visits",
             "Priority Support Response",
@@ -488,6 +637,10 @@ export const CARD_DATA = [
         color: "#d97706",
         rgb: "217,119,6",
         image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&q=80",
+        images: [
+            "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&q=80",
+            "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80",
+        ],
         description: [
             "Starts form 250/- per month Our technical support department provides prompt support by telephone and onsite support from a single source, where and when you need By Weekly and monthly visits basis . To that end, our Regular Maintenance Contract (RMC) ensures that your software is always supported and up to date We hire a team that is technically sound. All our team members are professional degree holders and hold extensive experience in their field. The years of experience they have help them in detecting the exact problem and repairing them at once. So, you do not need to worry if it is an emergency situation because our team is brilliant at identifying problems and fixing them within a few hours.",
             "            Our RMS Services :",
@@ -504,7 +657,7 @@ export const CARD_DATA = [
             "• Keeps your computer perfectly tuned round the clock.",
         ],
         fullContent:
-            "Regular maintenance is the difference between systems that run smoothly for years and those that fail at the worst possible moment. Our maintenance service includes physical cleaning, driver and firmware updates, performance benchmarking, and early detection of failing components — all documented in a detailed service report after each visit.",
+            "",
         features: [
             "Routine System Health Checks",
             "Dust Cleaning & Hardware Care",
@@ -520,11 +673,15 @@ export const CARD_DATA = [
         color: "#e11d48",
         rgb: "225,29,72",
         image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&q=80",
+        images: [
+            "https://plus.unsplash.com/premium_photo-1664297701028-3e9919a2574f?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2xpZW50JTIwc3VwcG9ydHxlbnwwfHwwfHx8MA%3D%3D",
+            // "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80",
+        ],
         description: [
             "We are providing oncall support for Desktops and laptops, printer installation, Antivirus installation , virus Removal, Simple Sharing , Etc. All our team members are professional degree holders and hold extensive experience in their field. The years of experience they have help them in detecting the exact problem and repairing them at once. So, you do not need to worry if it is an emergency situation because our team is brilliant at identifying problems and fixing them within a few hours.",
         ],
         fullContent:
-            "When something breaks, every minute of downtime costs your business money. Our oncall support service provides rapid response — remote diagnosis within the hour and on-site attendance when needed. Our engineers are equipped to handle hardware failures, software issues, network problems, and user support requests with minimal disruption to your operations.",
+            "",
         features: [
             "Same-Day On-site Response",
             "Remote Diagnosis & Fix",
@@ -540,11 +697,15 @@ export const CARD_DATA = [
         color: "#0891b2",
         rgb: "8,145,178",
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+        images: [
+            "https://empmonitor.com/blog/wp-content/uploads/2022/01/remote-team-management-tips-2022-1024x512.jpg",
+            // "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80",
+        ],
         description: [
             "Wouldn’t it be amazing if you could get instant help whenever you face a problem with your computer system? If yes, then remote IT support outsourcing services is what you need! Outsourcing remote IT support services is a smarter way of resolving computer related issues within a quick time. Be it a hardware or software issue, most of these can be sorted remotely using an online platform.Flatworld Solutions can provide you and your clients with the best-in-class remote IT support services which will resolve IT issues quickly. Our team of call center executives is trained to handle any of the software issues with high efficiency and ease.",
         ],
         fullContent:
-            "Our remote management platform monitors your entire IT infrastructure around the clock — servers, workstations, network devices, and cloud services. Automated alerts notify our engineers of anomalies before they become outages. We deploy patches, resolve issues remotely, and provide monthly SLA reports so you always have full visibility into your IT health.",
+            "",
         features: [
             "24/7 Infrastructure Monitoring",
             "Proactive Alert Management",
@@ -560,13 +721,20 @@ export const CARD_DATA = [
         color: "#6d28d9",
         rgb: "109,40,217",
         image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&q=80",
+        images: [
+            "https://static.vecteezy.com/system/resources/previews/021/538/383/non_2x/intranet-global-network-connection-technology-concept-in-the-shape-of-polygonal-sphere-in-wireframe-hand-intranet-business-corporate-communication-document-management-system-dms-illustration-vector.jpg",
+            "https://www.shutterstock.com/image-photo/internet-things-iot-technology-ar-260nw-1101101900.jpg",
+        ],
         description: [
-            "Internet – Corporate/Retail Connection : The Internet is the global system of interconnected computer networks that uses the Internet protocol suite (TCP/IP) to communicate between networks and devices. It is a network of networks that consists of private, public, academic, business, and government networks of local to global scope, linked by a broad array of electronic, wireless, and optical networking technologies. The Internet carries a vast range of information resources and services, such as the inter-linked hypertext documents and applications of the World Wide Web (WWW), electronic mail, telephony, and file sharing.UNIVERSAL TECHNOLOGY understands the ever-accelerating need for a high-speed reliable internet connection at both big and small organizations. A fast and reliable connection can help an organization achieve fast business growth by boosting employee productivity, increasing customer engagement and optimizing costs by streamlining workflows and business processes.",
-            "Intranet :An intranet is a private network that can only be accessed by authorized users. The prefix “intra” means “internal” and therefore implies an intranet is designed for internal communications. “Inter” (as in Internet) means “between” or “among.” Since there is only one Internet, the word “Internet” is capitalized. Because many intranets exist around the world, the word “intranet” is lowercase.It is a computer network for sharing information, collaboration tools, operational systems, and other computing services within an organization, usually to the exclusion of access by outsiders. The term is used in contrast to public networks, such as the Internet, but uses most of the same technology based on the Internet Protocol Suite.",
+            "Internet – Corporate/Retail Connection : The Internet is the global system of interconnected computer networks that uses the Internet protocol suite (TCP/IP) to communicate between networks and devices. It is a network of networks that consists of private, public, academic, business, and government networks of local to global scope, linked by a broad array of electronic, wireless, and optical networking technologies. The Internet carries a vast range of information resources and services, such as the inter-linked hypertext documents and applications of the World Wide Web (WWW), electronic mail, telephony, and file sharing.",
+            "UNIVERSAL TECHNOLOGY understands the ever-accelerating need for a high-speed reliable internet connection at both big and small organizations. A fast and reliable connection can help an organization achieve fast business growth by boosting employee productivity, increasing customer engagement and optimizing costs by streamlining workflows and business processes.",
+            "Intranet :",
+            "An intranet is a private network that can only be accessed by authorized users. The prefix “intra” means “internal” and therefore implies an intranet is designed for internal communications. “Inter” (as in Internet) means “between” or “among.” Since there is only one Internet, the word “Internet” is capitalized. Because many intranets exist around the world, the word “intranet” is lowercase.",
+            "It is a computer network for sharing information, collaboration tools, operational systems, and other computing services within an organization, usually to the exclusion of access by outsiders. The term is used in contrast to public networks, such as the Internet, but uses most of the same technology based on the Internet Protocol Suite.",
             "A company-wide intranet can constitute an important focal point of internal communication and collaboration, and provide a single starting point to access internal and external resources. In its simplest form, an intranet is established with the technologies for local area networks (LANs) and wide area networks (WANs). Many modern intranets have search engines, user profiles, blogs, mobile apps with notifications, and events planning within their infrastructure.Intranets serve many different purposes, but their primary objective is to facilitate internal communication. For example, a business may create an intranet to allow employees to securely share messages and files with each other. It also provides a simple way for system administrators to broadcast messages and roll out updates to all workstations connected to the intranet.",
         ],
         fullContent:
-            "A well-designed network is invisible — it just works. Our network engineers design and deploy structured cabling, wireless infrastructure, and intranet portals that give your team fast, reliable, and secure connectivity. We handle ISP coordination, firewall configuration, VPN setup, and ongoing network management so your connectivity never becomes a bottleneck.",
+            "",
         features: [
             "Network Architecture Design",
             "Structured Cabling & Setup",
@@ -584,17 +752,26 @@ export const CARD_DATA = [
         color: "#2563eb",
         rgb: "37,99,235",
         image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+        images: [
+            "https://attorneyatlawmagazine.com/wp-content/uploads/2025/10/bigstock-Business-people-in-a-board-roo-209994802.jpg",
+            "https://img-cdn.inc.com/image/upload/f_webp,q_auto,c_fit/vip/2025/01/GettyImages-2155192216.jpg",
+            // "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80",
+        ],
+        secondImage: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&q=80",
         description: [
+            "Business Units-RETAIL",
             "The hardware which includes equipment from the world’s leading technology provider such as INTEL, MICROSOFT, HCL, HP/COMPAQ,AMD, SEAGATE, DAX NETWORKS, LOGITECH, CANON. etc.,",
 
             "The digital product lines ie the high end consumer electronic products will see a major development inside Universal Technology. Home Entertainment GRANDIZ 5.1 systems will allow customer to make their choice amongst, the best sound systems hence enhancing their customer experiences by being professionally consulted by Universal sales advisors.",
 
-            "Business Services Universal Business System is helping organisations across SALEM to become more effective and efficient. A dedicated team of Sales consultant and IT engineers are helping corporate customers, Government and educational institutions, insurance, companies and construction companies to meet their hardware, software, internet, networking, Projectors and structured cabling. Universal offers integrated approach in solving the needs for office automation, Data communication, and IT network infrastructure of these institutions.",
+            "Business Services",
+            " Universal Business System is helping organisations across SALEM to become more effective and efficient. A dedicated team of Sales consultant and IT engineers are helping corporate customers, Government and educational institutions, insurance, companies and construction companies to meet their hardware, software, internet, networking, Projectors and structured cabling. Universal offers integrated approach in solving the needs for office automation, Data communication, and IT network infrastructure of these institutions.",
 
-            "Technical Services The sales and consultancy operations are backed by skilled after sales services specifically developed to ensure that neither,individuals nor business are affected by unwanted computer downtime.Our Service Centre will take care of all your problems. Customers also have uninterrupted 12 hours a day access to a technical help desk by phone or email or internet. Fully trained and Certified persons are always on hand to deal with all aspects of hardware and software maintenance, fault diagnosis and repair.Customers can buy ‘UNIVERSAL SUPPORT ME CARE PACK’ to extend Manufacturer’s warranties as long as they required.",
+            "Technical Services ",
+            "The sales and consultancy operations are backed by skilled after sales services specifically developed to ensure that neither,individuals nor business are affected by unwanted computer downtime.Our Service Centre will take care of all your problems. Customers also have uninterrupted 12 hours a day access to a technical help desk by phone or email or internet. Fully trained and Certified persons are always on hand to deal with all aspects of hardware and software maintenance, fault diagnosis and repair.Customers can buy ‘UNIVERSAL SUPPORT ME CARE PACK’ to extend Manufacturer’s warranties as long as they required.",
         ],
         fullContent:
-            "Our business units are organized to deliver specialized expertise in every area we operate. Each unit is staffed by dedicated professionals who understand the unique challenges of their domain — from hardware procurement and network infrastructure to software development and client training. This structure ensures you always work with the right expert for your specific need, backed by the full resources of the organization.",
+            "",
         features: [
             "Hardware Supply & Distribution",
             "IT Services & Support Division",
@@ -610,44 +787,56 @@ export const CARD_DATA = [
         color: "#7c3aed",
         rgb: "124,58,237",
         image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80",
+        images: [
+            "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80",
+            "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80",
+            "https://jessup.edu/wp-content/uploads/2023/12/Differences-Between-Software-Developers-and-Software-Engineers.jpg",
+            "https://www.yourfreecareertest.com/wp-content/uploads/2016/07/What-does-a-Software-Developer-do.jpg",
+        ],
         description: [
             "Are you looking RETAIL Super market, Grocery, Electronics, Gift Shops & Stationery, RESTAURANTS Take away, Self service, Ice cream parlor, Coffee shop, Bakery SERVICES Accountant, Lawyer, Consultant, Florist, Trainer, Photographer. GST billing software dealers in salem UNIVERSAL TECHNOLOGY is the best place to buy your invoicing and billing software in SALEM for all your accounting needs. You can expect our billing software at very lowest price in SALEM. We design and build best GST billing software in SALEM for the retail POS, restaurant, stores, and GST accounting that helps you to create invoices very easily, manage your accounts, track transactions, purchase and sales orders, create more reports & MIS and file GST returns extremely easily. Our business consultant know how the billing software works and adding value to the clients. They will collect the complete software requirements to build the best billing software ever if they are small shop owners or enterprise organizations. We have skilled designers and developers to build highly customizable GST software that gives fastest, accurate solutions. With our billing software you can manage your accounts, billings, pending and unpaid invoices that will give clear view of your business.",
             "Ease your business with our complete GST billing software We offer Highly customized,Modern and user friendly gst billing software for Retail, Restaurant POS,Small shops, Garments and medical shops.• We offer simple to use, easy to navigate billing software that performs well than our competitors billing solutions.• As a best software development company in coimbatore we specialized in building GST and accounting software for small businesses.• Our billing software designed and built for multi device, it can used on a PC, Web and mobile browsers and tablets.",
             "Desktop billing software         Web-based billing          software",
 
-            "Subscription-based online billing software",
-            "Yarn based online billing software",
-            "Packers and movers billing software",
-            "Corrugated box box billing software",
-            "Online billing for any application",
-            "Offline billing for any application",
-            "Restaurant BILLING",
-            "Matrimonial billing.",
-            "Medical stock billing.",
-            "Chartered Accountants Billing",
-            "Custom product development.",
-            "ERP application development.",
-            "Retail Billing software development.",
-            "CRM software development.",
-            "Inventory management software and etc.",
-            "Benefits Of Our GST And Retail Billing Software",
-            "Save time & Increase revenue and optimize cost by strategic reports anywhere anytime. Manage queue with faster billing, auto-inventory & account update, no manual effort required.",
+            "• Subscription-based online billing software",
+            "• Yarn based online billing software",
+            "• Packers and movers billing software",
+            "• Corrugated box box billing software",
+            "• Online billing for any application",
+            "• Offline billing for any application",
+            "• Restaurant BILLING",
+            "• Matrimonial billing.",
+            "• Medical stock billing.",
+            "• Chartered Accountants Billing",
+            "• Custom product development.",
+            "• ERP application development.",
+            "• Retail Billing software development.",
+            "• CRM software development.",
+            "• Inventory management software and etc.",
+            "• Benefits Of Our GST And Retail Billing Software",
+            "• Save time & Increase revenue and optimize cost by strategic reports anywhere anytime. Manage queue with faster billing, auto-inventory & account update, no manual effort required.",
 
-            "Fast & Efficient Tap to bill, auto-update the inventory and accounts, and stay organized.",
+            "Fast & Efficient ",
+            "Tap to bill, auto-update the inventory and accounts, and stay organized.",
 
-            "Avoid Human Error Auto-updating feature of inventory & accounting prevent misuse of materials and theft.",
+            "Avoid Human Error ",
+            "Auto-updating feature of inventory & accounting prevent misuse of materials and theft.",
 
-            "Easy Navigation Groom your business with latest technology, send SMS/Email invoice",
+            "Easy Navigation ",
+            "Groom your business with latest technology, send SMS/Email invoice",
 
-            "Accuracy in billing reports Say goodbye to human errors with automated billing, discounts & complex GST calculations.",
+            "Accuracy in billing reports",
+            " Say goodbye to human errors with automated billing, discounts & complex GST calculations.",
 
-            "Easy to Track your billing and payments Offer customer loyalty and discounts to increase the customer base.",
+            "Easy to Track your billing and payments",
+            " Offer customer loyalty and discounts to increase the customer base.",
 
-            "Reconciliation of your GST bills Automated reconciliation of sales, purchase, inventory, payments and GST.",
+            "Reconciliation of your GST bills",
+            " Automated reconciliation of sales, purchase, inventory, payments and GST.",
             "As a business everyone’s focus is on growth. But a good technology solution enables and expedite your growth faster.",
         ],
         fullContent:
-            "We design and develop custom software that solves real business problems. From internal workflow automation tools to customer-facing web applications, our development team follows agile methodologies to deliver working software quickly and iteratively. Every solution is built with clean architecture, thorough testing, and documentation — ensuring it remains maintainable and scalable as your business grows.",
+            "",
         features: [
             "Custom Web Application Development",
             "Business Process Automation",
@@ -663,16 +852,21 @@ export const CARD_DATA = [
         color: "#059669",
         rgb: "5,150,105",
         image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+        images: [
+            "https://s3-alpha.figma.com/hub/file/2317162292462538586/f85d6581-39dd-4aba-ab38-d888e0669c15-cover.png",
+            "https://images.template.net/118072/creative-photography-portfolio-template-fa5t4.jpg",
+        ],
         description: [
+            "What out clients are saying...",
             "Here are some comments from our clients:",
 
             "The talents of Website Design Images go unmatched. we are outstanding in helping guide us through our website design and implementation. Our goals were fulfilled with every step of the way. AND Ms. Odell continues to help us to make the best technical decisions in keeping our site up to date and maintained. She receives a five star review and comes highly attractive.",
 
-            "WDI has been hosting and developing our web site for the past few years. We are very happy with their services and prices",
+            "“WDI has been hosting and developing our web site for the past few years. We are very happy with their services and prices”",
 
-            "We have seen immediate community learn more about the library and its services. It has been a terrific advantage and invaluable asset to learn to update and revise our information myself and your proficiency with these tools has made this a very simple process for me. Thank you for your professional attention, expertise, technical, and visual talents",
+            "“We have seen immediate community learn more about the library and its services. It has been a terrific advantage and invaluable asset to learn to update and revise our information myself and your proficiency with these tools has made this a very simple process for me. Thank you for your professional attention, expertise, technical, and visual talents”",
 
-            "“I have to say that having a website designed by WDI resulted in my winning several awards over the past few years, most recently top notch",
+            "“I have to say that having a website designed by WDI resulted in my winning several awards over the past few years, most recently top notch”",
 
             "“A very large part of our business now stems from our website. We have been able to serve customers from all over the country”",
 
@@ -687,7 +881,7 @@ export const CARD_DATA = [
             "If you would like to contact any of our clients for references, please let us know and we will put you in contact with them.",
         ],
         fullContent:
-            "Our portfolio reflects over two decades of delivering technology solutions to businesses across Salem and beyond. From small business websites to enterprise IT infrastructure deployments, each project represents our commitment to quality, reliability, and client satisfaction. We are proud of the long-term relationships we have built with clients who return to us for every new technology challenge they face.",
+            "",
         features: [
             "Enterprise IT Deployments",
             "E-Commerce & Web Projects",

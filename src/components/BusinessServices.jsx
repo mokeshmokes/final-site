@@ -74,7 +74,7 @@ export default function BusinessServices() {
                         animate={headingInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ delay: 0.15, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                     >
-                        Extended <span className="biz-svc__heading-accent">Business Services</span>
+                        <span className="biz-svc__heading-accent">Technical Services</span>
                     </motion.h2>
 
                     <motion.p
@@ -83,8 +83,7 @@ export default function BusinessServices() {
                         animate={headingInView ? { opacity: 1 } : {}}
                         transition={{ delay: 0.3, duration: 0.6 }}
                     >
-                        Beyond our core offerings, we operate across multiple business areas
-                        to deliver comprehensive value to every client we serve.
+                        From troubleshooting to optimization, our expert team delivers scalable, secure, and future-ready solutions tailored to your business needs.
                     </motion.p>
 
                     <motion.div

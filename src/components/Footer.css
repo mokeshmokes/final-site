@@ -172,7 +172,7 @@
     margin-bottom: 1.1rem;
     position: relative;
     padding-bottom: 0.6rem;
-    
+
 }
 
 .footer__col-heading::after {
@@ -241,6 +241,7 @@
 
 /* ── Bottom bar ── */
 .footer__bottom {
+    position: relative;
     border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
@@ -368,5 +369,33 @@
         flex-direction: column;
         text-align: center;
         padding: 1rem;
+    }
+}
+
+/* ── Visitor counter — bottom-right of footer bottom bar ── */
+.footer__visitors {
+    position: absolute;
+    bottom: 50%;
+    right: 2rem;
+    transform: translateY(50%);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.55);
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.footer__visitors-count {
+    color: #60a5fa;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .footer__visitors {
+        position: static;
+        transform: none;
+        text-align: center;
+        padding: 0.5rem 0 0.75rem;
+        display: block;
     }
 }

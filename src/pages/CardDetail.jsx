@@ -2,7 +2,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import {
-    ArrowLeft, CheckCircle2,
+    ArrowLeft,
     Globe, Layers, ShoppingCart, Palette, Server, GraduationCap,
     Monitor, Laptop, Shield, HardDrive, Printer, Network, Camera,
     Lightbulb, Wrench, FileCheck, Settings, Headphones, Wifi,
@@ -96,27 +96,35 @@ export default function CardDetail() {
             <section className="card-detail__body">
                 <div className="card-detail__container">
 
-                    {/* LEFT — image */}
+                    {/* LEFT — image(s) */}
                     <motion.div
                         className="card-detail__left"
                         initial={{ opacity: 0, x: -40 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
                     >
-                        <div className="card-detail__img-wrap" style={{ "--cd-color": card.color, "--cd-rgb": card.rgb }}>
-                            <img
-                                src={card.image}
-                                alt={card.title}
-                                className="card-detail__img"
-                                onError={(e) => {
-                                    e.currentTarget.style.display = "none";
-                                    e.currentTarget.nextSibling.style.display = "flex";
-                                }}
-                            />
-                            <div className="card-detail__img-fallback" style={{ display: "none" }}>
-                                <Icon size={64} style={{ color: card.color }} />
+                        {/* Render images array if present, otherwise fall back to single image */}
+                        {(card.images || [card.image]).map((src, i) => (
+                            <div
+                                key={i}
+                                className={`card-detail__img-wrap${i > 0 ? " card-detail__img-wrap--second" : ""}`}
+                                style={{ "--cd-color": card.color, "--cd-rgb": card.rgb }}
+                            >
+                                <img
+                                    src={src}
+                                    alt={`${card.title}${i > 0 ? ` — view ${i + 1}` : ""}`}
+                                    className="card-detail__img"
+                                    onError={(e) => {
+                                        e.currentTarget.parentElement.style.display = "none";
+                                    }}
+                                />
+                                {i === 0 && (
+                                    <div className="card-detail__img-fallback" style={{ display: "none" }}>
+                                        <Icon size={64} style={{ color: card.color }} />
+                                    </div>
+                                )}
                             </div>
-                        </div>
+                        ))}
                     </motion.div>
 
                     {/* RIGHT — content */}
@@ -133,35 +141,27 @@ export default function CardDetail() {
                             <h2 className="card-detail__title">{card.title}</h2>
                         </div>
 
-                        {Array.isArray(card.description)
-                            ? card.description.map((item, i) => (
-                                typeof item === "object" && item.subtitle
-                                    ? (
-                                        <div key={i} className="card-detail__desc-block">
-                                            <h4 className="card-detail__desc-subtitle">{item.subtitle}</h4>
-                                            <p className="card-detail__desc">{item.text}</p>
-                                        </div>
-                                    )
-                                    : <p key={i} className="card-detail__desc">{item}</p>
-                            ))
-                            : <p className="card-detail__desc">{card.description}</p>
-                        }
-                        <p className="card-detail__full-content">{card.fullContent}</p>
-
-                        <h3 className="card-detail__features-heading">Key Features</h3>
-                        <ul className="card-detail__features">
-                            {card.features.map((f) => (
-                                <li key={f} className="card-detail__feature">
-                                    <CheckCircle2 size={16} className="card-detail__feature-icon" style={{ color: card.color }} />
-                                    {f}
-                                </li>
-                            ))}
-                        </ul>
+                        {/* All content as clean paragraphs */}
+                        <div className="card-detail__paragraphs">
+                            {Array.isArray(card.description)
+                                ? card.description.map((item, i) => (
+                                    typeof item === "object" && item.subtitle
+                                        ? (
+                                            <div key={i} className="card-detail__desc-block">
+                                                <h4 className="card-detail__desc-subtitle">{item.subtitle}</h4>
+                                                <p className="card-detail__desc">{item.text}</p>
+                                            </div>
+                                        )
+                                        : <p key={i} className="card-detail__desc">{item}</p>
+                                ))
+                                : <p className="card-detail__desc">{card.description}</p>
+                            }
+                            {card.fullContent && (
+                                <p className="card-detail__desc">{card.fullContent}</p>
+                            )}
+                        </div>
 
                         <div className="card-detail__cta-row">
-                            {/* <a href="/#visit-us" className="card-detail__cta-btn" style={{ background: card.color }}>
-                                Get a Quote
-                            </a> */}
                             <button className="card-detail__back-btn" onClick={() => navigate(-1)}>
                                 <ArrowLeft size={16} /> Back
                             </button>

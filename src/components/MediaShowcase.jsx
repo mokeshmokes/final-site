@@ -93,8 +93,7 @@ export default function MediaShowcase() {
                         See &amp; Hear <span className="media__heading-accent">Who We Are</span>
                     </h2>
                     <p className="media__sub">
-                        Explore our introduction through audio and video — get to know
-                        JUSCO before you reach out.
+                        Explore our introduction through audio and video — get to know Universal Technology before you reach out.
                     </p>
                     <motion.div
                         className="media__divider"
@@ -123,8 +122,7 @@ export default function MediaShowcase() {
 
                         <h3 className="media-box__title">Listen to Our Introduction</h3>
                         <p className="media-box__desc">
-                            Hear directly from our team about what makes JUSCO the trusted
-                            technology partner for businesses across the region.
+                            Hear directly from our team about what makes Universal Technology the trusted partner for businesses across the region.
                         </p>
 
                         {/* Play / Pause button */}
@@ -170,8 +168,7 @@ export default function MediaShowcase() {
 
                         <h3 className="media-box__title">Watch Our Overview</h3>
                         <p className="media-box__desc">
-                            A short visual walkthrough of our services, team, and the
-                            solutions we deliver to clients every day.
+                            A short visual walkthrough of our services, team, and the solutions we deliver to clients every day.
                         </p>
 
                         {/* Play / Pause button */}

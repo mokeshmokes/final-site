@@ -65,6 +65,9 @@
 .card-detail__left {
     flex: 1;
     min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
 }
 
 .card-detail__img-wrap {
@@ -76,6 +79,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Second image — slightly smaller aspect ratio for visual variety */
+.card-detail__img-wrap--second {
+    aspect-ratio: 16 / 9;
+    box-shadow: 0 12px 36px rgba(var(--cd-rgb), 0.1);
 }
 
 .card-detail__img {
@@ -128,13 +137,21 @@
     line-height: 1.2;
 }
 
+/* All content paragraphs wrapper */
+.card-detail__paragraphs {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 2rem;
+}
+
 /* Description blocks — subtitle + paragraph */
 .card-detail__desc-block {
     margin-bottom: 1.1rem;
 }
 
 .card-detail__desc-block:last-of-type {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0;
 }
 
 .card-detail__desc-subtitle {
@@ -149,61 +166,15 @@
 }
 
 .card-detail__desc {
-    font-size: 0.97rem;
-    line-height: 1.85;
-    color: #0a5ce1;
-    margin-bottom: 0;
-}
-
-/* Expanded full content paragraph */
-.card-detail__full-content {
     font-size: 0.95rem;
     line-height: 1.85;
-    color: #0a5ce1;
-    margin-bottom: 2rem;
-    padding: 1.25rem 1.5rem;
-    background: #ffffff;
-    border-left: 3px solid var(--cd-color, #2563eb);
-    border-radius: 0 12px 12px 0;
-}
-
-.card-detail__features-heading {
-    font-size: 1rem;
-    font-weight: 700;
     color: #2563eb;
     margin-bottom: 1rem;
-    letter-spacing: -0.2px;
+    text-align: justify;
 }
 
-.card-detail__features {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.65rem;
-    margin-bottom: 2.5rem;
-}
-
-.card-detail__feature {
-    display: flex;
-    align-items: center;
-    gap: 0.65rem;
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: #1e40af;
-    background: #eef2ff;
-    border: 1px solid #c7d2fe;
-    border-radius: 10px;
-    padding: 0.6rem 1rem;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card-detail__feature:hover {
-    border-color: rgba(var(--cd-rgb), 0.3);
-    box-shadow: 0 4px 12px rgba(var(--cd-rgb), 0.08);
-}
-
-.card-detail__feature-icon {
-    flex-shrink: 0;
+.card-detail__desc:last-child {
+    margin-bottom: 0;
 }
 
 /* CTA row */

@@ -9,11 +9,11 @@ const PRODUCTS = [
     { id: "desktop", icon: FaDesktop, title: "Desktop", desc: "High-performance desktop computers for business, workstations, and enterprise environments.", color: "#2563eb", rgb: "37,99,235" },
     { id: "laptop", icon: FaLaptopCode, title: "Laptop", desc: "Premium laptops for professionals — lightweight, powerful, and built for productivity on the go.", color: "#7c3aed", rgb: "124,58,237" },
     { id: "server", icon: FaServer, title: "Server", desc: "Rack, tower, and blade servers engineered for reliability, scalability, and enterprise workloads.", color: "#059669", rgb: "5,150,105" },
-    { id: "firewall", icon: FaShieldAlt, title: "Firewall", desc: "Next-generation firewall solutions to protect your network from threats and unauthorized access.", color: "#e11d48", rgb: "225,29,72" },
+    { id: "firewall", icon: FaShieldAlt, title: "Firewall", desc: "Next-generation firewall solutions to protect your network from threats and unauthorized access.", color: "#3ee11dff", rgb: "225,29,72" },
     { id: "nas", icon: FaDatabase, title: "Network Attached Storage", desc: "NAS solutions for centralized, secure, and scalable data storage across your organization.", color: "#0891b2", rgb: "8,145,178" },
     { id: "printer", icon: FaPrint, title: "Printer", desc: "Commercial-grade printers and multifunction devices for high-volume, high-quality document output.", color: "#d97706", rgb: "217,119,6" },
     { id: "router-switches", icon: FaNetworkWired, title: "Router & Switches", desc: "Enterprise networking hardware for fast, reliable, and secure wired and wireless connectivity.", color: "#6d28d9", rgb: "109,40,217" },
-    { id: "cctv", icon: FaCamera, title: "CCTV", desc: "Advanced surveillance camera systems for comprehensive security monitoring of your premises.", color: "#dc2626", rgb: "220,38,38" },
+    { id: "cctv", icon: FaCamera, title: "CCTV", desc: "Advanced surveillance camera systems for comprehensive security monitoring of your premises.", color: "#2638dcff", rgb: "220,38,38" },
 ];
 
 const containerVariants = { hidden: {}, visible: { transition: { staggerChildren: 0.09 } } };

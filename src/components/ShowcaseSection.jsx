@@ -12,7 +12,7 @@ const WEB_SERVICES = [
     { id: "ecommerce-development", icon: FaMobileAlt, title: "Mobile App Development", desc: "Cross-platform mobile apps for Android and iOS that deliver seamless user experiences.", color: "#059669", rgb: "5,150,105" },
     { id: "domain-hosting", icon: FaServer, title: "Web Hosting", desc: "Secure and reliable hosting with 99.9% uptime, SSL certificates, and daily backups.", color: "#0891b2", rgb: "8,145,178" },
     { id: "professional-training", icon: FaSearch, title: "SEO Optimization", desc: "Improve your ranking and visibility on search engines to drive more organic traffic.", color: "#d97706", rgb: "217,119,6" },
-    { id: "logo-brand-identity", icon: FaGlobe, title: "Domain Registration", desc: "Get your perfect business domain with easy management and flexible extensions.", color: "#e11d48", rgb: "225,29,72" },
+    { id: "logo-brand-identity", icon: FaGlobe, title: "Domain Registration", desc: "Get your perfect business domain with easy management and flexible extensions.", color: "#e11da9ff", rgb: "225,29,72" },
 ];
 
 const containerVariants = {

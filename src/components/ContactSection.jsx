@@ -1,17 +1,24 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
+import emailjs from "@emailjs/browser";
 import {
     User, Mail, Phone, MessageSquare, Send,
     CheckCircle2, AlertCircle, MapPin, Clock,
 } from "lucide-react";
 import "./ContactSection.css";
 
+/* ─── EmailJS config — replace with your real IDs from emailjs.com ─── */
+const EJS_SERVICE_ID = "YOUR_SERVICE_ID";   // e.g. "service_abc123"
+const EJS_ADMIN_TPL = "YOUR_ADMIN_TEMPLATE_ID";  // template that mails YOU
+const EJS_REPLY_TPL = "YOUR_REPLY_TEMPLATE_ID";  // auto-reply template to user
+const EJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";   // Account → API Keys → Public Key
+
 /* ─── Validation helpers ─── */
 const validators = {
     name: (v) => v.trim().length >= 2 ? "" : "Name must be at least 2 characters.",
     address: (v) => v.trim().length >= 5 ? "" : "Please enter your address.",
     phone: (v) => /^[+]?[\d\s\-().]{7,15}$/.test(v.trim()) ? "" : "Please enter a valid phone number.",
-    mobile: (v) => /^[+]?[\d\s\-().]{7,15}$/.test(v.trim()) ? "" : "Please enter a valid mobile number.",
+    mobile: (v) => v.trim() === "" || /^[+]?[\d\s\-().]{7,15}$/.test(v.trim()) ? "" : "Please enter a valid mobile number.",
     email: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) ? "" : "Please enter a valid email address.",
     subjects: (v) => v.trim().length >= 5 ? "" : "Subject must be at least 5 characters.",
 };
@@ -50,6 +57,7 @@ function Field({ id, label, icon: Icon, type = "text", placeholder, value, error
                 {isTextarea ? (
                     <textarea
                         id={id}
+                        name={id}
                         className="cf-field__input cf-field__textarea"
                         placeholder={placeholder}
                         value={value}
@@ -61,6 +69,7 @@ function Field({ id, label, icon: Icon, type = "text", placeholder, value, error
                 ) : (
                     <input
                         id={id}
+                        name={id}
                         type={type}
                         className="cf-field__input"
                         placeholder={placeholder}
@@ -83,6 +92,7 @@ function Field({ id, label, icon: Icon, type = "text", placeholder, value, error
 /* ─── Main component ─── */
 export default function ContactSection() {
     const sectionRef = useRef(null);
+    const formRef = useRef(null);
     const inView = useInView(sectionRef, { once: true, margin: "-80px" });
 
     const [values, setValues] = useState(INITIAL);
@@ -114,25 +124,46 @@ export default function ContactSection() {
         return Object.values(newErrors).every((e) => e === "");
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if (!validate()) return;
         setStatus("sending");
-        setTimeout(() => {
+
+        try {
+            /* 1. Send notification to admin */
+            await emailjs.sendForm(
+                EJS_SERVICE_ID,
+                EJS_ADMIN_TPL,
+                formRef.current,
+                EJS_PUBLIC_KEY
+            );
+
+            /* 2. Send auto-reply to user */
+            await emailjs.sendForm(
+                EJS_SERVICE_ID,
+                EJS_REPLY_TPL,
+                formRef.current,
+                EJS_PUBLIC_KEY
+            );
+
             setStatus("success");
             setValues(INITIAL);
             setTouched({});
             setErrors({});
             setTimeout(() => setStatus("idle"), 5000);
-        }, 1800);
+        } catch (err) {
+            console.error("EmailJS error:", err);
+            setStatus("idle");
+            alert("Failed to send message. Please try again or email us directly at swamijai@gmail.com");
+        }
     };
 
     /* ── Info cards data ── */
     const INFO_CARDS = [
-        { icon: Mail, label: "MAIL US", value: "info@jusco.com", href: "mailto:info@jusco.com" },
-        { icon: Phone, label: "CALL ME", value: "+1 (800) 123-4567", href: "tel:+18001234567" },
-        { icon: MessageSquare, label: "SUPPORT", value: "support@jusco.com", href: "mailto:support@jusco.com" },
-        { icon: MapPin, label: "MY LOCATION", value: "UNIVERSAL TECHNOLOGY 250/187, GUPTHA NAGAR,ANGAMMAL COLONY,SALEM-636009,LAND MARK: NEAR KRISHNA MEDICALS.", href: null },
+        { icon: Mail, label: "MAIL US", value: "swamijai@gmail.com", href: "swamijai@gmail.com" },
+        { icon: Phone, label: "CALL ME", value: "9944494399  9944494299", href: "tel:+9944494399  9944494299" },
+        { icon: MessageSquare, label: "SUPPORT", value: "swamijai@gmail.co", href: "swamijai@gmail.co" },
+        { icon: MapPin, label: "MY LOCATION", value: "UNIVERSAL TECHNOLOGY 250/187, GUPTHA NAGAR,ANGAMMAL COLONY,SALEM-636009,LAND MARK: NEAR KRISHNA MEDICALS.", href: "https://maps.app.goo.gl/QpYcVCLJZPwqbStk8" },
         { icon: Clock, label: "OFFICE TIMEING", value: "Mon - Sat : 9:00 AM - 9:00 PM", href: null },
     ];
 
@@ -203,13 +234,13 @@ export default function ContactSection() {
                         animate={inView ? "visible" : "hidden"}
                     >
                         <iframe
-                            src="https://www.google.com/maps?q=Chennai,Tamil+Nadu,India&output=embed"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3907.4025611517814!2d78.14077879999999!3d11.6658566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf0476a064e87%3A0xe6b8d4d1a2c17b0e!2sGuptha%20Nagar%2C%20250%2F187%2C%20Guptha%20Nagar%2C%20Four%20roads%2C%20Angammal%20Colony%2C%20Salem%2C%20Tamil%20Nadu%20636009!5e0!3m2!1sen!2sin!4v1777801574911!5m2!1sen!2sin"
                             width="100%"
                             style={{ border: 0, borderRadius: "12px", display: "block" }}
                             allowFullScreen=""
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
-                            title="Office Location — Chennai, Tamil Nadu"
+                            title="Universal Technology — 250/187, Guptha Nagar, Salem 636009"
                         />
                     </motion.div>
                 </motion.div>
@@ -237,7 +268,7 @@ export default function ContactSection() {
                             </p>
                         </motion.div>
                     ) : (
-                        <form className="contact-sec__form" onSubmit={handleSubmit} noValidate>
+                        <form className="contact-sec__form" onSubmit={handleSubmit} ref={formRef} noValidate>
                             <div className="contact-sec__form-header">
                                 <h3 className="contact-sec__form-title">LEAVE US YOUR INFO</h3>
                                 <p className="contact-sec__form-sub">And we will get back to you soon.</p>
@@ -268,7 +299,7 @@ export default function ContactSection() {
                                     onChange={handleChange} onBlur={handleBlur}
                                 />
                                 <Field
-                                    id="mobile" label="Mobile Number 2*" icon={Phone} type="tel"
+                                    id="mobile" label="Mobile Number 2" icon={Phone} type="tel"
                                     placeholder="+91 XXXXX XXXXX"
                                     value={values.mobile} error={errors.mobile} touched={touched.mobile}
                                     onChange={handleChange} onBlur={handleBlur}

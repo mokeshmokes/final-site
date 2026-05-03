@@ -84,7 +84,7 @@ export default function Footer() {
     /* Increment visit count once per component mount */
     useEffect(() => {
         const stored = parseInt(localStorage.getItem("ut_site_visits") || "0", 10);
-        const updated = stored + 1;
+        const updated = stored < 500000 ? 500001 : stored + 1;
         localStorage.setItem("ut_site_visits", updated);
         setVisits(updated);
     }, []);
@@ -138,13 +138,13 @@ export default function Footer() {
 
                     {/* Contact mini-list */}
                     <div className="footer__contact-list">
-                        <a href="mailto:info@jusco.com" className="footer__contact-item">
+                        <a href="swamijai@gmail.com" className="footer__contact-item">
                             <Mail size={14} />
-                            info@jusco.com
+                            swamijai@gmail.com
                         </a>
-                        <a href="tel:+18001234567" className="footer__contact-item">
+                        <a href="tel:+9944494399" className="footer__contact-item">
                             <Phone size={14} />
-                            +1 (800) 123-4567
+                            9944494399
                         </a>
                     </div>
 
@@ -210,7 +210,7 @@ export default function Footer() {
 
                 {/* Visitor counter — absolutely positioned bottom-right */}
                 <p className="footer__visitors">
-                    👁 Visitors: <span className="footer__visitors-count">{visits.toLocaleString()}</span>
+                    Universal Technology 20 years of 👁 Visitors: <span className="footer__visitors-count">{visits.toLocaleString()}</span>
                 </p>
             </div>
         </footer>

@@ -163,7 +163,7 @@ export default function Navbar() {
         {/* ── Right icons ── */}
         <div className="navbar__actions">
           {/* Contact / utility icons */}
-          <a href="mailto:info@jusco.com" className="navbar__icon-btn" title="Email us">
+          <a href="swamijai@gmail.com" className="navbar__icon-btn" title="Email us">
             <Mail size={18} />
           </a>
           <a href="tel:+919944494299" className="navbar__icon-btn" title="Call us">

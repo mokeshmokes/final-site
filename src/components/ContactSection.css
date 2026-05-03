@@ -349,16 +349,16 @@
 
 /* Validation states */
 .cf-field--error .cf-field__input {
-    border-color: #e11d48;
-    background: rgba(225, 29, 72, 0.03);
+    border-color: #6366f1;
+    background: rgba(99, 102, 241, 0.03);
 }
 
 .cf-field--error .cf-field__input:focus {
-    box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.12);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
 }
 
 .cf-field--error .cf-field__icon {
-    color: #e11d48;
+    color: #6366f1;
 }
 
 .cf-field--valid .cf-field__input {
@@ -383,7 +383,7 @@
 }
 
 .cf-field__status--err {
-    color: #e11d48;
+    color: #6366f1;
 }
 
 .cf-field__textarea~.cf-field__status {
@@ -393,7 +393,7 @@
 
 .cf-field__error {
     font-size: 0.72rem;
-    color: #f87171;
+    color: #818cf8;
     font-weight: 500;
     padding-left: 2px;
 }

@@ -1,4 +1,4 @@
-﻿/* ═══════════════════════════════════════════
+/* ═══════════════════════════════════════════
    CARD DATA — Services, Products, IT Services
    Used by CardDetail page for dynamic content
 ═══════════════════════════════════════════ */

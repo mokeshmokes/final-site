@@ -45,13 +45,13 @@ const TESTIMONIALS = [
         image: "/images/VIGNESH.jpg",
         rating: 5,
     },
-    {
-        text: "The service here is outstanding. They always address the underlying cause of problems and solve them successfully. If they say they can fix it, they fix it — every time.",
-        name: "sowmyaa",
-        role: "",
-        image: "/images/sowmyaa.jpg",
-        rating: 5,
-    },
+    // {
+    //     text: "The service here is outstanding. They always address the underlying cause of problems and solve them successfully. If they say they can fix it, they fix it — every time.",
+    //     name: "sowmyaa",
+    //     role: "",
+    //     image: "/images/sowmyaa.jpg",
+    //     rating: 5,
+    // },
     {
         text: "Great service at great prices. My laptop issue was resolved faster than expected. Affordable pricing with no compromise on quality — highly recommended for everyone.",
         name: "RAJALAKSHMI",

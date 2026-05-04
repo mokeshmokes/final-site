@@ -113,32 +113,32 @@ const TEAM = [
             { icon: FaInstagram, href: "#" },
         ],
     },
-    {
-        name: "UMA",
-        role: "General Client",
-        desc: "Represents the satisfied customers of Universal Technology, benefiting from reliable service, timely support, and quality IT solutions tailored to everyday needs.",
-        image: "/images/uma.jpg",
-        color: "#d97706",
-        rgb: "217,119,6",
-        socials: [
-            { icon: FaXTwitter, href: "#" },
-            { icon: FaLinkedinIn, href: "#" },
-            { icon: FaInstagram, href: "#" },
-        ],
-    },
-    {
-        name: "VIGNEESH",
-        role: "General Client",
-        desc: "A valued client of Universal Technology who experienced professional service delivery, efficient problem-solving, and a team that genuinely cares about customer satisfaction.",
-        image: "/images/VIGNESH.jpg",
-        color: "#2563eb",
-        rgb: "37,99,235",
-        socials: [
-            { icon: FaXTwitter, href: "#" },
-            { icon: FaLinkedinIn, href: "#" },
-            { icon: FaInstagram, href: "#" },
-        ],
-    },
+    // {
+    //     name: "UMA",
+    //     role: "General Client",
+    //     desc: "Represents the satisfied customers of Universal Technology, benefiting from reliable service, timely support, and quality IT solutions tailored to everyday needs.",
+    //     image: "/images/uma.jpg",
+    //     color: "#d97706",
+    //     rgb: "217,119,6",
+    //     socials: [
+    //         { icon: FaXTwitter, href: "#" },
+    //         { icon: FaLinkedinIn, href: "#" },
+    //         { icon: FaInstagram, href: "#" },
+    //     ],
+    // },
+    // {
+    //     name: "VIGNEESH",
+    //     role: "General Client",
+    //     desc: "A valued client of Universal Technology who experienced professional service delivery, efficient problem-solving, and a team that genuinely cares about customer satisfaction.",
+    //     image: "/images/VIGNESH.jpg",
+    //     color: "#2563eb",
+    //     rgb: "37,99,235",
+    //     socials: [
+    //         { icon: FaXTwitter, href: "#" },
+    //         { icon: FaLinkedinIn, href: "#" },
+    //         { icon: FaInstagram, href: "#" },
+    //     ],
+    // },
 ];
 
 const headingVariants = {

@@ -1,4 +1,4 @@
-/* ═══════════════════════════════════════════
+﻿/* ═══════════════════════════════════════════
    CARD DATA — Services, Products, IT Services
    Used by CardDetail page for dynamic content
 ═══════════════════════════════════════════ */
@@ -653,8 +653,8 @@ export const CARD_DATA = [
         rgb: "217,119,6",
         image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&q=80",
         images: [
-            "https://leistertech.com/wp-content/uploads/2024/09/The-Importance-of-Regular-Maintenance.png",
-            "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3VVUcMbeShTJvuIXm8WfpfAfOEKSw5qfHGd8AHVRwI85cblctNNggnzTbagRu3j_EOLB1x10_UzLaVyVrCDqRquvkuG1Q5_Lw2blO6CNifJG1diMlbpxshTbOpXF4o6gFYxH_yFY0Mi0nPs4jbPzbmnMkFYfxdQwrMlbm__UqBTMDcPw4OfUwoMd_/w0/technician-service-removing-air-filter-air-conditioner-cleaning.jpg",
+            "https://eccrm.in/assets/images/template/IT%20Computer%20Repair%20Software.svg",
+            "https://setpoint.bkvibro.com/wp-content/uploads/2024/07/Technical-support-and-product-services-scaled.jpeg",
         ],
         description: [
             "Starts form 250/- per month Our technical support department provides prompt support by telephone and onsite support from a single source, where and when you need By Weekly and monthly visits basis . To that end, our Regular Maintenance Contract (RMC) ensures that your software is always supported and up to date We hire a team that is technically sound. All our team members are professional degree holders and hold extensive experience in their field. The years of experience they have help them in detecting the exact problem and repairing them at once. So, you do not need to worry if it is an emergency situation because our team is brilliant at identifying problems and fixing them within a few hours.",
@@ -764,7 +764,7 @@ export const CARD_DATA = [
     /* ─── TECHNICAL ─────────────────────────────────────────────────────── */
     {
         id: "business-units",
-        imageGap: 290,
+        imageGap: 210,
         category: "Technical",
         title: "Business Units",
         
@@ -780,16 +780,13 @@ export const CARD_DATA = [
         // highlightPoints:[],
         description: [
             
-            "Business Units-RETAIL",
-            "The hardware which includes equipment from the world’s leading technology provider such as INTEL, MICROSOFT, HCL, HP/COMPAQ,AMD, SEAGATE, DAX NETWORKS, LOGITECH, CANON. etc.,",
+            { subtitle: "Business Units — RETAIL", text: "The hardware which includes equipment from the world’s leading technology provider such as INTEL, MICROSOFT, HCL, HP/COMPAQ,AMD, SEAGATE, DAX NETWORKS, LOGITECH, CANON. etc.," },
 
             "The digital product lines ie the high end consumer electronic products will see a major development inside Universal Technology. Home Entertainment GRANDIZ 5.1 systems will allow customer to make their choice amongst, the best sound systems hence enhancing their customer experiences by being professionally consulted by Universal sales advisors.",
 
-            "Business Services",
-            " Universal Business System is helping organisations across SALEM to become more effective and efficient. A dedicated team of Sales consultant and IT engineers are helping corporate customers, Government and educational institutions, insurance, companies and construction companies to meet their hardware, software, internet, networking, Projectors and structured cabling. Universal offers integrated approach in solving the needs for office automation, Data communication, and IT network infrastructure of these institutions.",
+            { subtitle: "Business Services", text: "Universal Business System is helping organisations across SALEM to become more effective and efficient. A dedicated team of Sales consultant and IT engineers are helping corporate customers, Government and educational institutions, insurance, companies and construction companies to meet their hardware, software, internet, networking, Projectors and structured cabling. Universal offers integrated approach in solving the needs for office automation, Data communication, and IT network infrastructure of these institutions." },
 
-            "Technical Services ",
-            "The sales and consultancy operations are backed by skilled after sales services specifically developed to ensure that neither,individuals nor business are affected by unwanted computer downtime.Our Service Centre will take care of all your problems. Customers also have uninterrupted 12 hours a day access to a technical help desk by phone or email or internet. Fully trained and Certified persons are always on hand to deal with all aspects of hardware and software maintenance, fault diagnosis and repair.Customers can buy ‘UNIVERSAL SUPPORT ME CARE PACK’ to extend Manufacturer’s warranties as long as they required.",
+            { subtitle: "Technical Services", text: "The sales and consultancy operations are backed by skilled after sales services specifically developed to ensure that neither individuals nor business are affected by unwanted computer downtime. Our Service Centre will take care of all your problems. Customers also have uninterrupted 12 hours a day access to a technical help desk by phone or email or internet. Fully trained and Certified persons are always on hand to deal with all aspects of hardware and software maintenance, fault diagnosis and repair. Customers can buy 'UNIVERSAL SUPPORT ME CARE PACK' to extend Manufacturer’s warranties as long as they required." },
         ],
         
         fullContent:

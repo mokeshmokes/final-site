@@ -54,9 +54,9 @@ const TESTIMONIALS = [
     // },
     {
         text: "Great service at great prices. My laptop issue was resolved faster than expected. Affordable pricing with no compromise on quality — highly recommended for everyone.",
-        name: "RAJALAKSHMI",
+        name: "GOMATHI",
         role: "",
-        image: "/images/RAJALAKSHMI.jpg",
+        image: "/images/GOMATHI.jpg",
         rating: 5,
     },
     {
@@ -89,9 +89,9 @@ const TESTIMONIALS = [
     },
     {
         text: "They provide clear explanations and fix issues perfectly the first time. Highly professional service with a team that genuinely cares about the outcome for each customer.",
-        name: "SRIKANTH DEVA",
+        name: "ANURADHA",
         role: "",
-        image: "/images/SRIKANTH DEVA.jpg",
+        image: "/images/ANURADHA.jpg",
         rating: 5,
     },
     {
@@ -131,9 +131,9 @@ const TESTIMONIALS = [
     },
     {
         text: "Great experience working with Universal Technology. Highly reliable service with a team that is always available and ready to help. I strongly recommend their services.",
-        name: "RAMOORTHY",
+        name: "HEMA",
         role: "",
-        image: "/images/RAMOORTHY.jpg",
+        image: "/images/HEMA.jpg",
         rating: 5,
     },
 ];

@@ -145,6 +145,16 @@
     padding-bottom: 0.5rem !important;
 }
 
+/* Force all slides to equal height so cards stretch uniformly */
+.testi__swiper .swiper-wrapper {
+    align-items: stretch;
+}
+
+.testi__swiper .swiper-slide {
+    height: auto;
+    display: flex;
+}
+
 /* Card */
 .testi-card {
     position: relative;

@@ -24,6 +24,13 @@ const TESTIMONIALS = [
         image: "/images/chandran.jpg",
         rating: 5,
     },
+    // {
+    //     text: "Best service provider in Salem! Amazing technical expertise and an effective communicator. They truly understand customer needs and deliver outstanding results every time.",
+    //     name: "HARIHARAKRISHNAN",
+    //     role: "",
+    //     image: "/images/HARIHARAKRISHNAN.jpg",
+    //     rating: 5,
+    // },
     {
         text: "Best service provider in Salem! Amazing technical expertise and an effective communicator. They truly understand customer needs and deliver outstanding results every time.",
         name: "HARIHARAKRISHNAN",
